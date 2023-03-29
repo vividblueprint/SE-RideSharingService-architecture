@@ -1,53 +1,149 @@
-![Adove Ride Logo](https://github.com/adobe/ride/raw/develop/images/RideLogo.jpg)
-<h3 align="center">Ride Sharing Service</h3>
+<br>
+<br><p align=center><img width=400 src="https://jugnoo.io/wp-content/uploads/2021/05/2-1024x536.png"/></p>
 
-<div align="center">
+<h1 align="center" >
+<img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+<img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+<img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+<b>Ride Sharing Service</b>
+<img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+<img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+<img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/></h1>
+ <p align="center">Get dynamically generated GitHub stats!</p>
 
-  [![Tweet](https://img.shields.io/twitter/url/https/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=%F0%9F%93%A2%20Various%20README%20templates%20and%20tips%20on%20writing%20high-quality%20documentation%20that%20people%20want%20to%20read.&url=https://github.com/kylelobo/The-Documentation-Compendium)
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-  [![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
-  [![License](https://img.shields.io/badge/license-CC0-blue.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
-
-  <a href="https://www.producthunt.com/posts/the-documentation-compendium?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-the-documentation-compendium" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=157965&theme=dark&period=daily" alt="The Documentation Compendium - Beautiful README templates that people want to read. | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
-
-</div>
+<p align="center">
+  <a href="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/actions">
+    <img alt="Tests Passing" src="https://github.com/anuraghazra/github-readme-stats/workflows/Test/badge.svg"/>
+  </a>
+  <a href="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/contributors">
+    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture"/>
+  </a>
+  <a href="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/issues">
+    <img alt="Issues" src="https://img.shields.io/github/issues/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture?color=0088ff"/>
+  </a>
+  <a href="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/pulls">
+    <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture?color=0088ff">
+  </a>
+  <br />
+<img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture?color=green">
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture?color=302df0">
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture">
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture?color=0088ff">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture?color=00ff00f">
+<img alt="GitHub repo file count" src="https://img.shields.io/github/directory-file-count/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture">
+</p>
 
 ---
 
-<p align = "center">💡 Various templates & tips on writing high-quality documentation that people want to read.</p>
-
-
 ## Table of Contents
 
-* [Project description](#project-description)
-* [Business goals](#business-goals)
-* [Stackholders](#stackholders)
-* [Functional Requirements](#functional-requirements)
-* [Quality Attribute](#quality-attribute)
+- [Introduction](#introduction)
+- [Business Requirements](#business-requirements)
+- [Stakeholder Analysis](#stakeholder-analysis)
+- [Architecture Principles](#architecture-principles)
+- [Architecture Components](#architecture-components)
+- [Functional Requirements](#functional-requirements)
+- [Viewpoint](#viewpoint)
+  - [Functional Viewpoint](#functional-viewpoint)
+  - [Development Viewpoint](#development-viewpoint)
+  - [Deployment View](#deployment-view)
+  - [Context Viewpoint](#context-viewpoint)
+- [Quality Attribute](#quality-attribute)
   - [Consistency](#consistency)
   - [Availability](#availability)
   - [Scalability](#scalability)
   - [Flexibility](#flexibility)
   - [Security](#security)
   - [Performance](#performance)
-* [Viewpoint](#viewpoint)
+- [Technical Debt](#technical-debt)
+- [Conclusion](#conclusion)
+- [References](#references)
+- [Appendix](#appendix)
 
-## Project description
+# Introduction
 
-When it comes to getting about in cities, many people choose ride-sharing apps like Uber or Lyft. Indeed, such apps make short-range commute very easy by offering competitive pricing, reasonably short wait time, high security and high availability. From a technical point of view, systems like these are very interesting because nearest-neighbor searching is hard. These systems have much more complex architecture and there are a lot of components joined together internally to provide riding services all over the world. 
-A user can request a ride through the application and within a few minutes, a driver arrives nearby his/her location to take them to their destination. It has a backend service, a frontend service, and a single database.
+The ride-sharing industry has exploded in popularity in recent years, with services such as Uber, Lyft, and Grab becoming ubiquitous in cities around the world. These services offer a new and convenient way for people to get around, using a combination of technology and transportation to connect riders with drivers. However, designing and implementing a successful ride-sharing service is no simple feat, and requires careful consideration of a wide range of technical, logistical, and social factors.
 
-## Business goals
+This software architecture document aims to provide a detailed overview of the architecture of a ride-sharing service, including the key components and systems involved in its operation. This document is intended for developers, architects, and stakeholders who are involved in the development or management of a ride-sharing service, and who need to understand the technical aspects of the service in order to make informed decisions.
 
-  <li> To achieve 99.99% reliability of the core travel experience on ride sharing service (only have a total of one hour of downtime per year, and a maximum of one minute per week, in other words, every 10,000 operations can only fail 1 time at a time.</li>
-  <li>Codebase divided by 2: Core code, and optional code. Core code is compulsory when the rider register, calls and completes or cancels travel requirements. Any modification to the core code must go through a rigorous review process. Optional code is less reviewed and can be dynamically closed at any time. This encourages mutual independence at the code level, allowing us to try new features and stop them at any time.</li>
-  <li>Core architecture: class names, inheritance relationships between business logic units (inheritance relationship between business logic units), main business logic, plugin point (name, dependency, structure, etc.), reactive programming chains (relationship between reactive programming), unified platform components (unified platform-level modules).</li>
-</ol>
+The document will begin by providing an overview of the ride-sharing industry, including the key players and trends that have emerged in recent years. This will be followed by a detailed description of the architecture of a typical ride-sharing service, including the key components such as the rider app, driver app, and backend systems. The document will also cover topics such as data privacy and security, scalability and performance, and integration with third-party services.
 
-## Stackholders
+Overall, this document aims to provide a comprehensive and practical guide to the architecture of a ride-sharing service, with a focus on the technical considerations and challenges involved in designing and operating such a service. By providing a clear and detailed understanding of the key systems and components involved in a ride-sharing service, this document will help developers and stakeholders to make informed decisions and build successful ride-sharing services that meet the needs of riders, drivers, and other stakeholders.
 
-The main stakeholders and users of the ride sharing service are the admin (ride sharing company), Passengers and Drivers. 
+# Business Requirements
+
+Before we dive deeper into the architecture of the ride-sharing service, let's first define the business requirements. The ride-sharing service should meet the following requirements:
+
+1. Passenger and Driver Registration: The service should allow passengers and drivers to easily register and create accounts.
+
+1. Ride Requests: Passengers should be able to request rides using the app, specifying their pickup and dropoff locations, and the type of vehicle they want. Drivers should receive notifications of incoming ride requests.
+
+1. Driver Acceptance: Drivers should be able to accept or reject ride requests based on their availability.
+
+1. Navigation: The app should provide navigation instructions to the pickup and dropoff locations for both passengers and drivers.
+
+1. Real-Time Tracking: Passengers should be able to track the driver's location in real-time.
+
+1. Payment Processing: The service should process payments securely and efficiently, handling refunds, chargebacks, and disputes.
+
+1. Ratings and Reviews: Passengers and drivers should be able to rate each other and leave reviews.
+
+1. Customer Support: The service should provide customer support to handle issues and complaints.
+
+Now that we have defined the business requirements, let's move on to the architecture of the ride-sharing service.
+
+# Stakeholder Analysis
+In the case of a ride-sharing service, stakeholders can include a wide range of individuals or groups who have an interest or investment in the success of the service. Some examples of stakeholders in a ride-sharing service might include:
+
+1. Investors: Investors who have put money into the ride-sharing service and expect a return on their investment. These investors may include venture capitalists, angel investors, or institutional investors.
+
+1. Riders: People who use the ride-sharing service to get from one place to another. These individuals have a stake in the success of the service because they rely on it for transportation.
+
+1. Drivers: Individuals who work for the ride-sharing service and provide rides to riders. Drivers have a stake in the success of the service because their livelihood depends on it.
+
+1. Administrators: People who are responsible for managing the ride-sharing service, including making decisions about pricing, marketing, and customer support.
+
+1. Regulators: Government agencies or other entities that have regulatory authority over the ride-sharing service. These regulators may have an interest in ensuring that the service operates in compliance with local laws and regulations.
+
+Competitors: Other companies that offer ride-sharing services and may be impacted by the success of the service.
+
+Each stakeholder group may have different goals, interests, and expectations for the ride-sharing service, and it's important to consider their perspectives when designing the architecture of the service. By understanding the needs and goals of each stakeholder group, architects can design a ride-sharing service that meets the needs of everyone involved and is well-positioned for success.
+
+In addition to the stakeholders who have a positive interest or investment in the success of the ride-sharing service, there may also be negative stakeholders who have concerns or objections to the service. Some examples of negative stakeholders in a ride-sharing service might include:
+
+1. Taxi companies: Traditional taxi companies may see ride-sharing services as competition and may have negative opinions about the service. They may lobby against the service or try to block its entry into certain markets.
+
+1. Local governments: Some local governments may have concerns about the impact of ride-sharing services on traffic congestion, public safety, and revenue from traditional taxi and transportation fees. They may impose regulations or taxes on the service that increase costs or limit its operations.
+
+1. Labor unions: Labor unions may have concerns about the working conditions and wages of ride-sharing service drivers. They may lobby for greater protections or regulations that limit the flexibility or earning potential of drivers.
+
+1. Environmental groups: Environmental groups may be concerned about the impact of ride-sharing services on air quality and carbon emissions. They may advocate for alternative transportation solutions or policies that limit the use of ride-sharing services.
+
+1. Privacy advocates: Privacy advocates may have concerns about the collection and use of user data by ride-sharing services. They may advocate for greater privacy protections or transparency around how user data is collected and used.
+
+Understanding the concerns and objections of negative stakeholders is important in designing a ride-sharing service that is sustainable and responsive to the needs of all stakeholders. By considering the perspectives of both positive and negative stakeholders, architects can design a ride-sharing service that addresses concerns and objections while still meeting the needs of riders, drivers, investors, and other positive stakeholders.
+
+
+# Architecture Principles
+# Architecture Components
+# Functional Requirements
+# Viewpoint
+# Functional Viewpoint
+# Development Viewpoint
+# Deployment View
+# Context Viewpoint
+# Quality Attribute
+# Consistency
+# Availability
+# Scalability
+# Flexibility
+# Security
+# Performance
+# Technical Debt
+# Conclusion
+# References
+# Appendix
+
 
 ## Functional Requirements
 
