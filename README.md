@@ -90,6 +90,8 @@ Before we dive deeper into the architecture of the ride-sharing service, let's f
 
 1. Customer Support: The service should provide customer support to handle issues and complaints.
 
+1. Reducing costs: Companies aim to optimize their operations to reduce costs, including driver acquisition and retention, maintenance of vehicles, and marketing expenses.
+
 Now that we have defined the business requirements, let's move on to the architecture of the ride-sharing service.
 
 # Stakeholder Analysis
