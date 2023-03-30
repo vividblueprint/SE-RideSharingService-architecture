@@ -179,7 +179,8 @@ The basic features and functionalities of an Admin panel would be:
 
 
 # Viewpoint
-## Use Case Viewpoint
+
+### Use Case Viewpoint
 
 Ride sharing services have become a popular mode of transportation for people all over the world. They offer an affordable and convenient way to get around, and can be accessed through a variety of platforms, including mobile apps and websites. In this Use Case Viewpoint, we will examine the different use cases for ride sharing services, including how they are used by passengers and drivers.
 
