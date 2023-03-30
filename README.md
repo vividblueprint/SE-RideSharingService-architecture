@@ -202,13 +202,13 @@ These actors play a crucial role in the ride sharing service use case. The prima
 #### Use Cases:
 
 1. Request a Ride
-- Rider opens the ride sharing service app and enters their destination.
-- Ride sharing service uses GPS to determine the rider's location and matches the rider with an available driver who is nearby and notifies the driver of the request.
-- Driver accepts the ride request and the Navigation Engine provides turn-by-turn directions to navigate to the pick-up location.
+-- Rider opens the ride sharing service app and enters their destination.
+-- Ride sharing service uses GPS to determine the rider's location and matches the rider with an available driver who is nearby and notifies the driver of the request.
+-- Driver accepts the ride request and the Navigation Engine provides turn-by-turn directions to navigate to the pick-up location.
 1. Start Ride
-- Driver picks up the rider at the pick-up location.
-- Driver starts the ride in the app to begin tracking the distance and time of the ride using GPS.
-- Navigation Engine provides turn-by-turn directions to the destination.
+-- Driver picks up the rider at the pick-up location.
+--  Driver starts the ride in the app to begin tracking the distance and time of the ride using GPS.
+-- Navigation Engine provides turn-by-turn directions to the destination.
 1. End Ride
 - Driver completes the ride in the app when they arrive at the destination.
 - Rider confirms that the ride has ended and pays for the ride through the app, with GPS being used to calculate the fare based on distance and time.
