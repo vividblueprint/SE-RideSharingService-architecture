@@ -68,6 +68,7 @@ This software architecture document aims to provide a detailed overview of the a
 
 The document will begin by providing an overview of the ride-sharing industry, including the key players and trends that have emerged in recent years. This will be followed by a detailed description of the architecture of a typical ride-sharing service, including the key components such as the rider app, driver app, and backend systems. The document will also cover topics such as data privacy and security, scalability and performance, and integration with third-party services.
 
+
 Overall, this document aims to provide a comprehensive and practical guide to the architecture of a ride-sharing service, with a focus on the technical considerations and challenges involved in designing and operating such a service. By providing a clear and detailed understanding of the key systems and components involved in a ride-sharing service, this document will help developers and stakeholders to make informed decisions and build successful ride-sharing services that meet the needs of riders, drivers, and other stakeholders.
 
 # Business Requirements
