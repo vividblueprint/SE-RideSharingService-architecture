@@ -149,16 +149,51 @@ Understanding the concerns and objections of negative stakeholders is important 
 
 ## Functional Requirements
 
-- Riders can view nearby drivers
+### Essential Requirements of Rider/Passenger Interface
+
+- Registration: Riders can register or sign in via email and social media. They can also register for different payment methods.
 - Riders can request a ride
-- Riders can view the driver’s ETA and approximate price
-- Driver accepts the trip; the rider can view the driver’s location and communicate until trip completion.
-- Book a cab
-- Match riders with drivers
-- See cabs in your vicinity
-- Location tracking
-- Post-tractions: Collect ratings, send emails, update databases, schedule payments
-- Price and Surge: the price is increased when there are more demand and less supply with the help of prediction algorithms. According the ride-sharing service helps to meet supply demands by increasing the price, more cabs will be on the road when the demand is more.
+- Taxi Booking: The riders can book a taxi, enter their address, select the type of car, and adjust the pickup location. 
+- Fare Calculator: The fare for traveling from point A to point B is automatically calculated based on the number of kilometers, the type of car chosen, current fuel rates, estimated traffic, etc
+- Ride Tracking: The driver’s location is tracked in Real-time based on which timely updates on traffic, travel routes, and the estimated time of arrival is provided to the rider.
+- Payment: Cashless and in-app payment features are at the rider’s disposal. They can choose from various options, including credit cards, debit cards, net banking, PayPal, etc. 
+- Messaging & Calling: Messages and calls to the rider providing the status of their ride.
+- Driver Rating & Analysis: Provide driver rating based on the journey, taken route, car comfort, driver’s behavior, etc.
+- Travel History: The track record of the previous rides and transactions.
+- Ride Cancellation: The rider has the option of canceling the ride, but needs to be done within a specified time limit to avoid paying the  cancellation fee.
+- Split Payment: Riders also can opt to share a ride with other passengers. 
+- Schedule for Later: This feature allows the riders to book a ride in advance. 
+- Book for Others: Using this feature, one can also book a taxi for their friends, relatives, colleagues, etc.
+
+
+### Essential Requirements of Driver Interface
+
+- Driver Profile & Status: This feature gives the complete information of the driver, for example: if he/she is verified or not, their license, car insurance, etc. The driver’s availability status is also displayed through this feature.
+- Trip Alert: The driver would be notified for incoming ride requests, information on the destination, pickup location, travel route, and rider’s necessary details.
+- Push Notifications: Notifications are received when the ride commences, any change in the travel route, heavy traffic ahead and on the completion of the ride
+- Navigation & Route Optimization: The driver uses this feature to navigate the traffic, opt for the shortest way to the destination using the Google Maps
+- Reports: Provide insights regarding trips and earnings on a daily/weekly/monthly basis
+- Waiting time: The rider would be charged extra if the waiting period exceeds 5minutes.
+- Next Ride: The ride is notified of an upcoming ride while he/she is still completing the previous one.
+
+
+### Essential Requirements of Admin Interface
+An Admin panel is crucial for the proper integration and smooth functioning of the system.
+
+The basic features and functionalities of an Admin panel would be:
+
+- Customer and Driver Details Management (CRM)
+- Booking Management
+- Vehicle Detail Management (if self-owned)
+- Location and Fares Management
+- Call System Management
+- Communication
+- Ratings and Reviews
+- Promotions and Discounts
+- Payroll Management
+- Content Management
+- Customer Support and Help
+
 
 ## Quality Attribute
 
