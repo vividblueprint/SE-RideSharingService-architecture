@@ -130,24 +130,6 @@ Understanding the concerns and objections of negative stakeholders is important 
 # Architecture Principles
 # Architecture Components
 # Functional Requirements
-# Viewpoint
-# Functional Viewpoint
-# Development Viewpoint
-# Deployment View
-# Context Viewpoint
-# Quality Attribute
-# Consistency
-# Availability
-# Scalability
-# Flexibility
-# Security
-# Performance
-# Technical Debt
-# Conclusion
-# References
-# Appendix
-
-
 ## Functional Requirements
 
 ### Essential Requirements of Rider/Passenger Interface
@@ -194,6 +176,25 @@ The basic features and functionalities of an Admin panel would be:
 - Payroll Management
 - Content Management
 - Customer Support and Help
+
+
+# Viewpoint
+# Functional Viewpoint
+# Development Viewpoint
+# Deployment View
+# Context Viewpoint
+# Quality Attribute
+# Consistency
+# Availability
+# Scalability
+# Flexibility
+# Security
+# Performance
+# Technical Debt
+# Conclusion
+# References
+# Appendix
+
 
 
 ## Quality Attribute
