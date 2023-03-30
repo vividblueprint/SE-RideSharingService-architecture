@@ -202,34 +202,34 @@ These actors play a crucial role in the ride sharing service use case. The prima
 #### Use Cases:
 
 1. Request a Ride
--- Rider opens the ride sharing service app and enters their destination.
--- Ride sharing service uses GPS to determine the rider's location and matches the rider with an available driver who is nearby and notifies the driver of the request.
--- Driver accepts the ride request and the Navigation Engine provides turn-by-turn directions to navigate to the pick-up location.
+   - Rider opens the ride sharing service app and enters their destination.
+   - Ride sharing service uses GPS to determine the rider's location and matches the rider with an available driver who is nearby and notifies the driver of the request.
+   - Driver accepts the ride request and the Navigation Engine provides turn-by-turn directions to navigate to the pick-up location.
 1. Start Ride
--- Driver picks up the rider at the pick-up location.
---  Driver starts the ride in the app to begin tracking the distance and time of the ride using GPS.
--- Navigation Engine provides turn-by-turn directions to the destination.
+   - Driver picks up the rider at the pick-up location.
+   -  Driver starts the ride in the app to begin tracking the distance and time of the ride using GPS.
+   - Navigation Engine provides turn-by-turn directions to the destination.
 1. End Ride
-- Driver completes the ride in the app when they arrive at the destination.
-- Rider confirms that the ride has ended and pays for the ride through the app, with GPS being used to calculate the fare based on distance and time.
-- GPS is used to track the vehicle's location and calculate the fare.
-- Navigation Engine provides the driver with the most efficient route to the destination, which helps to reduce the time and distance of the ride.
+   - Driver completes the ride in the app when they arrive at the destination.
+   - Rider confirms that the ride has ended and pays for the ride through the app, with GPS being used to calculate the fare based on distance and time.
+   - GPS is used to track the vehicle's location and calculate the fare.
+   - Navigation Engine provides the driver with the most efficient route to the destination, which helps to reduce the time and distance of the ride.
 1. Cancel Ride
-- Rider cancels the ride request before the driver arrives.
-- Ride sharing service cancels the ride and notifies the driver, with GPS being used to update the driver's location.
-- Navigation Engine provides the driver with updated directions to their next destination.
+   - Rider cancels the ride request before the driver arrives.
+   - Ride sharing service cancels the ride and notifies the driver, with GPS being used to update the driver's location.
+   - Navigation Engine provides the driver with updated directions to their next destination.
 1. Update Ride Details
-- Rider updates the pick-up location or destination of the ride request before the driver arrives.
-- Ride sharing service updates the ride details and notifies the driver, with GPS being used to update the driver's route and estimated time of arrival.
-- Navigation Engine provides the driver with updated directions to the new destination.
+   - Rider updates the pick-up location or destination of the ride request before the driver arrives.
+   - Ride sharing service updates the ride details and notifies the driver, with GPS being used to update the driver's route and estimated time of arrival.
+   - Navigation Engine provides the driver with updated directions to the new destination.
 1. Rate Driver
-- Rider rates the driver on a scale of 1 to 5 stars after the ride is complete.
-- Ride sharing service records the rating and uses it to inform future ride matches, with GPS being used to track the driver's location and route during the ride.
+   - Rider rates the driver on a scale of 1 to 5 stars after the ride is complete.
+   - Ride sharing service records the rating and uses it to inform future ride matches, with GPS being used to track the driver's location and route during the ride.
 1. Report Issue
-- Rider reports an issue with the ride, such as poor driving or unsafe conditions.
-- Ride sharing service records the report and investigates the issue, with GPS being used to track the vehicle's location and route during the ride.
+   - Rider reports an issue with the ride, such as poor driving or unsafe conditions.
+   - Ride sharing service records the report and investigates the issue, with GPS being used to track the vehicle's location and route during the ride.
 1. View Ride History
-- Rider and driver can view their past ride history in the app, including the pick-up and drop-off locations, distance, time, fare, and rating, with GPS being used to track the vehicle's location and route during the ride.
+   - Rider and driver can view their past ride history in the app, including the pick-up and drop-off locations, distance, time, fare, and rating, with GPS being used to track the vehicle's location and route during the ride.
 1. Manage Account
 - Rider and driver can manage their account details, such as payment information and personal information, through the app.
 # Functional Viewpoint
