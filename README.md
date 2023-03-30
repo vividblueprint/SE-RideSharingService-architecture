@@ -232,6 +232,19 @@ These actors play a crucial role in the ride sharing service use case. The prima
    - Rider and driver can view their past ride history in the app, including the pick-up and drop-off locations, distance, time, fare, and rating, with GPS being used to track the vehicle's location and route during the ride.
 1. Manage Account
 - Rider and driver can manage their account details, such as payment information and personal information, through the app.
+
+# Logical Viewpoint
+A logical view of a ride-sharing service can be represented as a layered architecture. At the top layer, there is the user interface, which interacts with the lower layers of the system. The lower layers of the system include the authentication and authorization layer, ride matching layer, payment and pricing layer, rating and review layer, and analytics and reporting layer..
+
+- User interface layer: The user interface layer provides the front-end interface for users to access the ride-sharing service. This layer interacts with the authentication and authorization layer, which handles user authentication and authorization.
+
+- Ride matching layer: The ride matching layer is responsible for matching passengers with drivers based on their location, destination, and other parameters. The payment and pricing layer calculates the fare based on factors such as distance traveled, time taken, and surge pricing.
+
+- Rating and review layer: The rating and review layer allows passengers to rate and review their driver and vice versa. This helps to maintain the quality of service and provides feedback for improvement.
+
+- Analytics and reporting layer: Finally, the analytics and reporting layer collects and analyzes data related to the ride-sharing service, such as ride volumes, revenue, and user feedback. It provides insights into the performance of the service and helps to identify areas for improvement.
+
+
 # Functional Viewpoint
 # Development Viewpoint
 # Deployment View
