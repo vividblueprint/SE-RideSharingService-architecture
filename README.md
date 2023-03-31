@@ -44,6 +44,8 @@
 - [Architecture Components](#architecture-components)
 - [Functional Requirements](#functional-requirements)
 - [Viewpoint](#viewpoint)
+  - [Use Case Viewpoint](#use-case-viewpoint)
+  - [Logical Viewpoint](#logical-viewpoint)
   - [Functional Viewpoint](#functional-viewpoint)
   - [Development Viewpoint](#development-viewpoint)
   - [Deployment View](#deployment-view)
@@ -128,11 +130,51 @@ Understanding the concerns and objections of negative stakeholders is important 
 
 
 # Architecture Principles
-# Architecture Components
-# Functional Requirements
-## Functional Requirements
+The architecture principles for a ride-sharing service may vary depending on the specific needs and goals of the service. However, here are some potential architecture principles:
 
-### Essential Requirements of Rider/Passenger Interface
+1. Geolocation: The architecture should support the ability to locate and track drivers and passengers in real-time using GPS and geolocation data.
+
+1. Scalability: The architecture should be designed to handle large volumes of requests and traffic during peak times, such as rush hour or major events.
+
+1. Dynamic pricing: The architecture should support the ability to adjust pricing in real-time based on supply and demand, such as surge pricing during peak times.
+
+1. Ratings and reviews: The architecture should include mechanisms for riders and drivers to rate and review each other, which can help maintain a high level of service quality and safety.
+
+1. Payment processing: The architecture should support secure and reliable payment processing for riders and drivers, including options for different payment methods and currencies.
+
+1. Matching algorithms: The architecture should include intelligent matching algorithms to match riders with drivers based on factors such as proximity, availability, and ride history.
+
+1. Driver verification: The architecture should include mechanisms for verifying the identity and qualifications of drivers, including background checks, driver’s license verification, and vehicle inspections.
+
+1. Customer support: The architecture should include robust customer support mechanisms, including chatbots, phone support, and email support, to address any issues or concerns that riders or drivers may have.
+
+1. Regulatory compliance: The architecture should comply with local regulations and laws related to ride-sharing services, such as licensing requirements and insurance regulations.
+
+1. Continuous improvement: The architecture should support the ability to continuously improve the service through data analytics, user feedback, and testing of new features and services.
+
+# Architecture Components
+1. The architecture components of a ride-sharing service can be broken down into several layers, each with their own set of components. Here are some potential architecture components for a ride-sharing service:
+
+1. Presentation Layer: This layer includes the components that interact with users, such as mobile apps or web interfaces, and allows riders and drivers to request or accept rides, track the location of their ride, and communicate with each other.
+
+1. Application Layer: This layer includes the logic that manages the ride-sharing service, such as matching algorithms that connect drivers with riders, pricing algorithms that determine ride costs, and payment processing components that handle payments.
+
+1. Service Layer: This layer includes the components that provide backend services, such as geolocation services that track the location of drivers and passengers, and notification services that alert drivers and riders of ride requests or updates.
+
+1. Data Layer: This layer includes the components that store and manage data related to the ride-sharing service, such as user profiles, ride history, payment information, and driver qualifications.
+
+1. Infrastructure Layer: This layer includes the hardware and software infrastructure that supports the ride-sharing service, such as servers, databases, and network components.
+
+1. Analytics Layer: This layer includes the components that provide data analytics and business intelligence, such as tools for monitoring service performance, analyzing rider and driver behavior, and identifying areas for improvement.
+
+1. Security Layer: This layer includes the components that ensure the security of the ride-sharing service, such as authentication and access control mechanisms, data encryption, and monitoring for suspicious activity.
+
+1. Integration Layer: This layer includes the components that integrate the ride-sharing service with other systems or services, such as third-party payment processors, mapping services, or social media platforms.
+
+1. Overall, the architecture of a ride-sharing service should be designed to provide a reliable, scalable, and secure platform that can deliver high-quality services to riders and drivers while complying with regulatory requirements and evolving to meet changing market needs.
+# Functional Requirements
+
+## Essential Requirements of Rider/Passenger Interface
 
 - Registration: Riders can register or sign in via email and social media. They can also register for different payment methods.
 - Riders can request a ride
@@ -148,8 +190,7 @@ Understanding the concerns and objections of negative stakeholders is important 
 - Schedule for Later: This feature allows the riders to book a ride in advance. 
 - Book for Others: Using this feature, one can also book a taxi for their friends, relatives, colleagues, etc.
 
-
-### Essential Requirements of Driver Interface
+## Essential Requirements of Driver Interface
 
 - Driver Profile & Status: This feature gives the complete information of the driver, for example: if he/she is verified or not, their license, car insurance, etc. The driver’s availability status is also displayed through this feature.
 - Trip Alert: The driver would be notified for incoming ride requests, information on the destination, pickup location, travel route, and rider’s necessary details.
@@ -159,12 +200,9 @@ Understanding the concerns and objections of negative stakeholders is important 
 - Waiting time: The rider would be charged extra if the waiting period exceeds 5minutes.
 - Next Ride: The ride is notified of an upcoming ride while he/she is still completing the previous one.
 
-
-### Essential Requirements of Admin Interface
+## Essential Requirements of Admin Interface
 An Admin panel is crucial for the proper integration and smooth functioning of the system.
-
 The basic features and functionalities of an Admin panel would be:
-
 - Customer and Driver Details Management (CRM)
 - Booking Management
 - Vehicle Detail Management (if self-owned)
@@ -180,7 +218,7 @@ The basic features and functionalities of an Admin panel would be:
 
 # Viewpoint
 
-### Use Case Viewpoint
+## Use Case Viewpoint
 
 Ride sharing services have become a popular mode of transportation for people all over the world. They offer an affordable and convenient way to get around, and can be accessed through a variety of platforms, including mobile apps and websites. In this Use Case Viewpoint, we will examine the different use cases for ride sharing services, including how they are used by passengers and drivers.
 
@@ -188,18 +226,18 @@ Ride sharing services have become a popular mode of transportation for people al
 
 These actors play a crucial role in the ride sharing service use case. The primary users (Rider, Ride Sharing Company, and Driver) are responsible for the core functionality of the service, while the secondary users (GPS, Navigation Engine, and Payment Gateway) provide supporting functions to ensure that the ride is completed efficiently and securely.
 
-#### Primary users:
+### Primary users:
 
 1. Rider: A person who needs a ride from one location to another.
 1. Driver: A person who provides a ride to a rider using their own vehicle.
 1. Ride Sharing Company: The organization that provides the ride sharing service and manages the API.
 
-#### Secondary users:
+### Secondary users:
 1. GPS (Global Positioning System): GPS is an actor that is responsible for providing real-time location data to the ride sharing service.
 1. Navigation Engine: Navigation Engine is an actor that provides route guidance to the driver during the ride. The use case of Navigation Engine involves providing real-time traffic information, suggesting alternate routes, and providing turn-by-turn directions to the driver.
 1. Payment Gateway: Payment Gateway is an actor that facilitates the transaction between the rider and the ride sharing service. The use case of Payment Gateway involves securely processing the payment information, verifying the transaction, and transferring the funds to the ride sharing service.
 
-#### Use Cases:
+### Use Cases:
 
 1. Request a Ride
    - Rider opens the ride sharing service app and enters their destination.
@@ -231,9 +269,9 @@ These actors play a crucial role in the ride sharing service use case. The prima
 1. View Ride History
    - Rider and driver can view their past ride history in the app, including the pick-up and drop-off locations, distance, time, fare, and rating, with GPS being used to track the vehicle's location and route during the ride.
 1. Manage Account
-- Rider and driver can manage their account details, such as payment information and personal information, through the app.
+   - Rider and driver can manage their account details, such as payment information and personal information, through the app.
 
-# Logical Viewpoint
+## Logical Viewpoint
 A logical view of a ride-sharing service can be represented as a layered architecture. At the top layer, there is the user interface, which interacts with the lower layers of the system. The lower layers of the system include the authentication and authorization layer, ride matching layer, payment and pricing layer, rating and review layer, and analytics and reporting layer..
 
 - User interface layer: The user interface layer provides the front-end interface for users to access the ride-sharing service. This layer interacts with the authentication and authorization layer, which handles user authentication and authorization.
@@ -251,39 +289,30 @@ A logical view of a ride-sharing service can be represented as a layered archite
 - Authentication and Authorization layer: This layer handles the authentication and authorization of users to access the ride-sharing service. It ensures that only authorized users are allowed to use the service.
 
 
-# Functional Viewpoint
-# Development Viewpoint
-# Deployment View
-# Context Viewpoint
+## Functional Viewpoint
+## Development Viewpoint
+## Deployment View
+## Context Viewpoint
+
 # Quality Attribute
-# Consistency
-# Availability
-# Scalability
-# Flexibility
-# Security
-# Performance
-# Technical Debt
-# Conclusion
-# References
-# Appendix
+## Consistency
 
-
-
-## Quality Attribute
-
-### Consistency
 Mission-critical applications such as financial dashboards require data to be consistent across all regions. This includes zero data loss in the inter-region and intraregional dispersal and processing mechanisms, de-duplication as well as ability to certify data quality.
 
-### Availability
+## Availability
+
 The real time data infrastructure stack must be highly available with 99.99 percentile guarantee. Loss of availability has a direct impact on ride sharing business and may result in significant financial losses. For instance, dynamic pricing leverages the real-time data infrastructure component for calculating demand and supply ratios per geo-fence, which in turn is used to influence the price of a trip.
 
-### Scalability
+## Scalability
+
 The raw data streams constitute petabytes of data volume collected per day across all regions. This data is constantly growing based on organic growth of our user base, new lines of business deployed by ride sharing company as well as new real time analytics use cases that arise over time. The ability to scale with this ever-growing data set in a seamless manner, without requiring users to re-architect the processing pipelines is a fundamental requirement of the real-time data infrastructure stack.
 
-### Flexibility
+## Flexibility
+
 We need to provide programmatic as well as declarative (SQL like) interface for expressing computational logic to accommodate the diverse user groups. In addition, some use cases need a push-based model which is semi stateful and continuously emits generated results whereas others might need a stateful pull-based model where the user can execute queries on the raw data stream. For instance, users can create intelligent alerts in case of business rule violation using push-based stream processing pipelines. Whereas, dashboarding and triaging will require a pull-based SQL interface for the same datasets.
 
-### Security
+## Security
+
 This system has multistep security. The user needs to login to the system every time by providing a password and user ID, and the login session will time out after every 2 minutes to ensure high security. When the passenger pays the bill, they need to again give the password. All of those steps will keep their bank card and payment information secure. In bellow see full description about security.
 
 Basic security behaviors:
@@ -296,14 +325,21 @@ For internet access, the following requirements are mandatory
 - Auditing: Every sensitive action can be logged
 - Non-repudiation: gives evidence a specific action occurred
 
-### Performance
+## Performance
+
 This system has high performance ability. Passengers can book a taxi and search for availability in a short period of time. Admin can update the bike taxi list. Search queries should return 90% of the time below 5 seconds. The credit card payment transaction should finish in 10 seconds.
 
-## Viewpoint
+# Technical Debt
 
 
-The system has some viewpoint. 
 
-- Use-Case view
-- Logical view
-- Development view
+# Conclusion
+
+
+
+# References
+
+
+
+# Appendix
+
