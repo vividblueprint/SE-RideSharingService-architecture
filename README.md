@@ -37,30 +37,30 @@
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Business Requirements](#business-requirements)
-- [Stakeholder Analysis](#stakeholder-analysis)
-- [Architecture Principles](#architecture-principles)
-- [Architecture Components](#architecture-components)
-- [Functional Requirements](#functional-requirements)
-- [Viewpoint](#viewpoint)
-  - [Use Case Viewpoint](#use-case-viewpoint)
-  - [Logical Viewpoint](#logical-viewpoint)
-  - [Functional Viewpoint](#functional-viewpoint)
-  - [Development Viewpoint](#development-viewpoint)
-  - [Deployment View](#deployment-view)
-  - [Context Viewpoint](#context-viewpoint)
-- [Quality Attribute](#quality-attribute)
-  - [Consistency](#consistency)
-  - [Availability](#availability)
-  - [Scalability](#scalability)
-  - [Flexibility](#flexibility)
-  - [Security](#security)
-  - [Performance](#performance)
-- [Technical Debt](#technical-debt)
-- [Conclusion](#conclusion)
-- [References](#references)
-- [Appendix](#appendix)
+1. [Introduction](#introduction)
+1. [Business Requirements](#business-requirements)
+1. [Stakeholder Analysis](#stakeholder-analysis)
+1. [Architecture Principles](#architecture-principles)
+1. [Architecture Components](#architecture-components)
+1. [Functional Requirements](#functional-requirements)
+1. [Viewpoint](#viewpoint)
+   - [Use Case Viewpoint](#use-case-viewpoint)
+   - [Logical Viewpoint](#logical-viewpoint)
+   - [Functional Viewpoint](#functional-viewpoint)
+   - [Development Viewpoint](#development-viewpoint)
+   - [Deployment View](#deployment-view)
+   - [Context Viewpoint](#context-viewpoint)
+1. [Quality Attribute](#quality-attribute)
+   - [Consistency](#consistency)
+   - [Availability](#availability)
+   - [Scalability](#scalability)
+   - [Flexibility](#flexibility)
+   - [Security](#security)
+   - [Performance](#performance)
+1. [Technical Debt](#technical-debt)
+1. [Conclusion](#conclusion)
+1. [References](#references)
+1. [Appendix](#appendix)
 
 # Introduction
 
@@ -216,7 +216,7 @@ The basic features and functionalities of an Admin panel would be:
 - Customer Support and Help
 
 
-# Viewpoint
+# Viewpoints
 
 ## Use Case Viewpoint
 
