@@ -1,5 +1,5 @@
 <br>
-<br><p align=center><img width=400 src="https://jugnoo.io/wp-content/uploads/2021/05/2-1024x536.png"/></p>
+<br><p align=center><img width=700 src="https://jugnoo.io/wp-content/uploads/2021/05/2-1024x536.png"/></p>
 
 <h1 align="center" >
 <img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
@@ -64,36 +64,29 @@
 
 # Introduction
 
-The ride-sharing industry has exploded in popularity in recent years, with services such as Uber, Lyft, and Grab becoming ubiquitous in cities around the world. These services offer a new and convenient way for people to get around, using a combination of technology and transportation to connect riders with drivers. However, designing and implementing a successful ride-sharing service is no simple feat, and requires careful consideration of a wide range of technical, logistical, and social factors.
+The ride-sharing industry has exploded in popularity in recent years, with services such as `Uber`, `Lyft`, and Grab becoming ubiquitous in cities around the world. These services offer a new and convenient way for people to get around, using a combination of technology and transportation to connect riders with drivers. However, designing and implementing a successful ride-sharing service is no simple feat, and requires careful consideration of a wide range of `technical`, `logistical`, and `social` factors.
 
-This software architecture document aims to provide a detailed overview of the architecture of a ride-sharing service, including the key components and systems involved in its operation. This document is intended for developers, architects, and stakeholders who are involved in the development or management of a ride-sharing service, and who need to understand the technical aspects of the service in order to make informed decisions.
+This software architecture document aims to provide a detailed overview of the architecture of a `ride-sharing service`, including the key components and systems involved in its operation. This document is intended for `developers`, `architects`, and `stakeholders` who are involved in the `development` or `management` of a ride-sharing service, and who need to understand the technical aspects of the service in order to make informed decisions.
 
-The document will begin by providing an overview of the ride-sharing industry, including the key players and trends that have emerged in recent years. This will be followed by a detailed description of the architecture of a typical ride-sharing service, including the key components such as the rider app, driver app, and backend systems. The document will also cover topics such as data privacy and security, scalability and performance, and integration with third-party services.
+The document will begin by providing an overview of the `ride-sharing industry`, including the key players and trends that have emerged in recent years. This will be followed by a detailed description of the architecture of a `typical ride-sharing service`, including the key components such as the `rider app`, `driver app`, and `backend systems`. The document will also cover topics such as `data privacy` and `security`, `scalability` and `performance`, and `integration` with `third-party` services.
 
-
-Overall, this document aims to provide a comprehensive and practical guide to the architecture of a ride-sharing service, with a focus on the technical considerations and challenges involved in designing and operating such a service. By providing a clear and detailed understanding of the key systems and components involved in a ride-sharing service, this document will help developers and stakeholders to make informed decisions and build successful ride-sharing services that meet the needs of riders, drivers, and other stakeholders.
+Overall, this document aims to provide a comprehensive and practical guide to the architecture of a ride-sharing service, with a focus on the technical considerations and challenges involved in designing and operating such a service. By providing a clear and detailed understanding of the key systems and components involved in a ride-sharing service, this document will help developers and `stakeholders` to make informed decisions and build successful ride-sharing services that meet the needs of `riders`, `drivers`, and `other stakeholders`.
 
 # Business Requirements
 
 Before we dive deeper into the architecture of the ride-sharing service, let's first define the business requirements. The ride-sharing service should meet the following requirements:
 
-1. Passenger and Driver Registration: The service should allow passengers and drivers to easily register and create accounts.
-
-1. Ride Requests: Passengers should be able to request rides using the app, specifying their pickup and dropoff locations, and the type of vehicle they want. Drivers should receive notifications of incoming ride requests.
-
-1. Driver Acceptance: Drivers should be able to accept or reject ride requests based on their availability.
-
-1. Navigation: The app should provide navigation instructions to the pickup and dropoff locations for both passengers and drivers.
-
-1. Real-Time Tracking: Passengers should be able to track the driver's location in real-time.
-
-1. Payment Processing: The service should process payments securely and efficiently, handling refunds, chargebacks, and disputes.
-
-1. Ratings and Reviews: Passengers and drivers should be able to rate each other and leave reviews.
-
-1. Customer Support: The service should provide customer support to handle issues and complaints.
-
-1. Reducing costs: Companies aim to optimize their operations to reduce costs, including driver acquisition and retention, maintenance of vehicles, and marketing expenses.
+|Requirements | Descriptions|
+|---: | :---|
+|Passenger and Driver Registration | The service should allow passengers and drivers to easily `register` and `create` accounts.|
+|Ride Requests | Passengers should be able to `request rides` using the `app`, specifying their `pickup` and `dropoff locations`, and the `type of vehicle` they want. Drivers should receive notifications of `incoming ride requests`.|
+|Driver Acceptance | Drivers should be able to `accept` or `reject` ride requests based on their availability.|
+|Navigation | The app should provide `navigation` instructions to the pickup and dropoff locations for both passengers and drivers.|
+|Real-Time Tracking | Passengers should be able to track the driver's location in `real-time`.
+|Payment Processing | The service should process payments `securely` and `efficiently`, handling `refunds`, `chargebacks`, and `disputes`.
+|Ratings and Reviews | Passengers and drivers should be able to `rate` each other and leave `reviews`.
+|Customer Support | The service should provide `customer support` to handle `issues` and `complaints`.
+| Reducing costs | Companies aim to optimize their operations to `reduce costs`, including driver `acquisition` and `retention`, `maintenance of vehicles`, and `marketing expenses`.|
 
 Now that we have defined the business requirements, let's move on to the architecture of the ride-sharing service.
 
@@ -238,7 +231,18 @@ These actors play a crucial role in the ride sharing service use case. The prima
 1. Payment Gateway: Payment Gateway is an actor that facilitates the transaction between the rider and the ride sharing service. The use case of Payment Gateway involves securely processing the payment information, verifying the transaction, and transferring the funds to the ride sharing service.
 
 ### Use Cases:
+This Use Case Diagram is a graphic depiction of the interactions among the elements of  Car Sharing System. It represents the methodology used in system analysis to identify, clarify, and organize system requirements of  Car Sharing System. The main actors of  Car Sharing System in this Use Case Diagram are: Super Admin, System User, Customer, Driver, who perform the different type of use cases such as Manage Booking, Manage Customer, Manage Payment, Manage Car History, Manage Insurance, Manage Memebership, Manage Destination, Manage Users and Full  Car Sharing System Operations. Major elements of the UML use case diagram of  Car Sharing System are shown on the picture below.
 
+The relationships between and among the actors and the use cases of  Car Sharing System: 
+
+**Super Admin Entity** : Use cases of Super Admin are Manage Booking, Manage Customer, Manage Payment, Manage Car History, Manage Insurance, Manage Memebership, Manage Destination, Manage Users and Full  Car Sharing System Operations
+
+**System User Entity**  : Use cases of System User are Manage Booking, Manage Customer, Manage Payment, Manage
+
+**Customer Entity** : Use cases of Customer are Request Sharing, View Sharing, Make Payment, View Payment History
+
+**Driver Entity**  : Use cases of Driver are Check Sharing Request, View Passengars, Manage Routes, Collect Payments
+<img src="https://raw.githubusercontent.com/vividblueprint/GitLearn/main/usecase.png?token=GHSAT0AAAAAACA4IBFLJ7ZCHPFGKH357OVAZBPMP6A">
 1. Request a Ride
    - Rider opens the ride sharing service app and enters their destination.
    - Ride sharing service uses GPS to determine the rider's location and matches the rider with an available driver who is nearby and notifies the driver of the request.
