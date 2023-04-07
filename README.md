@@ -171,44 +171,50 @@ Overall, the architecture of a ride-sharing service should be designed to provid
 
 ## Essential Requirements of Rider/Passenger Interface
 
-- Registration: Riders can register or sign in via email and social media. They can also register for different payment methods.
-- Riders can request a ride
-- Taxi Booking: The riders can book a taxi, enter their address, select the type of car, and adjust the pickup location. 
-- Fare Calculator: The fare for traveling from point A to point B is automatically calculated based on the number of kilometers, the type of car chosen, current fuel rates, estimated traffic, etc
-- Ride Tracking: The driver’s location is tracked in Real-time based on which timely updates on traffic, travel routes, and the estimated time of arrival is provided to the rider.
-- Payment: Cashless and in-app payment features are at the rider’s disposal. They can choose from various options, including credit cards, debit cards, net banking, PayPal, etc. 
-- Messaging & Calling: Messages and calls to the rider providing the status of their ride.
-- Driver Rating & Analysis: Provide driver rating based on the journey, taken route, car comfort, driver’s behavior, etc.
-- Travel History: The track record of the previous rides and transactions.
-- Ride Cancellation: The rider has the option of canceling the ride, but needs to be done within a specified time limit to avoid paying the  cancellation fee.
-- Split Payment: Riders also can opt to share a ride with other passengers. 
-- Schedule for Later: This feature allows the riders to book a ride in advance. 
-- Book for Others: Using this feature, one can also book a taxi for their friends, relatives, colleagues, etc.
+|Rider/Passenger Interface | Requirements|
+|---: | :---|
+|Registration | Riders can register or sign in via email and social media. They can also register for different payment methods. Riders can request a ride.
+|Taxi Booking | The riders can book a taxi, enter their address, select the type of car, and adjust the pickup location.|
+|Fare Calculator | The fare for traveling from point A to point B is automatically calculated based on the number of kilometers, the type of car chosen, current fuel rates, estimated traffic, etc.|
+|Ride Tracking | The driver’s location is tracked in Real-time based on which timely updates on traffic, travel routes, and the estimated time of arrival is provided to the rider.|
+|Payment | Cashless and in-app payment features are at the rider’s disposal. They can choose from various options, including credit cards, debit cards, net banking, PayPal, etc.|
+|Messaging & Calling | Messages and calls to the rider providing the status of their ride.|
+|Driver Rating & Analysis | Provide driver rating based on the journey, taken route, car comfort, driver’s behavior, etc.|
+|Travel History | The track record of the previous rides and transactions.|
+|Ride Cancellation | The rider has the option of canceling the ride, but needs to be done within a specified time limit to avoid paying the  cancellation fee.|
+|Split Payment | Riders also can opt to share a ride with other passengers.| 
+|Schedule for Later | This feature allows the riders to book a ride in advance.|
+|Book for Others | Using this feature, one can also book a taxi for their friends, relatives, colleagues, etc.|
 
 ## Essential Requirements of Driver Interface
 
-- Driver Profile & Status: This feature gives the complete information of the driver, for example: if he/she is verified or not, their license, car insurance, etc. The driver’s availability status is also displayed through this feature.
-- Trip Alert: The driver would be notified for incoming ride requests, information on the destination, pickup location, travel route, and rider’s necessary details.
-- Push Notifications: Notifications are received when the ride commences, any change in the travel route, heavy traffic ahead and on the completion of the ride
-- Navigation & Route Optimization: The driver uses this feature to navigate the traffic, opt for the shortest way to the destination using the Google Maps
-- Reports: Provide insights regarding trips and earnings on a daily/weekly/monthly basis
-- Waiting time: The rider would be charged extra if the waiting period exceeds 5minutes.
-- Next Ride: The ride is notified of an upcoming ride while he/she is still completing the previous one.
+|Driver Interface Requirements | Description|
+|---: | :---|
+|Driver Profile & Status | This feature gives the complete information of the driver, for example: if he/she is verified or not, their license, car insurance, etc. The driver’s availability status is also displayed through this feature.
+|Trip Alert | The driver would be notified for incoming ride requests, information on the destination, pickup location, travel route, and rider’s necessary details.
+|Push Notifications | Notifications are received when the ride commences, any change in the travel route, heavy traffic ahead and on the completion of the ride
+|Navigation & Route Optimization | The driver uses this feature to navigate the traffic, opt for the shortest way to the destination using the Google Maps
+|Reports | Provide insights regarding trips and earnings on a daily/weekly/monthly basis
+|Waiting time | The rider would be charged extra if the waiting period exceeds 5minutes.
+|Next Ride | The ride is notified of an upcoming ride while he/she is still completing the previous one.|
 
 ## Essential Requirements of Admin Interface
 An Admin panel is crucial for the proper integration and smooth functioning of the system.
 The basic features and functionalities of an Admin panel would be:
-- Customer and Driver Details Management (CRM)
-- Booking Management
-- Vehicle Detail Management (if self-owned)
-- Location and Fares Management
-- Call System Management
-- Communication
-- Ratings and Reviews
-- Promotions and Discounts
-- Payroll Management
-- Content Management
-- Customer Support and Help
+
+|Admin Interface Requirements|
+|:---:|
+|Customer and Driver Details Management (CRM)|
+|Booking Management|
+|Vehicle Detail Management (if self-owned)|
+|Location and Fares Management|
+|Call System Management|
+|Communication|
+|Ratings and Reviews|
+|Promotions and Discounts|
+|Payroll Management|
+|Content Management|
+|Customer Support and Help|
 
 
 # Viewpoints
@@ -223,28 +229,32 @@ These actors play a crucial role in the ride sharing service use case. The prima
 
 ### Primary users:
 
-1. Rider: A person who needs a ride from one location to another.
-1. Driver: A person who provides a ride to a rider using their own vehicle.
-1. Ride Sharing Company: The organization that provides the ride sharing service and manages the API.
+|Primary user| Description|
+|---: | :---|
+|Rider | A person who needs a ride from one location to another.|
+|Driver | A person who provides a ride to a rider using their own vehicle.|
+|Ride Sharing Company | The organization that provides the ride sharing service and manages the API.|
 
 ### Secondary users:
-1. GPS (Global Positioning System): GPS is an actor that is responsible for providing real-time location data to the ride sharing service.
-1. Navigation Engine: Navigation Engine is an actor that provides route guidance to the driver during the ride. The use case of Navigation Engine involves providing real-time traffic information, suggesting alternate routes, and providing turn-by-turn directions to the driver.
-1. Payment Gateway: Payment Gateway is an actor that facilitates the transaction between the rider and the ride sharing service. The use case of Payment Gateway involves securely processing the payment information, verifying the transaction, and transferring the funds to the ride sharing service.
+|Secondary users | Description|
+|---: | :---|
+|GPS (Global Positioning System) | GPS is an actor that is responsible for providing real-time location data to the ride sharing service.|
+|Navigation Engine | Navigation Engine is an actor that provides route guidance to the driver during the ride. The use case of Navigation Engine involves providing real-time traffic information, suggesting alternate routes, and providing turn-by-turn directions to the driver.|
+|Payment Gateway | Payment Gateway is an actor that facilitates the transaction between the rider and the ride sharing service. The use case of Payment Gateway involves securely processing the payment information, verifying the transaction, and transferring the funds to the ride sharing service.|
 
 ### Use Cases:
 This Use Case Diagram is a graphic depiction of the interactions among the elements of  Car Sharing System. It represents the methodology used in system analysis to identify, clarify, and organize system requirements of  Car Sharing System. The main actors of  Car Sharing System in this Use Case Diagram are: Super Admin, System User, Customer, Driver, who perform the different type of use cases such as Manage Booking, Manage Customer, Manage Payment, Manage Car History, Manage Insurance, Manage Memebership, Manage Destination, Manage Users and Full  Car Sharing System Operations. Major elements of the UML use case diagram of  Car Sharing System are shown on the picture below.
 
 The relationships between and among the actors and the use cases of  Car Sharing System: 
 
-**Super Admin Entity** : Use cases of Super Admin are Manage Booking, Manage Customer, Manage Payment, Manage Car History, Manage Insurance, Manage Memebership, Manage Destination, Manage Users and Full  Car Sharing System Operations
+<!-- **Super Admin Entity** : Use cases of Super Admin are Manage Booking, Manage Customer, Manage Payment, Manage Car History, Manage Insurance, Manage Memebership, Manage Destination, Manage Users and Full  Car Sharing System Operations
 
 **System User Entity**  : Use cases of System User are Manage Booking, Manage Customer, Manage Payment, Manage
 
 **Customer Entity** : Use cases of Customer are Request Sharing, View Sharing, Make Payment, View Payment History
 
-**Driver Entity**  : Use cases of Driver are Check Sharing Request, View Passengars, Manage Routes, Collect Payments
-<img src="https://raw.githubusercontent.com/vividblueprint/GitLearn/main/usecase.png?token=GHSAT0AAAAAACA4IBFLJ7ZCHPFGKH357OVAZBPMP6A">
+**Driver Entity**  : Use cases of Driver are Check Sharing Request, View Passengars, Manage Routes, Collect Payments -->
+
 1. Request a Ride
    - Rider opens the ride sharing service app and enters their destination.
    - Ride sharing service uses GPS to determine the rider's location and matches the rider with an available driver who is nearby and notifies the driver of the request.
@@ -278,22 +288,17 @@ The relationships between and among the actors and the use cases of  Car Sharing
    - Rider and driver can manage their account details, such as payment information and personal information, through the app.
 
 ## Logical Viewpoint
-A logical view of a ride-sharing service can be represented as a layered architecture. At the top layer, there is the user interface, which interacts with the lower layers of the system. The lower layers of the system include the authentication and authorization layer, ride matching layer, payment and pricing layer, rating and review layer, and analytics and reporting layer..
+A logical view of a ride-sharing service can be represented as a layered architecture. At the top layer, there is the user interface, which interacts with the lower layers of the system. The lower layers of the system include the authentication and authorization layer, ride matching layer, payment and pricing layer, rating and review layer, and analytics and reporting layer.
 
-- User interface layer: The user interface layer provides the front-end interface for users to access the ride-sharing service. This layer interacts with the authentication and authorization layer, which handles user authentication and authorization.
-
-- Ride matching layer: The ride matching layer is responsible for matching passengers with drivers based on their location, destination, and other parameters. The payment and pricing layer calculates the fare based on factors such as distance traveled, time taken, and surge pricing.
-
-- Payment and Pricing layer: The Payment and Pricing layer handles payment and pricing for the service. It calculates the fare based on factors such as distance, time, and demand. This layer also manages payment processing and billing.
-
-- Driver Interface layer : This layer  provides a user interface for drivers to accept ride requests, navigate to the passenger's location, and complete rides. The driver interface can be accessed through a mobile application.
-
-- Rating and review layer: The rating and review layer allows passengers to rate and review their driver and vice versa. This helps to maintain the quality of service and provides feedback for improvement.
-
-- Analytics and reporting layer: Finally, the analytics and reporting layer collects and analyzes data related to the ride-sharing service, such as ride volumes, revenue, and user feedback. It provides insights into the performance of the service and helps to identify areas for improvement.
-
-- Authentication and Authorization layer: This layer handles the authentication and authorization of users to access the ride-sharing service. It ensures that only authorized users are allowed to use the service.
-
+|Logical Viewpoint | Description|
+|---: | :---|
+|User interface layer | The user interface layer provides the front-end interface for users to access the ride-sharing service. This layer interacts with the authentication and authorization layer, which handles user authentication and authorization.|
+|Ride matching layer | The ride matching layer is responsible for matching passengers with drivers based on their location, destination, and other parameters. The payment and pricing layer calculates the fare based on factors such as distance traveled, time taken, and surge pricing.|
+|Payment and Pricing layer | The Payment and Pricing layer handles payment and pricing for the service. It calculates the fare based on factors such as distance, time, and demand. This layer also manages payment processing and billing.|
+|Driver Interface layer | This layer  provides a user interface for drivers to accept ride requests, navigate to the passenger's location, and complete rides. The driver interface can be accessed through a mobile application.|
+|Rating and review layer | The rating and review layer allows passengers to rate and review their driver and vice versa. This helps to maintain the quality of service and provides feedback for improvement.|
+|Analytics and reporting layer | Finally, the analytics and reporting layer collects and analyzes data related to the ride-sharing service, such as ride volumes, revenue, and user feedback. It provides insights into the performance of the service and helps to identify areas for improvement.|
+|Authentication and Authorization layer | This layer handles the authentication and authorization of users to access the ride-sharing service. It ensures that only authorized users are allowed to use the service.|
 
 ## Functional Viewpoint
 ## Development Viewpoint
@@ -322,14 +327,15 @@ We need to provide programmatic as well as declarative (SQL like) interface for 
 This system has multistep security. The user needs to login to the system every time by providing a password and user ID, and the login session will time out after every 2 minutes to ensure high security. When the passenger pays the bill, they need to again give the password. All of those steps will keep their bank card and payment information secure. In bellow see full description about security.
 
 Basic security behaviors:
-- Authentication: Login using at least a user name and a password
-- Authorization: according to their profile, online user must be granted or not allowed to receive some specific services (Automatic match finding, Ride Suggestion, etc...)
-For internet access, the following requirements are mandatory
-- Confidentiality: sensitive data must be encrypted if any (credit card payments).
-- Safety: Credit card data must not be kept at a local database.
-- Data integrity: Data sent across the network cannot be modified by a tier
-- Auditing: Every sensitive action can be logged
-- Non-repudiation: gives evidence a specific action occurred
+|Security behaviors|Description|
+|---: | :---|
+|Authentication | Login using at least a user name and a password.|
+|Authorization | according to their profile, online user must be granted or not allowed to receive some specific services (Automatic match finding, Ride Suggestion, etc...)|
+|Confidentiality | sensitive data must be encrypted if any (credit card payments).|
+|Safety | Credit card data must not be kept at a local database.
+|Data integrity | Data sent across the network cannot be modified by a tier.|
+|Auditing | Every sensitive action can be logged.|
+|Non-repudiation | gives evidence a specific action occurred.|
 
 ## Performance
 
@@ -346,16 +352,13 @@ Another area of technical debt in ride-sharing services is in the infrastructure
 Finally, ride-sharing services face technical debt in the area of regulatory compliance. The laws and regulations governing ride-sharing services vary by jurisdiction, and it can be challenging to keep up with changes and ensure that the service is in compliance with all applicable laws.
 
 Ride-sharing services are no exception and may face various technical debt challenges, including:
-
-1. Legacy systems: As ride-sharing services expand, they often acquire new technologies and integrate them into their existing systems, leading to a more complex and difficult-to-maintain infrastructure.
-
-1. Scalability: As the user base of ride-sharing services grows, the system must be able to handle the increased traffic and demand. This can lead to issues such as slow response times and downtime.
-
-1. Security: With sensitive user data being shared on ride-sharing platforms, security must be a top priority. Any security breaches can result in severe consequences, including legal action and damage to the brand's reputation.
-
-1. Technical infrastructure: Ride-sharing services require a sophisticated technical infrastructure to function, including GPS technology, payment processing systems, and real-time communication channels. The maintenance and upgrading of this infrastructure can be costly and time-consuming.
-
-1. Integration with third-party services: Ride-sharing services often integrate with other third-party services such as mapping and payment platforms. This can lead to issues with compatibility and system stability.
+|Technical Debt Challenges | Description|
+|---: | :---|
+|Legacy systems | As ride-sharing services expand, they often acquire new technologies and integrate them into their existing systems, leading to a more complex and difficult-to-maintain infrastructure.|
+|Scalability | As the user base of ride-sharing services grows, the system must be able to handle the increased traffic and demand. This can lead to issues such as slow response times and downtime.|
+|Security | With sensitive user data being shared on ride-sharing platforms, security must be a top priority. Any security breaches can result in severe consequences, including legal action and damage to the brand's reputation.|
+|Technical infrastructure | Ride-sharing services require a sophisticated technical infrastructure to function, including GPS technology, payment processing systems, and real-time communication channels. The maintenance and upgrading of this infrastructure can be costly and time-consuming.|
+|Integration with third-party services | Ride-sharing services often integrate with other third-party services such as mapping and payment platforms. This can lead to issues with compatibility and system stability.|
 
 Overall, technical debt is a significant concern for ride-sharing services, and it requires ongoing attention and investment to ensure that the service remains stable, secure, and compliant with all relevant regulations. Technical debt in ride-sharing services requires a long-term approach and a commitment to ongoing maintenance and improvement. Regular updates and upgrades can help to improve system scalability, security, and user experience, while reducing technical debt over time.
 
