@@ -33,8 +33,27 @@
 <img alt="GitHub repo file count" src="https://img.shields.io/github/directory-file-count/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture">
 </p>
 
----
 
+
+```mermaid
+  graph BT 
+    A(AKTER MST SHAMIMAM\n2022272110008) --> B(Contributors) 
+    C(MIA MD SHMIM\n2022272110001) --> B 
+    D(JONY MD MONIR HOSEN\n2022272110005) --> B
+```
+```mermaid
+  gitGraph
+    commit
+    commit
+    branch develop
+    commit
+    commit
+    commit
+    checkout main
+    commit
+    commit
+```
+---
 ## Table of Contents
 
 1. [Introduction](#introduction)
