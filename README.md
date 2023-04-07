@@ -243,11 +243,16 @@ These actors play a crucial role in the ride sharing service use case. The prima
 |Payment Gateway | Payment Gateway is an actor that facilitates the transaction between the rider and the ride sharing service. The use case of Payment Gateway involves securely processing the payment information, verifying the transaction, and transferring the funds to the ride sharing service.|
 
 ### Use Cases:
-This Use Case Diagram is a graphic depiction of the interactions among the elements of  Car Sharing System. It represents the methodology used in system analysis to identify, clarify, and organize system requirements of  Car Sharing System. The main actors of  Car Sharing System in this Use Case Diagram are: Super Admin, System User, Customer, Driver, who perform the different type of use cases such as Manage Booking, Manage Customer, Manage Payment, Manage Car History, Manage Insurance, Manage Memebership, Manage Destination, Manage Users and Full  Car Sharing System Operations. Major elements of the UML use case diagram of  Car Sharing System are shown on the picture below.
-
+This Use Case Diagram is a graphic depiction of the interactions among the elements of  Car Sharing System. It represents the methodology used in system analysis to identify, clarify, and organize system requirements of  Car Sharing System. The main actors of  Car Sharing System in this Use Case Diagram are: Super Admin, System User, Customer, Driver, who perform the different type of use cases such as Manage Booking, Manage Customer, Manage Payment, Manage Car History, Manage Insurance, Manage Memebership, Manage Destination, Manage Users and Full  Car Sharing System Operations.
+<details>
+    <summary> Major elements of the UML use case diagram of  Car Sharing System are shown on the picture below: </summary>
+<!-- empty line -->
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/75358854/230544205-b7a4e334-cf6a-4ae5-ac92-96333f7f0e24.jpg" width="700" height="900">
+    <img src="https://user-images.githubusercontent.com/75358854/230544205-b7a4e334-cf6a-4ae5-ac92-96333f7f0e24.jpg" width="700">
 </p>
+</details>
+<!-- empty line -->
+
 
 The relationships between and among the actors and the use cases of  Car Sharing System: 
 
