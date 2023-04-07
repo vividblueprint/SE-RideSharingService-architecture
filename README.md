@@ -37,7 +37,7 @@
 
 ```mermaid
   graph BT 
-    A(AKTER MST SHAMIMAM\n2022272110008) --> B(Contributors) 
+    A(AKTER MST SHAMIMA\n2022272110008) --> B(Contributors) 
     C(MIA MD SHMIM\n2022272110001) --> B 
     D(JONY MD MONIR HOSEN\n2022272110005) --> B
 ```
