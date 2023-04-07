@@ -64,7 +64,7 @@
 
 # Introduction
 
-The ride-sharing industry has exploded in popularity in recent years, with services such as `Uber`, `Lyft`, and Grab becoming ubiquitous in cities around the world. These services offer a new and convenient way for people to get around, using a combination of technology and transportation to connect riders with drivers. However, designing and implementing a successful ride-sharing service is no simple feat, and requires careful consideration of a wide range of `technical`, `logistical`, and `social` factors.
+The ride-sharing industry has exploded in popularity in recent years, with services such as `Uber`, `Lyft`, and `Grab` becoming ubiquitous in cities around the world. These services offer a new and convenient way for people to get around, using a combination of technology and transportation to connect riders with drivers. However, designing and implementing a successful ride-sharing service is no simple feat, and requires careful consideration of a wide range of `technical`, `logistical`, and `social` factors.
 
 This software architecture document aims to provide a detailed overview of the architecture of a `ride-sharing service`, including the key components and systems involved in its operation. This document is intended for `developers`, `architects`, and `stakeholders` who are involved in the `development` or `management` of a ride-sharing service, and who need to understand the technical aspects of the service in order to make informed decisions.
 
@@ -88,83 +88,66 @@ Before we dive deeper into the architecture of the ride-sharing service, let's f
 |Customer Support | The service should provide `customer support` to handle `issues` and `complaints`.
 | Reducing costs | Companies aim to optimize their operations to `reduce costs`, including driver `acquisition` and `retention`, `maintenance of vehicles`, and `marketing expenses`.|
 
-Now that we have defined the business requirements, let's move on to the architecture of the ride-sharing service.
+Now that we have defined the business requirements, let's move on to the `architecture of the ride-sharing` service.
 
 # Stakeholder Analysis
-In the case of a ride-sharing service, stakeholders can include a wide range of individuals or groups who have an interest or investment in the success of the service. Some examples of stakeholders in a ride-sharing service might include:
+In the case of a ride-sharing service, `stakeholders` can include a wide range of individuals or groups who have an `interest` or `investment` in the success of the service. Some examples of stakeholders in a ride-sharing service might include:
 
-1. Investors: Investors who have put money into the ride-sharing service and expect a return on their investment. These investors may include venture capitalists, angel investors, or institutional investors.
+|Stackeholder | Analysis|
+|---: | :---|
+|Investors | Investors who have put `money` into the ride-sharing service and expect a return on their `investment`. These investors may include `venture capitalists`, `angel investors`, or `institutional investors`.|
+|Riders | People who use the ride-sharing service to get from one place to another. These individuals have a stake in the success of the service because they `rely` on it for `transportation`.|
+|Drivers | Individuals who work for the ride-sharing service and `provide rides` to `riders`. Drivers have a stake in the success of the service because their `livelihood` depends on it.|
+|Administrators | People who are responsible for managing the ride-sharing service, including making `decisions about pricing`, `marketing`, and `customer support`.|
+|Regulators | `Government agencies` or other entities that have `regulatory authority` over the ride-sharing service. These regulators may have an interest in ensuring that the service operates in compliance with `local laws` and `regulations`.|
+|Competitors | Other companies that offer ride-sharing services and may be `impacted` by the success of the service.|
 
-1. Riders: People who use the ride-sharing service to get from one place to another. These individuals have a stake in the success of the service because they rely on it for transportation.
+Each stakeholder group may have different goals, interests, and `expectations` for the ride-sharing service, and it's important to consider their perspectives when designing the architecture of the service. By understanding the needs and goals of each stakeholder group, architects can design a ride-sharing service that meets the needs of everyone involved and is `well-positioned` for success.
 
-1. Drivers: Individuals who work for the ride-sharing service and provide rides to riders. Drivers have a stake in the success of the service because their livelihood depends on it.
+In addition to the stakeholders who have a `positive interest` or investment in the success of the ride-sharing service, there may also be **`negative stakeholders`** who have concerns or objections to the service. Some examples of negative stakeholders in a ride-sharing service might include:
 
-1. Administrators: People who are responsible for managing the ride-sharing service, including making decisions about pricing, marketing, and customer support.
+|Negative Stakeholders | Analysis|
+|---: | :---|
+|Taxi companies | Traditional taxi companies may see ride-sharing services as competition and may have negative opinions about the service. They may `lobby` against the service or try to `block` its entry into certain `markets`.|
+|Local governments | Some local governments may have concerns about the impact of ride-sharing services on `traffic congestion`, `public safety`, and `revenue` from traditional taxi and transportation fees. They may `impose regulations` or taxes on the service that `increase costs` or `limit` its operations.|
+|Labor unions | Labor unions may have concerns about the working conditions and wages of ride-sharing service drivers. They may lobby for `greater protections` or regulations that `limit the flexibility` or earning `potential` of drivers.|
+|Environmental groups | `Environmental groups` may be concerned about the impact of ride-sharing services on `air quality` and `carbon emissions`. They may advocate for `alternative transportation` solutions or `policies` that limit the use of ride-sharing services.|
+|Privacy advocates | `Privacy advocates` may have concerns about the collection and use of user data by ride-sharing services. They may `advocate for greater privacy protections` or `transparency around` how user data is collected and used.|
 
-1. Regulators: Government agencies or other entities that have regulatory authority over the ride-sharing service. These regulators may have an interest in ensuring that the service operates in compliance with local laws and regulations.
-
-Competitors: Other companies that offer ride-sharing services and may be impacted by the success of the service.
-
-Each stakeholder group may have different goals, interests, and expectations for the ride-sharing service, and it's important to consider their perspectives when designing the architecture of the service. By understanding the needs and goals of each stakeholder group, architects can design a ride-sharing service that meets the needs of everyone involved and is well-positioned for success.
-
-In addition to the stakeholders who have a positive interest or investment in the success of the ride-sharing service, there may also be negative stakeholders who have concerns or objections to the service. Some examples of negative stakeholders in a ride-sharing service might include:
-
-1. Taxi companies: Traditional taxi companies may see ride-sharing services as competition and may have negative opinions about the service. They may lobby against the service or try to block its entry into certain markets.
-
-1. Local governments: Some local governments may have concerns about the impact of ride-sharing services on traffic congestion, public safety, and revenue from traditional taxi and transportation fees. They may impose regulations or taxes on the service that increase costs or limit its operations.
-
-1. Labor unions: Labor unions may have concerns about the working conditions and wages of ride-sharing service drivers. They may lobby for greater protections or regulations that limit the flexibility or earning potential of drivers.
-
-1. Environmental groups: Environmental groups may be concerned about the impact of ride-sharing services on air quality and carbon emissions. They may advocate for alternative transportation solutions or policies that limit the use of ride-sharing services.
-
-1. Privacy advocates: Privacy advocates may have concerns about the collection and use of user data by ride-sharing services. They may advocate for greater privacy protections or transparency around how user data is collected and used.
-
-Understanding the concerns and objections of negative stakeholders is important in designing a ride-sharing service that is sustainable and responsive to the needs of all stakeholders. By considering the perspectives of both positive and negative stakeholders, architects can design a ride-sharing service that addresses concerns and objections while still meeting the needs of riders, drivers, investors, and other positive stakeholders.
-
+Understanding the concerns and `objections of negative stakeholders` is important in designing a ride-sharing service that is `sustainable` and `responsive` to the needs of all stakeholders. By considering the perspectives of both positive and negative stakeholders, architects can design a ride-sharing service that addresses concerns and objections while still meeting the needs of `riders`, `drivers`, `investors`, and other `positive stakeholders`.
 
 # Architecture Principles
-The architecture principles for a ride-sharing service may vary depending on the specific needs and goals of the service. However, here are some potential architecture principles:
+The architecture principles for a ride-sharing service may vary depending on the specific needs and goals of the service. However, here are some `potential` architecture principles:
 
-1. Geolocation: The architecture should support the ability to locate and track drivers and passengers in real-time using GPS and geolocation data.
-
-1. Scalability: The architecture should be designed to handle large volumes of requests and traffic during peak times, such as rush hour or major events.
-
-1. Dynamic pricing: The architecture should support the ability to adjust pricing in real-time based on supply and demand, such as surge pricing during peak times.
-
-1. Ratings and reviews: The architecture should include mechanisms for riders and drivers to rate and review each other, which can help maintain a high level of service quality and safety.
-
-1. Payment processing: The architecture should support secure and reliable payment processing for riders and drivers, including options for different payment methods and currencies.
-
-1. Matching algorithms: The architecture should include intelligent matching algorithms to match riders with drivers based on factors such as proximity, availability, and ride history.
-
-1. Driver verification: The architecture should include mechanisms for verifying the identity and qualifications of drivers, including background checks, driver’s license verification, and vehicle inspections.
-
-1. Customer support: The architecture should include robust customer support mechanisms, including chatbots, phone support, and email support, to address any issues or concerns that riders or drivers may have.
-
-1. Regulatory compliance: The architecture should comply with local regulations and laws related to ride-sharing services, such as licensing requirements and insurance regulations.
-
-1. Continuous improvement: The architecture should support the ability to continuously improve the service through data analytics, user feedback, and testing of new features and services.
+|Architecture Principles | Descriptions|
+|---: | :---|
+|Geolocation | The architecture should support the ability to `locate` and `track` drivers and passengers in `real-time` using `GPS` and `geolocation` data.|
+|Scalability | The architecture should be designed to handle `large volumes of requests` and `traffic during peak times`, such as `rush hour` or `major events`.|
+|Dynamic pricing | The architecture should support the ability to adjust pricing in real-time based on `supply` and `demand`, such as `surge pricing during peak times`.|
+|Ratings and reviews | The architecture should include mechanisms for riders and drivers to `rate` and `review` each other, which can help `maintain` a high level of service `quality` and `safety`.|
+|Payment processing | The architecture should support `secure` and `reliable payment processing` for riders and drivers, including options for `different payment methods` and `currencies`.|
+|Matching algorithms | The architecture should include `intelligent matching algorithms to match riders with drivers based on factors such as proximity`, `availability`, and `ride history`.|
+|Driver verification | The architecture should include mechanisms for `verifying` the `identity` and `qualifications` of drivers, including `background checks`, `driver’s license verification`, and `vehicle inspections`.|
+|Customer support | The architecture should include `robust customer support mechanisms`, including `chatbots`, `phone support`, and `email support`, to address any issues or concerns that riders or drivers may have.|
+|Regulatory compliance | The architecture should comply with local `regulations` and laws related to ride-sharing services, such as `licensing requirements` and `insurance regulations`.|
+|Continuous improvement | The architecture should support the ability to continuously `improve` the service through `data analytics`, `user feedback`, and `testing of new features` and `services`.|
 
 # Architecture Components
-1. The architecture components of a ride-sharing service can be broken down into several layers, each with their own set of components. Here are some potential architecture components for a ride-sharing service:
 
-1. Presentation Layer: This layer includes the components that interact with users, such as mobile apps or web interfaces, and allows riders and drivers to request or accept rides, track the location of their ride, and communicate with each other.
+The architecture components of a ride-sharing service can be broken down into `several layers`, each with their own set of components. Here are some `potential architecture components` for a ride-sharing service:
 
-1. Application Layer: This layer includes the logic that manages the ride-sharing service, such as matching algorithms that connect drivers with riders, pricing algorithms that determine ride costs, and payment processing components that handle payments.
+|Architecture Components | Descriptions|
+|---: | :---|
+|Presentation Layer | This layer includes the components that `interact` with users, such as `mobile apps` or `web interfaces`, and allows riders and drivers to `request` or `accept` rides, `track` the location of their ride, and `communicate` with each other.|
+|Application Layer | This layer includes the `logic` that manages the ride-sharing service, such as `matching algorithms` that `connect` drivers with riders, `pricing algorithms` that determine ride `costs`, and `payment processing` components that `handle payments`.|
+|Service Layer | This layer includes the components that provide `backend services`, such as `geolocation` services that track the location of drivers and passengers, and `notification` services that `alert` drivers and riders of ride `requests` or `updates`.|
+|Data Layer | This layer includes the components that `store` and manage `data` related to the ride-sharing service, such as `user profiles`, `ride history`, `payment information`, and `driver qualifications`.|
+|Infrastructure Layer | This layer includes the `hardware` and `software` infrastructure that supports the ride-sharing service, such as `servers`, `databases`, and `network components`.|
+|Analytics Layer | This layer includes the components that provide `data analytics` and `business intelligence`, such as tools for `monitoring service` performance, `analyzing rider` and `driver behavior`, and `identifying areas` for improvement.|
+|Security Layer | This layer includes the components that ensure the security of the ride-sharing service, such as `authentication` and `access control mechanisms`, `data encryption`, and `monitoring` for `suspicious activity`.|
+|Integration Layer | This layer includes the components that integrate the ride-sharing service with other `systems` or `services`, such as `third-party payment processors`, `mapping` services, or `social media` platforms.|
 
-1. Service Layer: This layer includes the components that provide backend services, such as geolocation services that track the location of drivers and passengers, and notification services that alert drivers and riders of ride requests or updates.
-
-1. Data Layer: This layer includes the components that store and manage data related to the ride-sharing service, such as user profiles, ride history, payment information, and driver qualifications.
-
-1. Infrastructure Layer: This layer includes the hardware and software infrastructure that supports the ride-sharing service, such as servers, databases, and network components.
-
-1. Analytics Layer: This layer includes the components that provide data analytics and business intelligence, such as tools for monitoring service performance, analyzing rider and driver behavior, and identifying areas for improvement.
-
-1. Security Layer: This layer includes the components that ensure the security of the ride-sharing service, such as authentication and access control mechanisms, data encryption, and monitoring for suspicious activity.
-
-1. Integration Layer: This layer includes the components that integrate the ride-sharing service with other systems or services, such as third-party payment processors, mapping services, or social media platforms.
-
-1. Overall, the architecture of a ride-sharing service should be designed to provide a reliable, scalable, and secure platform that can deliver high-quality services to riders and drivers while complying with regulatory requirements and evolving to meet changing market needs.
+Overall, the architecture of a ride-sharing service should be designed to provide a `reliable`, `scalable`, and secure platform that can deliver high-quality services to riders and drivers while complying with `regulatory requirements` and `evolving` to meet changing market needs.
 # Functional Requirements
 
 ## Essential Requirements of Rider/Passenger Interface
@@ -335,15 +318,41 @@ This system has high performance ability. Passengers can book a taxi and search 
 
 # Technical Debt
 
+Technical debt refers to the costs that arise from taking shortcuts or making trade-offs during the development process of software or technology systems. The ride-sharing service industry is no exception, and there are several areas where technical debt can accumulate.
+
+One major area of technical debt in ride-sharing services is in the development of the mobile applications that riders and drivers use to request and provide rides. These apps must handle large amounts of data and complex algorithms in real-time, and shortcuts or compromises in the code can lead to bugs, crashes, and security vulnerabilities.
+
+Another area of technical debt in ride-sharing services is in the infrastructure that supports the services. This includes the servers and databases that store user information and ride data, as well as the network infrastructure that connects riders and drivers. Failure to properly design and maintain this infrastructure can lead to system downtime, data loss, and security breaches.
+
+Finally, ride-sharing services face technical debt in the area of regulatory compliance. The laws and regulations governing ride-sharing services vary by jurisdiction, and it can be challenging to keep up with changes and ensure that the service is in compliance with all applicable laws.
+
+Ride-sharing services are no exception and may face various technical debt challenges, including:
+
+1. Legacy systems: As ride-sharing services expand, they often acquire new technologies and integrate them into their existing systems, leading to a more complex and difficult-to-maintain infrastructure.
+
+1. Scalability: As the user base of ride-sharing services grows, the system must be able to handle the increased traffic and demand. This can lead to issues such as slow response times and downtime.
+
+1. Security: With sensitive user data being shared on ride-sharing platforms, security must be a top priority. Any security breaches can result in severe consequences, including legal action and damage to the brand's reputation.
+
+1. Technical infrastructure: Ride-sharing services require a sophisticated technical infrastructure to function, including GPS technology, payment processing systems, and real-time communication channels. The maintenance and upgrading of this infrastructure can be costly and time-consuming.
+
+1. Integration with third-party services: Ride-sharing services often integrate with other third-party services such as mapping and payment platforms. This can lead to issues with compatibility and system stability.
+
+Overall, technical debt is a significant concern for ride-sharing services, and it requires ongoing attention and investment to ensure that the service remains stable, secure, and compliant with all relevant regulations. Technical debt in ride-sharing services requires a long-term approach and a commitment to ongoing maintenance and improvement. Regular updates and upgrades can help to improve system scalability, security, and user experience, while reducing technical debt over time.
 
 
 # Conclusion
 
+The ride-sharing service industry has revolutionized the way people travel, and its popularity continues to grow worldwide. In conclusion, ride-sharing services offer numerous benefits, including convenience, affordability, and reduced environmental impact.
 
+These services have also provided new income opportunities for drivers, allowing them to work flexible hours and earn additional income. However, there are also potential drawbacks, such as concerns over safety and security, and the impact on traditional taxi and public transportation services.
+
+Overall, the future of ride-sharing services looks promising, with continued innovation and improvements in technology expected to further enhance the user experience and address any remaining concerns.
 
 # References
 
-
+**Will be added soon ... ... ...**
 
 # Appendix
 
+**Will be added soon ... ... ...**
