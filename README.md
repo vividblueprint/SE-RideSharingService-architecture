@@ -426,6 +426,27 @@ D -- manages payment processing and billing --> G
 
 ## Functional Viewpoint
 
+```mermaid
+sequenceDiagram
+participant User
+participant UI as User Interface Layer
+participant AAL as Authentication and Authorization Layer
+participant DB as Database
+
+User->>UI: User clicks 'Sign Up' or 'Log In'
+UI->>AAL: Sends authentication request
+AAL->>DB: Queries user database
+DB-->>AAL: Returns user data
+AAL-->>UI: Returns authentication status
+UI-->>User: Displays login/signup form
+User->>UI: Fills in login/signup form
+UI->>AAL: Sends login/signup request with user credentials
+AAL->>DB: Queries user database
+DB-->>AAL: Returns user data
+AAL-->>UI: Returns authentication status
+UI-->>User: Displays success/failure message
+```
+
 ## Development Viewpoint
 
 ## Deployment View
