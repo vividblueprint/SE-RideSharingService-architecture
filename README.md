@@ -254,7 +254,7 @@ This Use Case Diagram is a graphic depiction of the interactions among the eleme
 Major elements of the UML use case diagram of Car Sharing System are shown on the picture below:
 
 ```mermaid
-graph LR
+graph TB
 Rd(Rider)
 Dv(Driver)
 Rsc(Ride Sharing Company)
