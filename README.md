@@ -177,7 +177,7 @@ Overall, the architecture of a ride-sharing service should be designed to provid
 
 | Rider/Passenger Interface | Requirements                                                                                                                                                                      |
 | ------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|              Registration | Riders can register or sign in via email and social media. They can also register for different payment methods. Riders can request a ride.                                       |
+|              Registration | Riders can `register` or sign in via `email` and `social media`. They can also register for different `payment methods`.                                                          |
 |              Taxi Booking | The riders can book a taxi, enter their address, select the type of car, and adjust the pickup location.                                                                          |
 |           Fare Calculator | The fare for traveling from point A to point B is automatically calculated based on the number of kilometers, the type of car chosen, current fuel rates, estimated traffic, etc. |
 |             Ride Tracking | The driver’s location is tracked in Real-time based on which timely updates on traffic, travel routes, and the estimated time of arrival is provided to the rider.                |
@@ -254,45 +254,59 @@ This Use Case Diagram is a graphic depiction of the interactions among the eleme
 Major elements of the UML use case diagram of Car Sharing System are shown on the picture below:
 
 ```mermaid
-graph LR
-Rd(Rider)
-Dv(Driver)
-Rsc(Ride Sharing Company)
-Nve(Navigation Engine)
-Gps(GPS)
-Pg(Payent Gateway)
-
-Rd --> A(Register)
-Dv --> A
-Rd --> B(Login)
-Dv --> B
-Rd --> C(Manage Account)
-Dv --> C
-Rd --> D(Search for Trip Details)
-  D --> Nve
-Rd --> E(Request Ride)
-Rsc --> E
-  E --> Nve
-  E --> Gps
-Dv --> F(Start ride)
-  F --> Nve
-Rd --> G(View Ride History)
-  G --> Nve
-  G --> Gps
-Rd --> H(Cancel Request)
-Dv --> H
-Rsc --> H
-Rd --> I(Make Payment)
-  I --> Pg
-Rd --> J(Update Ride Details)
-  J --> Nve
-  J --> Gps
-Dv --> J
-Rd --> K(Rate Driver)
-Dv --> L(End Trip)
-  L --> Gps
-Rd --> M(Report Issue)
-Rsc --> M
+    graph LR;
+    A([Rider/\nPassenger]):::green;
+    B([Driver]):::orange;
+    C([Navigation\nEngine]):::blue;
+    D([Admin]):::red;
+    E([Payment\nGateway]):::red;
+    A --- 1([Register/Sign In])
+    B ---- 1
+    A --- 2([Manage Account])---2.1([Update/Change\nInfromation])
+    B ---- 2
+    A --- 3([Request Ride])---3.1([Select Type\nof Ride])
+    B ---- 3
+    C --- 3
+    A --- 4([Cancel Ride])
+    B ---- 4
+    C --- 4
+    A --- 5([Track Ride])
+    B ---- 5
+    C---5
+    A --- 6([Make Payment])
+    A --- 7([Send Messages/Make Calls])
+    B ---- 7
+    A --- 8([Rate Driver])
+    A --- 9([View Travel History])
+    9 ---- D
+    B ---- 9
+    A --- 10([Calculate Fare])---11([Make Payment])---12([Select Payment\nMethord])
+    12 --- E
+    A --- 13([Split Payment])---10
+    B --- 14([Next Ride])
+    A --- 15([Book for Others]) ---3.1
+    C --- 15
+    B ---- 16([Start Ride])
+    16 --- C
+    A --- 17([End Ride])
+    B ---- 17
+    17 --- C
+    A --- 18([Log Out])
+    B ---- 18
+    B --- 19([Complete Ride])
+    19 --- C
+    20([Manage User])----D
+    21([Manage Ride])----D
+    %%A --> 16([ ])
+    classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff;
+    classDef orange fill:#fc822b,stroke:#000,stroke-width:2px,color:#fff;
+    classDef green fill:#16b552,stroke:#000,stroke-width:2px,color:#fff;
+    classDef red fill:#ed2633,stroke:#000,stroke-width:2px,color:#fff;
+    classDef none fill:#none,stroke:#000,stroke-width:2px,color:#fff;
+    subgraph USE[Use Case\nDiagram];
+    style USE  fill:none,stroke:#f0000,stroke-width:2px;
+    1;2;2.1;3;3.1;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21
+    end
 
 ```
 
