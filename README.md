@@ -171,6 +171,42 @@ The architecture components of a ride-sharing service can be broken down into `s
 
 Overall, the architecture of a ride-sharing service should be designed to provide a `reliable`, `scalable`, and secure platform that can deliver high-quality services to riders and drivers while complying with `regulatory requirements` and `evolving` to meet changing market needs.
 
+```mermaid
+graph TD
+  A["Presentation Layer (UI)"] -->|Mobile App| B["Application Layer (Logic)"]
+  A -->|Web Interface| B:::orange
+  A:::blue -->|Voice Assistant| B
+  A -->|Wearables| B
+  B -->|Matching Algorithm| C["Service Layer (Backend)"]
+  B -->|Pricing Algorithm| C
+  B -->|Payment Processing| C:::green
+  C -->|Geolocation Service| D["Data Layer (Storage)"]
+  C -->|Notification Service| D
+  C -->|SMS Gateway| D:::red
+  D -->|User Profiles| E["Infrastructure Layer (Hardware)"]
+  D -->|Ride History| E:::green
+  D -->|Payment Information| E
+  D -->|Driver Qualifications| E
+  E -->|Servers| F["Analytics Layer (Data Analysis)"]
+  E -->|Databases| F:::blue
+  E -->|Network Components| F
+  E -->|Cloud Services| F
+  F -->|Service Performance Monitoring| G["Security Layer (Protection)"]
+  F -->|Rider & Driver Behavior Analysis| G:::orange
+  G -->|Authentication & Access Control| H["Integration Layer (Third-party)"]
+  G -->|Data Encryption| H
+  G -->|Monitoring| H:::red
+  H -->|Payment Processor| I(( ))
+  H -->|Mapping Service| I(( ))
+  H -->|Social Media Platform| I(( ))
+
+    classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff;
+    classDef orange fill:#fc822b,stroke:#000,stroke-width:2px,color:#fff;
+    classDef green fill:#16b552,stroke:#000,stroke-width:2px,color:#fff;
+    classDef red fill:#ed2633,stroke:#000,stroke-width:2px,color:#fff;
+    classDef none fill:#none,stroke:#000,stroke-width:2px,color:#fff;
+```
+
 # Functional Requirements
 
 ## Essential Requirements of Rider/Passenger Interface
@@ -374,6 +410,19 @@ A logical view of a ride-sharing service can be represented as a layered archite
 |                Rating and review layer | The rating and review layer allows passengers to rate and review their driver and vice versa. This helps to maintain the quality of service and provides feedback for improvement.                                                                                   |
 |          Analytics and reporting layer | Finally, the analytics and reporting layer collects and analyzes data related to the ride-sharing service, such as ride volumes, revenue, and user feedback. It provides insights into the performance of the service and helps to identify areas for improvement.   |
 | Authentication and Authorization layer | This layer handles the authentication and authorization of users to access the ride-sharing service. It ensures that only authorized users are allowed to use the service.                                                                                           |
+
+```mermaid
+graph TB
+A[User interface layer] -- interacts with --> B[Authentication and Authorization layer]
+A -- interacts with --> C[Ride matching layer]
+C -- calculates fare using --> D[Payment and Pricing layer]
+C -- interacts with --> E[Driver Interface layer]
+C -- interacts with --> F[Rating and review layer]
+G[Analytics and reporting layer] -- collects and analyzes data --> C
+B -- ensures authorized access to --> C
+D -- manages payment processing and billing --> G
+
+```
 
 ## Functional Viewpoint
 
