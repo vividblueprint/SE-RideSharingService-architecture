@@ -243,19 +243,37 @@ graph TD
 An Admin panel is crucial for the proper integration and smooth functioning of the system.
 The basic features and functionalities of an Admin panel would be:
 
-|         Admin Interface Requirements         |
-| :------------------------------------------: |
-| Customer and Driver Details Management (CRM) |
-|              Booking Management              |
-|  Vehicle Detail Management (if self-owned)   |
-|        Location and Fares Management         |
-|            Call System Management            |
-|                Communication                 |
-|             Ratings and Reviews              |
-|           Promotions and Discounts           |
-|              Payroll Management              |
-|              Content Management              |
-|          Customer Support and Help           |
+|                 Admin Interface Requirements | Description                                                                                                                                                                                                                                       |
+| -------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Customer and Driver Details Management (CRM) | This feature enables the admin to manage and update the customer and driver details, including their personal information, contact information, and payment details. It helps the admin to keep track of their users and maintain their database. |
+|                           Booking Management | Booking management feature is used to manage all the bookings made by customers. It allows the admin to view, update, and cancel the bookings. The admin can also assign drivers for the bookings and keep track of the booking status.           |
+|    Vehicle Detail Management (if self-owned) | If the business owns its vehicles, the admin should be able to manage all the vehicle details, including registration details, insurance, and maintenance records.                                                                                |
+|                Location and Fares Management | The admin panel should have a feature to manage the fare and location details. It allows the admin to update the fare prices and add new locations as required.                                                                                   |
+|                       Call System Management | This feature enables the admin to manage the call system, including call recording and call logs. It helps the admin to track the customer support calls and provide better service.                                                              |
+|                                Communication | Admin should be able to communicate with the customers and drivers using various channels such as email, SMS, and push notifications. It helps to keep the users informed about any updates or changes in the service.                            |
+|                          Ratings and Reviews | The admin should be able to view and manage the ratings and reviews given by customers for the service. It helps to maintain the quality of the service and improve the customer satisfaction.                                                    |
+|                     Promotions and Discounts | Admin should be able to create and manage the promotional offers and discounts for the users. It helps to attract new customers and retain the existing ones.                                                                                     |
+|                           Payroll Management | If the business employs drivers or other staff, the admin should be able to manage their payroll details, including salary, incentives, and deductions.                                                                                           |
+|                           Content Management | The admin should be able to manage the content on the website or app, including text, images, and videos. It helps to keep the content up-to-date and relevant.                                                                                   |
+|                    Customer Support and Help | Admin should be able to provide customer support and help to the users. It helps to resolve any issues or queries raised by the users and improve the overall service quality.                                                                    |
+
+Admin Interface Requirements Diagram:
+
+```mermaid
+graph TD;
+    A["Customer and Driver Details Management (CRM)"] --> B[Booking Management];
+    A --> C["Vehicle Detail Management (if self-owned)"];
+    B --> D[Location and Fares Management];
+    B --> E[Call System Management];
+    B --> F[Communication];
+    B --> G[Ratings and Reviews];
+    D --> H[Promotions and Discounts];
+    C --> I[Payroll Management];
+    F --> J[Content Management];
+    E --> J;
+    G --> J;
+    J --> K[Customer Support and Help];
+```
 
 # Viewpoints
 
