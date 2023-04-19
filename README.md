@@ -276,7 +276,7 @@ graph TD;
     G:::pink --> J;
     J --> K([Customer Support and Help]):::green;
 
-    
+
     classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff;
     classDef orange fill:#fc822b,stroke:#000,stroke-width:2px,color:#fff;
     classDef green fill:#16b552,stroke:#000,stroke-width:2px,color:#fff;
@@ -558,8 +558,6 @@ Overall, the future of ride-sharing services looks promising, with continued inn
 
 # Appendix
 
-Without knowing the specific context or content you are looking for appendices on, it's difficult to provide specific appendices. However, here are some commonly used appendices in various types of documents:
-
 **Appendix A:** Glossary - a list of definitions for key terms used in the document.
 
 **Appendix B:** References - a list of sources used in the document, typically arranged alphabetically by author's last name.
@@ -575,4 +573,3 @@ Without knowing the specific context or content you are looking for appendices o
 **Appendix G:** Code Samples - code examples or snippets that demonstrate a particular programming technique or approach.
 
 **Appendix H:** Budget - a detailed breakdown of the costs associated with a project or initiative.
-
