@@ -171,34 +171,36 @@ The architecture components of a ride-sharing service can be broken down into `s
 
 Overall, the architecture of a ride-sharing service should be designed to provide a `reliable`, `scalable`, and secure platform that can deliver high-quality services to riders and drivers while complying with `regulatory requirements` and `evolving` to meet changing market needs.
 
+### Architecture Components Diagram:
+
 ```mermaid
 graph TD
-  A["Presentation Layer (UI)"] -->|Mobile App| B["Application Layer (Logic)"]
+  A(["Presentation Layer (UI)"]) -->|Mobile App| B(["Application Layer (Logic)"])
   A -->|Web Interface| B:::orange
   A:::blue -->|Voice Assistant| B
   A -->|Wearables| B
-  B -->|Matching Algorithm| C["Service Layer (Backend)"]
+  B -->|Matching Algorithm| C(["Service Layer (Backend)"])
   B -->|Pricing Algorithm| C
   B -->|Payment Processing| C:::green
-  C -->|Geolocation Service| D["Data Layer (Storage)"]
+  C -->|Geolocation Service| D(["Data Layer (Storage)"])
   C -->|Notification Service| D
   C -->|SMS Gateway| D:::red
-  D -->|User Profiles| E["Infrastructure Layer (Hardware)"]
+  D -->|User Profiles| E(["Infrastructure Layer (Hardware)"])
   D -->|Ride History| E:::green
   D -->|Payment Information| E
   D -->|Driver Qualifications| E
-  E -->|Servers| F["Analytics Layer (Data Analysis)"]
+  E -->|Servers| F(["Analytics Layer (Data Analysis)"])
   E -->|Databases| F:::blue
   E -->|Network Components| F
   E -->|Cloud Services| F
-  F -->|Service Performance Monitoring| G["Security Layer (Protection)"]
+  F -->|Service Performance Monitoring| G(["Security Layer (Protection)"])
   F -->|Rider & Driver Behavior Analysis| G:::orange
-  G -->|Authentication & Access Control| H["Integration Layer (Third-party)"]
+  G -->|Authentication & Access Control| H(["Integration Layer (Third-party)"])
   G -->|Data Encryption| H
   G -->|Monitoring| H:::red
   H -->|Payment Processor| I(( ))
-  H -->|Mapping Service| I(( ))
-  H -->|Social Media Platform| I(( ))
+  H -->|Mapping Service| I
+  H -->|Social Media Platform| I
 
     classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff;
     classDef orange fill:#fc822b,stroke:#000,stroke-width:2px,color:#fff;
@@ -257,22 +259,31 @@ The basic features and functionalities of an Admin panel would be:
 |                           Content Management | The admin should be able to manage the content on the website or app, including text, images, and videos. It helps to keep the content up-to-date and relevant.                                                                                   |
 |                    Customer Support and Help | Admin should be able to provide customer support and help to the users. It helps to resolve any issues or queries raised by the users and improve the overall service quality.                                                                    |
 
-Admin Interface Requirements Diagram:
+### Admin Interface Requirements Diagram:
 
 ```mermaid
 graph TD;
-    A["Customer and Driver Details Management (CRM)"] --> B[Booking Management];
-    A --> C["Vehicle Detail Management (if self-owned)"];
-    B --> D[Location and Fares Management];
-    B --> E[Call System Management];
-    B --> F[Communication];
-    B --> G[Ratings and Reviews];
-    D --> H[Promotions and Discounts];
-    C --> I[Payroll Management];
-    F --> J[Content Management];
-    E --> J;
-    G --> J;
-    J --> K[Customer Support and Help];
+    A(["Customer and Driver Details Management (CRM)"]) --> B([Booking Management]);
+    A:::blue --> C(["Vehicle Detail Management (if self-owned)"]);
+    B:::green --> D([Location and Fares Management]):::violate;
+    B --> E([Call System Management]);
+    B --> F([Communication]);
+    B --> G([Ratings and Reviews]);
+    D --> H([Promotions and Discounts]):::pink;
+    C:::red --> I([Payroll Management]):::violate;
+    F:::red --> J([Content Management]):::blue;
+    E:::broune --> J;
+    G:::pink --> J;
+    J --> K([Customer Support and Help]):::green;
+
+    
+    classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff;
+    classDef orange fill:#fc822b,stroke:#000,stroke-width:2px,color:#fff;
+    classDef green fill:#16b552,stroke:#000,stroke-width:2px,color:#fff;
+    classDef red fill:#ed2633,stroke:#000,stroke-width:2px,color:#fff;
+    classDef broune fill:#b67633,stroke:#000,stroke-width:2px,color:#fff;
+    classDef violate fill:#6e07f5,stroke:#000,stroke-width:2px,color:#fff;
+    classDef pink fill:#f5077e,stroke:#000,stroke-width:2px,color:#fff;
 ```
 
 # Viewpoints
