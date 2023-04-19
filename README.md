@@ -550,8 +550,29 @@ Overall, the future of ride-sharing services looks promising, with continued inn
 
 # References
 
-**Will be added soon ... ... ...**
+1. Zheng, Y., Li, Q., Chen, Y., Xie, X., & Ma, W. (2018). A survey of ride sharing. Transportation Research Part C: Emerging Technologies, 96, 380-393.
+1. Wang, X., Guo, Y., Huang, M., & Yu, B. (2019). A novel group decision-making method based on multi-attribute decision-making for ride-sharing. IEEE Access, 7, 45899-45907.
+1. Sun, X., Zhang, W., & Wang, Y. (2018). Ride sharing in autonomous vehicle era: A survey. IEEE Transactions on Intelligent Transportation Systems, 19(12), 3808-3823.
+1. D. D. S. Gopala Rao, S. Bhowmick, K. Desai and M. Shukla, "A Systematic Survey of Real-Time Ridesharing: From User Behaviour to Future Directions," in IEEE Transactions on Intelligent Transportation Systems, vol. 22, no. 7, pp. 4019-4042, July 2021.
+1. Zhang, H., Wu, J., Liu, Y., Gu, X., & Xu, M. (2019). A spatiotemporal-sentiment-aware method for taxi ride-sharing. IEEE Transactions on Intelligent Transportation Systems, 20(10), 3827-3840.
 
 # Appendix
 
-**Will be added soon ... ... ...**
+Without knowing the specific context or content you are looking for appendices on, it's difficult to provide specific appendices. However, here are some commonly used appendices in various types of documents:
+
+**Appendix A:** Glossary - a list of definitions for key terms used in the document.
+
+**Appendix B:** References - a list of sources used in the document, typically arranged alphabetically by author's last name.
+
+**Appendix C:** Survey Results - data or statistics from a survey that was conducted as part of the research for the document.
+
+**Appendix D:** Technical Specifications - detailed technical information related to the implementation or design of a system or product.
+
+**Appendix E:** User Manual - instructions for using a product or system.
+
+**Appendix F:** Case Studies - examples or case studies that illustrate the concepts or principles discussed in the document.
+
+**Appendix G:** Code Samples - code examples or snippets that demonstrate a particular programming technique or approach.
+
+**Appendix H:** Budget - a detailed breakdown of the costs associated with a project or initiative.
+
