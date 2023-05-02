@@ -476,6 +476,54 @@ AAL-->>UI: Returns authentication status
 UI-->>User: Displays success/failure message
 ```
 
+### Sequence Diagram for Taxi Booking System
+
+This diagram shows the lifelines of a taxi booking system and the interactions between them. It shows the process of ordering a taxi ride. A rider can choose a pick-up point, destination, and time of pick up.
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/75358854/235557263-3bb7c723-d57a-4ca3-9309-cf8c5da80860.jpg" alt="Sequence Diagram for Taxi Booking System
+" width="600" height="800">
+</p>
+
+The diagram shows these lifelines:
+
+- Rider
+- Rider App
+- Management Server
+- Driver App
+- Driver
+
+There are these interactions between the lifelines:
+
+- Choose a pick-up point
+- Choose destination
+- (Optional) Later transfer
+- Choose time
+- (Loop) Order is not accepted and the customer does not close app
+  - Confirm order
+  - Send order
+  - Find free drivers
+  - Send order notification to free drivers
+  - Show order notification
+  - (Optional) No taxi driver available
+    - Choose extra fee
+- (Alternative 1) Taxi driver interested
+  - Accept the order
+  - Send acceptance
+  - Notify acceptance
+- (Alternative 2)Taxi driver not interested
+  - Reject the order
+  - Send rejection
+  - Notify rejection
+- (Loop) Rider is waiting for the taxi
+  - Send GPS coordinates of the taxi vehicle
+  - Retrieve GPS coordinates of taxi vehicle
+  - Show location of taxi vehicle on the map
+  - Send GPS coordinates of the customer
+  - Retrieve GPS coordinates of the customer
+  - Show customer location on the map
+
+
 ## Development Viewpoint
 
 ## Deployment View
