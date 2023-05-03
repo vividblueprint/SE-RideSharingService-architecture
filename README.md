@@ -563,14 +563,17 @@ Above diagram, Taxi is the supply which means the Taxi and User is the demand wh
 ## Process Viewpoint
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/75358854/235875300-e4b5792a-d12a-41d1-843f-203011ab62b4.jpeg" alt="Sequence Diagram for Taxi Booking System
-" width="800" height="800">
+    <img src="https://user-images.githubusercontent.com/75358854/235875300-e4b5792a-d12a-41d1-843f-203011ab62b4.jpeg" alt="Process Viewpoint Diagram" width="800" height="800">
 </p>
 
 
 
 
 ## Context Viewpoint
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/75358854/235879368-1b5475c6-2b60-4d91-8377-17598ae3f3da.jpg" alt="Context Viewpoint" width="800" height="800">
+</p>
 
 # Quality Attribute
 
