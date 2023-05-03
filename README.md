@@ -526,6 +526,42 @@ There are these interactions between the lifelines:
 
 ## Development Viewpoint
 
+A development viewpoint, the ride sharing services system is a highly scalable and fault-tolerant system that can handle large volumes of requests and transactions. The development of the ride sharing services system requires a deep understanding of distributed systems, microservices architecture, and cloud computing. By leveraging these technologies, the system is able to provide a highly scalable, fault-tolerant, and reliable platform for ride-sharing services.
+                                                                                              
+|  components & layers | Description                                                                                                                                                                                                                           |
+| -------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|      User Interface | The user interface allows passengers to book rides and drivers to accept or reject ride requests. This could be a mobile app or a web app.                            |
+|          Application Server | The application server receives ride requests from passengers and sends them to available drivers in the area. The server also manages the communication between drivers and passengers, handles ride pricing, and provides real-time GPS tracking.                                                |
+|        Driver App | The driver app allows drivers to accept or reject ride requests, track their location and destination, and receive payments for completed rides. It also provides a rating system for passengers and drivers.                                                        |
+| Passenger App | The passenger app allows passengers to request rides, track their location and destination, view ride history, and make payments. It also provides a rating system for drivers and passengers.                                                                                     |
+|     Payment Gateway | The payment gateway handles all payment transactions between passengers and drivers. It should be secure and reliable, and support various payment methods, such as credit cards, PayPal, or mobile wallets. |
+|    Competitors | Other companies that offer ride-sharing services and may be `impacted` by the success of the service.                                                                                                                                  |
+|     Analytics | The ride sharing system should track various metrics such as ride requests, cancellations, payments, ratings, and driver availability. This data can be used to optA geospatial database is used to store the real-time location data of drivers and passengers. This data is used to match ride requests with available drivers in the area.                            |
+|    Geospatial Database | A geospatial database is used to store the real-time location data of drivers and passengers. This data is used to match ride requests with available drivers in the area.                     |
+|     Map Service | The map service provides real-time maps and location data for the driver and passenger apps. It should be fast, reliable, and provide accurate routing and directions.          |
+|     Messaging Service | The messaging service provides real-time messaging between drivers and passengers. It should be secure and reliable and support multiple channels such as SMS, push notifications, or in-app messaging.                           |
+|    Security | A geospatial database is used to store the real-time location data of drivers and passengers. This data is used to match ride requests with available drivers in the area.                  |
+|    Infrastructure | The Uber system requires a robust infrastructure to handle a large number of concurrent users and transactions. This includes servers, storage, networking, and load balancing components.                                                    |
+
+Overall, the Uber system architecture is a complex and highly scalable distributed system that requires the use of multiple technologies and tools to ensure reliability, scalability, and security.
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/75358854/235846099-11017bf4-2569-415a-8e9b-e738400b34ea.jpg" width="700">
+</p>
+
+Above diagram, Taxi is the supply which means the Taxi and User is the demand where the User request the Driver. Every 4-sec once the taxi will be sending location data to the KAFKA REST API. Every call happens through the Firewall. Then it gets to the Load Balancer and it goes to KAFKA and it is going for different servers. And also a copy of location data sends to the Database and also Dispatch Optimization to keep the latest location of the Cab.
+
+- Web Application Firewall (WAF)
+Use for Security purposes. Here we can block the requests from the blocked IPs, Bots, and regions which is not supported by Uber.
+- Load Balancer 
+Here we can use different layers of Load balancers like Layer 3, Layer4, and Layer 7. Layer 3 works based on IP based Load Balancer(All the IPs for traffic go Layer3 Load balancer. In the Layer4 we can use DNS based Load Balancing. In Layer7 works based on Application-level Load Balancing)
+- KAFKA REST API 
+This will provide an endpoint to consume all the location data for every Cab. Example: We have 1000 Cabs running for a City and every 4 sec we are sending a location that means every 4 sec we have 1000 locations been sending for KAFKA REST API. Those locations will be sent to DISCO to keep the states alive.
+- WEB SOCKET 
+Unless normal HTTP requests web sockets are really helpful for these kinds of Applications. Because we need synchronize way to sending messages from Client to the Server and Server to the Client at any given point of the time. We should have a connection established between the Cab Application to the Server or The User to the Server. Web Socket keeps the connection opens for all of the Uber Application and based on the changes that happen in the DISCO or any component in the server the data will be exchanged between the Application and the Server. Mainly written in NodeJS(Asynchornize and event-driven framework).
+- DISCO Component
+Dispatch System is mainly written in NodeJS. So that server can send/push the messages to the Application whenever it wants.
+
 ## Deployment View
 
 ## Context Viewpoint
