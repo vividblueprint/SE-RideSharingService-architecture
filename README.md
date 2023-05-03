@@ -68,7 +68,7 @@
    - [Logical Viewpoint](#logical-viewpoint)
    - [Functional Viewpoint](#functional-viewpoint)
    - [Development Viewpoint](#development-viewpoint)
-   - [Deployment View](#deployment-view)
+   - [Process Viewpint](#process-viewpint)
    - [Context Viewpoint](#context-viewpoint)
 1. [Quality Attribute](#quality-attribute)
    - [Consistency](#consistency)
@@ -551,18 +551,24 @@ Overall, the Uber system architecture is a complex and highly scalable distribut
 
 Above diagram, Taxi is the supply which means the Taxi and User is the demand where the User request the Driver. Every 4-sec once the taxi will be sending location data to the KAFKA REST API. Every call happens through the Firewall. Then it gets to the Load Balancer and it goes to KAFKA and it is going for different servers. And also a copy of location data sends to the Database and also Dispatch Optimization to keep the latest location of the Cab.
 
-- Web Application Firewall (WAF)
-Use for Security purposes. Here we can block the requests from the blocked IPs, Bots, and regions which is not supported by Uber.
-- Load Balancer 
-Here we can use different layers of Load balancers like Layer 3, Layer4, and Layer 7. Layer 3 works based on IP based Load Balancer(All the IPs for traffic go Layer3 Load balancer. In the Layer4 we can use DNS based Load Balancing. In Layer7 works based on Application-level Load Balancing)
-- KAFKA REST API 
-This will provide an endpoint to consume all the location data for every Cab. Example: We have 1000 Cabs running for a City and every 4 sec we are sending a location that means every 4 sec we have 1000 locations been sending for KAFKA REST API. Those locations will be sent to DISCO to keep the states alive.
-- WEB SOCKET 
-Unless normal HTTP requests web sockets are really helpful for these kinds of Applications. Because we need synchronize way to sending messages from Client to the Server and Server to the Client at any given point of the time. We should have a connection established between the Cab Application to the Server or The User to the Server. Web Socket keeps the connection opens for all of the Uber Application and based on the changes that happen in the DISCO or any component in the server the data will be exchanged between the Application and the Server. Mainly written in NodeJS(Asynchornize and event-driven framework).
-- DISCO Component
-Dispatch System is mainly written in NodeJS. So that server can send/push the messages to the Application whenever it wants.
+|  components  | Description                                                                                                                                                                                                                           |
+| -------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|      Web Application Firewall (WAF) | Use for Security purposes. Here we can block the requests from the blocked IPs, Bots, and regions which is not supported by Uber.                            |
+|          Load Balancer  | Here we can use different layers of Load balancers like Layer 3, Layer4, and Layer 7. Layer 3 works based on IP based Load Balancer(All the IPs for traffic go Layer3 Load balancer. In the Layer4 we can use DNS based Load Balancing. In Layer7 works based on Application-level Load Balancing)                                                |
+|        KAFKA REST API | This will provide an endpoint to consume all the location data for every Cab. Example: We have 1000 Cabs running for a City and every 4 sec we are sending a location that means every 4 sec we have 1000 locations been sending for KAFKA REST API. Those locations will be sent to DISCO to keep the states alive.                                                        |
+| WEB SOCKET | Unless normal HTTP requests web sockets are really helpful for these kinds of Applications. Because we need synchronize way to sending messages from Client to the Server and Server to the Client at any given point of the time. We should have a connection established between the Cab Application to the Server or The User to the Server. Web Socket keeps the connection opens for all of the Uber Application and based on the changes that happen in the DISCO or any component in the server the data will be exchanged between the Application and the Server. Mainly written in NodeJS(Asynchornize and event-driven framework).                                     |
+|     DISCO Component | Dispatch System is mainly written in NodeJS. So that server can send/push the messages to the Application whenever it wants.                                                                                                 |
+                                              
 
-## Deployment View
+## Process Viewpoint
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/75358854/235875300-e4b5792a-d12a-41d1-843f-203011ab62b4.jpeg" alt="Sequence Diagram for Taxi Booking System
+" width="800" height="800">
+</p>
+
+
+
 
 ## Context Viewpoint
 
