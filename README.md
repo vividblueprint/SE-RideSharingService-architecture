@@ -1,5 +1,5 @@
 <br>
-<br><p align=center><img width=700 src="https://jugnoo.io/wp-content/uploads/2021/05/2-1024x536.png"/></p>
+<br><p align=center><img width=700 src="https://qph.cf2.quoracdn.net/main-qimg-bfb158d7f806d176dfe09e4547f61895-pjlq"/></p>
 
 <h1 align="center" >
 <img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
@@ -35,9 +35,9 @@
 
 ```mermaid
   graph BT
-    A(AKTAR MST SHAMIMA\n2022272110008) --> B(Contributors)
-    C(MIA MD SHMIM\n2022272110001) --> B
-    D(JONY MD MONIR HOSEN\n2022272110005) --> B
+    A(Name: AKTAR MST SHAMIMA\nID: 2022272110008) --> B(Contributors)
+    C(Name: MIA MD SHMIM\nID: 2022272110001) --> B
+    D(Name: JONY MD MONIR HOSEN\nID: 2022272110005) --> B
 ```
 
 ```mermaid
@@ -63,20 +63,25 @@
 1. [Architecture Principles](#architecture-principles)
 1. [Architecture Components](#architecture-components)
 1. [Functional Requirements](#functional-requirements)
-1. [Viewpoint](#viewpoint)
+1. [Architecture Views](#viewpoint)
    - [Use Case Viewpoint](#use-case-viewpoint)
    - [Logical Viewpoint](#logical-viewpoint)
    - [Functional Viewpoint](#functional-viewpoint)
    - [Development Viewpoint](#development-viewpoint)
    - [Process Viewpint](#process-viewpint)
    - [Context Viewpoint](#context-viewpoint)
-1. [Quality Attribute](#quality-attribute)
+1. [Architecture Patterns](#architecture-patterns)
+1. [Components:](#architecture-patterns)
+1. [Data Management:](#architecture-patterns)
+1. [Performance and Scalability](#quality-attribute)
    - [Consistency](#consistency)
    - [Availability](#availability)
    - [Scalability](#scalability)
    - [Flexibility](#flexibility)
    - [Security](#security)
    - [Performance](#performance)
+1. [Security and Privacy](#architecture-patterns)
+1. [Deployment](#architecture-patterns)
 1. [Technical Debt](#technical-debt)
 1. [Conclusion](#conclusion)
 1. [References](#references)
@@ -137,6 +142,41 @@ In addition to the stakeholders who have a `positive interest` or investment in 
 
 Understanding the concerns and `objections of negative stakeholders` is important in designing a ride-sharing service that is `sustainable` and `responsive` to the needs of all stakeholders. By considering the perspectives of both positive and negative stakeholders, architects can design a ride-sharing service that addresses concerns and objections while still meeting the needs of `riders`, `drivers`, `investors`, and other `positive stakeholders`.
 
+# System Context
+
+The ride-sharing service operates within a larger system context, consisting of various external systems, interfaces, and communication protocols. The following diagram illustrates the system context of the ride-sharing service:
+```mermaid
+graph TD
+A[External Services]
+B[Ride-Sharing Service]
+C[User Devices]
+D[Payment Gateway]
+E[Mapping Service]
+F[Push Notification Service]
+G[Analytics Service]
+H[Internet]
+
+C-->B
+B-->A
+B-->D
+B-->E
+B-->F
+B-->G
+B-->H
+
+```
+<br/>
+
+As shown in the diagram, the ride-sharing service is connected to various external services, including user devices, a payment gateway, a mapping service, a push notification service, and an analytics service. The ride-sharing service communicates with these external services through various interfaces and protocols, such as HTTP, HTTPS, and REST.
+
+User devices, such as mobile phones and tablets, are the primary interface for riders and drivers to interact with the ride-sharing service. They provide access to the ride-sharing app and enable users to request and accept rides, track ride status, and handle payments.
+
+The payment gateway service processes payments made by riders and drivers, handling transactions securely and efficiently. The mapping service provides real-time location data and navigation services, allowing riders and drivers to optimize their routes and minimize travel time.
+
+The push notification service sends real-time notifications to users about ride status updates, payment confirmations, and other relevant information. The analytics service collects and analyzes data on ride usage, user behavior, and service performance, providing insights to improve the quality and efficiency of the ride-sharing service.
+
+The ride-sharing service is deployed on the internet and relies on various internet technologies, such as DNS, load balancers, firewalls, and security protocols, to ensure secure and reliable service delivery.
+
 # Architecture Principles
 
 The architecture principles for a ride-sharing service may vary depending on the specific needs and goals of the service. However, here are some `potential` architecture principles:
@@ -171,43 +211,20 @@ The architecture components of a ride-sharing service can be broken down into `s
 
 Overall, the architecture of a ride-sharing service should be designed to provide a `reliable`, `scalable`, and secure platform that can deliver high-quality services to riders and drivers while complying with `regulatory requirements` and `evolving` to meet changing market needs.
 
-### Architecture Components Diagram:
+### Architecture Layer Diagram:
 
 ```mermaid
 graph TD
-  A(["Presentation Layer (UI)"]) -->|Mobile App| B(["Application Layer (Logic)"])
-  A -->|Web Interface| B:::orange
-  A:::blue -->|Voice Assistant| B
-  A -->|Wearables| B
-  B -->|Matching Algorithm| C(["Service Layer (Backend)"])
-  B -->|Pricing Algorithm| C
-  B -->|Payment Processing| C:::green
-  C -->|Geolocation Service| D(["Data Layer (Storage)"])
-  C -->|Notification Service| D
-  C -->|SMS Gateway| D:::red
-  D -->|User Profiles| E(["Infrastructure Layer (Hardware)"])
-  D -->|Ride History| E:::green
-  D -->|Payment Information| E
-  D -->|Driver Qualifications| E
-  E -->|Servers| F(["Analytics Layer (Data Analysis)"])
-  E -->|Databases| F:::blue
-  E -->|Network Components| F
-  E -->|Cloud Services| F
-  F -->|Service Performance Monitoring| G(["Security Layer (Protection)"])
-  F -->|Rider & Driver Behavior Analysis| G:::orange
-  G -->|Authentication & Access Control| H(["Integration Layer (Third-party)"])
-  G -->|Data Encryption| H
-  G -->|Monitoring| H:::red
-  H -->|Payment Processor| I(( ))
-  H -->|Mapping Service| I
-  H -->|Social Media Platform| I
-
-    classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff;
-    classDef orange fill:#fc822b,stroke:#000,stroke-width:2px,color:#fff;
-    classDef green fill:#16b552,stroke:#000,stroke-width:2px,color:#fff;
-    classDef red fill:#ed2633,stroke:#000,stroke-width:2px,color:#fff;
-    classDef none fill:#none,stroke:#000,stroke-width:2px,color:#fff;
+A[Presentation Layer]
+B[Application Layer]
+C[Data Layer]
+D[Infrastructure Layer]
+A-->B
+B-->C
+C-->D
 ```
+
+<p align=center><img src ="https://hackernoon.imgix.net/hn-images/1*EW7BA8uF7ghJ4sDLyhYHeQ.jpeg"/></p>
 
 # Functional Requirements
 
@@ -439,6 +456,8 @@ A logical view of a ride-sharing service can be represented as a layered archite
 |                Rating and review layer | The rating and review layer allows passengers to rate and review their driver and vice versa. This helps to maintain the quality of service and provides feedback for improvement.                                                                                   |
 |          Analytics and reporting layer | Finally, the analytics and reporting layer collects and analyzes data related to the ride-sharing service, such as ride volumes, revenue, and user feedback. It provides insights into the performance of the service and helps to identify areas for improvement.   |
 | Authentication and Authorization layer | This layer handles the authentication and authorization of users to access the ride-sharing service. It ensures that only authorized users are allowed to use the service.                                                                                           |
+
+<br><p align=center><img width=700 src="https://media.cheggcdn.com/media/9e4/9e4da75d-3fff-4458-8ff2-3bfb4c620d53/php9AEoc3"/></p>
 
 ```mermaid
 graph TB
