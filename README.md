@@ -56,38 +56,40 @@
 ---
 
 ## Table of Contents
+1. <a id="introduction-1">[Introduction](#introduction)</a>
+1. <a id="business-requirements-1">[Business Requirements](#business-requirements)</a>
+1. <a id="stakeholder-analysis-1">[Stakeholder Analysis](#stakeholder-analysis)</a>
+1. <a id="system-context-1">[System Context](#system-context)</a>
+1. <a id="architecture-components-1">[Architecture Components](#architecture-components)</a>
+1. <a id="functional-requirements-1">[Functional Requirements](#functional-requirements)</a>
+   - <a id="Essential-1">[Essential Requirements of Driver Interface](#Essential)</a>
+   - <a id="essentialDriver-1">[Essential Requirements of Driver Interface](#essentialDriver)</a>
+   - <a id="essentialAdmin-1">[Essential Requirements of Admin Interface](#essentialAdmin)</a>
+1. <a id="viewpoint-1">[Architecture Views](#viewpoint)</a>
+   - <a id="use-case-viewpoint-1">[Use Case Viewpoint](#use-case-viewpoint)</a>
+   - <a id="logical-viewpoint-1">[Logical Viewpoint](#logical-viewpoint)</a>
+   - <a id="functional-viewpoint-1">[Functional Viewpoint](#functional-viewpoint)</a>
+   - <a id="development-viewpoint-1">[Development Viewpoint](#development-viewpoint)</a>
+   - <a id="process-viewpint-1">[Process Viewpint](#process-viewpint)</a>
+   - <a id="context-viewpoint-1">[Context Viewpoint](#context-viewpoint)</a>
+1. <a id="architecture-patterns-1">[Architecture Patterns](#architecture-patterns)</a>
+1. <a id="Components-1">[Components:](#Components)</a>
+1. <a id="data-managment-1">[Data Management:](#data-managment)</a>
+1. <a id="quality-attribute-1">[Performance and Scalability](#quality-attribute)</a>
+   - <a id="consistency-1">[Consistency](#consistency)</a>
+   - <a id="availability-1">[Availability](#availability)</a>
+   - <a id="scalability-1">[Scalability](#scalability)</a>
+   - <a id="flexibility-1">[Flexibility](#flexibility)</a>
+   - <a id="security-1">[Security](#security)</a>
+   - <a id="performance-1">[Performance](#performance)</a>
+1. <a id="securityPrivacy-1">[Security and Privacy](#securityPrivacy)</a>
+1. <a id="deployment-1">[Deployment](#deployment)</a>
+1. <a id="technicaldebt-1">[Technical Debt](#technicaldebt)</a>
+1. <a id="conclusion-1">[Conclusion](#conclusion)</a>
+1. <a id="references-1">[References](#references)</a>
+1. <a id="appendix-1">[Appendix](#appendix)</a>
 
-1. [Introduction](#introduction)
-1. [Business Requirements](#business-requirements)
-1. [Stakeholder Analysis](#stakeholder-analysis)
-1. [Architecture Principles](#architecture-principles)
-1. [Architecture Components](#architecture-components)
-1. [Functional Requirements](#functional-requirements)
-1. [Architecture Views](#viewpoint)
-   - [Use Case Viewpoint](#use-case-viewpoint)
-   - [Logical Viewpoint](#logical-viewpoint)
-   - [Functional Viewpoint](#functional-viewpoint)
-   - [Development Viewpoint](#development-viewpoint)
-   - [Process Viewpint](#process-viewpint)
-   - [Context Viewpoint](#context-viewpoint)
-1. [Architecture Patterns](#architecture-patterns)
-1. [Components:](#architecture-patterns)
-1. [Data Management:](#architecture-patterns)
-1. [Performance and Scalability](#quality-attribute)
-   - [Consistency](#consistency)
-   - [Availability](#availability)
-   - [Scalability](#scalability)
-   - [Flexibility](#flexibility)
-   - [Security](#security)
-   - [Performance](#performance)
-1. [Security and Privacy](#architecture-patterns)
-1. [Deployment](#architecture-patterns)
-1. [Technical Debt](#technical-debt)
-1. [Conclusion](#conclusion)
-1. [References](#references)
-1. [Appendix](#appendix)
-
-# Introduction
+# <a id='introduction'>[Introduction](#introduction-1)</a>
 
 The ride-sharing industry has exploded in popularity in recent years, with services such as `Uber`, `Lyft`, and `Grab` becoming ubiquitous in cities around the world. These services offer a new and convenient way for people to get around, using a combination of technology and transportation to connect riders with drivers. However, designing and implementing a successful ride-sharing service is no simple feat, and requires careful consideration of a wide range of `technical`, `logistical`, and `social` factors.
 
@@ -97,8 +99,13 @@ The document will begin by providing an overview of the `ride-sharing industry`,
 
 Overall, this document aims to provide a comprehensive and practical guide to the architecture of a ride-sharing service, with a focus on the technical considerations and challenges involved in designing and operating such a service. By providing a clear and detailed understanding of the key systems and components involved in a ride-sharing service, this document will help developers and `stakeholders` to make informed decisions and build successful ride-sharing services that meet the needs of `riders`, `drivers`, and `other stakeholders`.
 
-# Business Requirements
+<br/>
+<br/>
+<p align=center><img src="https://user-images.githubusercontent.com/78911344/236380492-c5831a7a-b3ef-4f53-9cba-3d9ae621ef3a.jpg" alt="System overview"/></p>
 
+### <p align=center>System overview</p>
+
+# <a id="business-requirements">[Business Requirements](#business-requirements-1)</a>
 Before we dive deeper into the architecture of the ride-sharing service, let's first define the business requirements. The ride-sharing service should meet the following requirements:
 
 |                      Requirements | Descriptions                                                                                                                                                                                                            |
@@ -115,7 +122,8 @@ Before we dive deeper into the architecture of the ride-sharing service, let's f
 
 Now that we have defined the business requirements, let's move on to the `architecture of the ride-sharing` service.
 
-# Stakeholder Analysis
+
+# <a id="stakeholder-analysis">[Stakeholder Analysis](#stakeholder-analysis-1)</a>
 
 In the case of a ride-sharing service, `stakeholders` can include a wide range of individuals or groups who have an `interest` or `investment` in the success of the service. Some examples of stakeholders in a ride-sharing service might include:
 
@@ -142,9 +150,10 @@ In addition to the stakeholders who have a `positive interest` or investment in 
 
 Understanding the concerns and `objections of negative stakeholders` is important in designing a ride-sharing service that is `sustainable` and `responsive` to the needs of all stakeholders. By considering the perspectives of both positive and negative stakeholders, architects can design a ride-sharing service that addresses concerns and objections while still meeting the needs of `riders`, `drivers`, `investors`, and other `positive stakeholders`.
 
-# System Context
+# <a id="system-context">[System Context](#system-context-1)</a>
 
 The ride-sharing service operates within a larger system context, consisting of various external systems, interfaces, and communication protocols. The following diagram illustrates the system context of the ride-sharing service:
+
 ```mermaid
 graph TD
 A[External Services]
@@ -177,58 +186,34 @@ The push notification service sends real-time notifications to users about ride 
 
 The ride-sharing service is deployed on the internet and relies on various internet technologies, such as DNS, load balancers, firewalls, and security protocols, to ensure secure and reliable service delivery.
 
-# Architecture Principles
 
-The architecture principles for a ride-sharing service may vary depending on the specific needs and goals of the service. However, here are some `potential` architecture principles:
+# <a id="architecture-components">[Architecture Components](#architecture-components-1)</a>
 
-| Architecture Principles | Descriptions                                                                                                                                                                                          |
-| ----------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|             Geolocation | The architecture should support the ability to `locate` and `track` drivers and passengers in `real-time` using `GPS` and `geolocation` data.                                                         |
-|             Scalability | The architecture should be designed to handle `large volumes of requests` and `traffic during peak times`, such as `rush hour` or `major events`.                                                     |
-|         Dynamic pricing | The architecture should support the ability to adjust pricing in real-time based on `supply` and `demand`, such as `surge pricing during peak times`.                                                 |
-|     Ratings and reviews | The architecture should include mechanisms for riders and drivers to `rate` and `review` each other, which can help `maintain` a high level of service `quality` and `safety`.                        |
-|      Payment processing | The architecture should support `secure` and `reliable payment processing` for riders and drivers, including options for `different payment methods` and `currencies`.                                |
-|     Matching algorithms | The architecture should include `intelligent matching algorithms to match riders with drivers based on factors such as proximity`, `availability`, and `ride history`.                                |
-|     Driver verification | The architecture should include mechanisms for `verifying` the `identity` and `qualifications` of drivers, including `background checks`, `driver’s license verification`, and `vehicle inspections`. |
-|        Customer support | The architecture should include `robust customer support mechanisms`, including `chatbots`, `phone support`, and `email support`, to address any issues or concerns that riders or drivers may have.  |
-|   Regulatory compliance | The architecture should comply with local `regulations` and laws related to ride-sharing services, such as `licensing requirements` and `insurance regulations`.                                      |
-|  Continuous improvement | The architecture should support the ability to continuously `improve` the service through `data analytics`, `user feedback`, and `testing of new features` and `services`.                            |
+This Component diagram depicts the Car Sharing System, illustrating its components and the interfaces, ports, and relationships between them. It is a powerful tool used in Component-Based Development (CBD) to describe systems with Service-Oriented Architecture (SOA).
 
-# Architecture Components
+The Car Sharing System UML component diagram provides a comprehensive view of the organization and wiring of the physical components in the system. Its primary objective is to convey a clear and concise representation of the system's structure and its interrelationships.
 
-The architecture components of a ride-sharing service can be broken down into `several layers`, each with their own set of components. Here are some `potential architecture components` for a ride-sharing service:
+The Car Sharing System is composed of several components, including the `Payment Component`, `Booking Component`, `Destination Component`, `Customer Component`, and `Insurance Component`. Each of these components plays a crucial role in the overall system, and they work together seamlessly to ensure that the Car Sharing System provides a reliable, efficient, and safe service to its users.
 
-| Architecture Components | Descriptions                                                                                                                                                                                                                                           |
-| ----------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|      Presentation Layer | This layer includes the components that `interact` with users, such as `mobile apps` or `web interfaces`, and allows riders and drivers to `request` or `accept` rides, `track` the location of their ride, and `communicate` with each other.         |
-|       Application Layer | This layer includes the `logic` that manages the ride-sharing service, such as `matching algorithms` that `connect` drivers with riders, `pricing algorithms` that determine ride `costs`, and `payment processing` components that `handle payments`. |
-|           Service Layer | This layer includes the components that provide `backend services`, such as `geolocation` services that track the location of drivers and passengers, and `notification` services that `alert` drivers and riders of ride `requests` or `updates`.     |
-|              Data Layer | This layer includes the components that `store` and manage `data` related to the ride-sharing service, such as `user profiles`, `ride history`, `payment information`, and `driver qualifications`.                                                    |
-|    Infrastructure Layer | This layer includes the `hardware` and `software` infrastructure that supports the ride-sharing service, such as `servers`, `databases`, and `network components`.                                                                                     |
-|         Analytics Layer | This layer includes the components that provide `data analytics` and `business intelligence`, such as tools for `monitoring service` performance, `analyzing rider` and `driver behavior`, and `identifying areas` for improvement.                    |
-|          Security Layer | This layer includes the components that ensure the security of the ride-sharing service, such as `authentication` and `access control mechanisms`, `data encryption`, and `monitoring` for `suspicious activity`.                                      |
-|       Integration Layer | This layer includes the components that integrate the ride-sharing service with other `systems` or `services`, such as `third-party payment processors`, `mapping` services, or `social media` platforms.                                              |
+| Component | Descripiton|
+| ---: | :--- |
+|Payment Component|The Payment Component is responsible for managing the payment transactions between the user and the system. It ensures secure and efficient processing of payment details and charges the user for each ride.|
+|Booking Component|The Booking Component handles the ride booking process, including ride requests, driver assignment, and fare calculation. It is responsible for ensuring that rides are assigned to the most suitable driver and that the user is charged an appropriate fare.|
+|Customer Component|Destination ComponentThe Destination Component is responsible for providing accurate and reliable destination information to the user. It tracks the location of drivers and users and provides distance and time estimates for rides.|
+|Customer Component|The Customer Component manages the user's account, including their profile, ride history, and preferences. It ensures that users have a smooth and seamless experience while using the Car Sharing System.
+|Insurance Component|The Insurance Component provides insurance coverage for the Car Sharing System. It ensures that users and drivers are protected in case of accidents or other incidents.|
 
-Overall, the architecture of a ride-sharing service should be designed to provide a `reliable`, `scalable`, and secure platform that can deliver high-quality services to riders and drivers while complying with `regulatory requirements` and `evolving` to meet changing market needs.
+The Car Sharing System Component diagram is a valuable tool for modeling and understanding the Car Sharing System's physical components, their relationships, and their interactions. It can help developers and system architects identify potential issues early in the design process and ensure that the system is designed to meet the needs of its users.
+<br/>
+<br/>
 
-### Architecture Layer Diagram:
+<p align=center><img src ="https://user-images.githubusercontent.com/78911344/236380331-93019f1f-436b-4307-a6d0-86c2ebbcbb55.png"/></p>
 
-```mermaid
-graph TD
-A[Presentation Layer]
-B[Application Layer]
-C[Data Layer]
-D[Infrastructure Layer]
-A-->B
-B-->C
-C-->D
-```
+### <p align=center>Architecture Component Diagram</p>
 
-<p align=center><img src ="https://hackernoon.imgix.net/hn-images/1*EW7BA8uF7ghJ4sDLyhYHeQ.jpeg"/></p>
+# <a id="functional-requirements">[Functional Requirements](#functional-requirements-1)</a>
 
-# Functional Requirements
-
-## Essential Requirements of Rider/Passenger Interface
+## <a id="Essential">[Essential Requirements of Driver Interface](#Essential-1)</a>
 
 | Rider/Passenger Interface | Requirements                                                                                                                                                                      |
 | ------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -245,7 +230,7 @@ C-->D
 |        Schedule for Later | This feature allows the riders to book a ride in advance.                                                                                                                         |
 |           Book for Others | Using this feature, one can also book a taxi for their friends, relatives, colleagues, etc.                                                                                       |
 
-## Essential Requirements of Driver Interface
+## <a id="essentialDriver">[Essential Requirements of Driver Interface](#essentialDriver-1)</a>
 
 |   Driver Interface Requirements | Description                                                                                                                                                                                                       |
 | ------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -257,7 +242,7 @@ C-->D
 |                    Waiting time | The rider would be charged extra if the waiting period exceeds 5minutes.                                                                                                                                          |
 |                       Next Ride | The ride is notified of an upcoming ride while he/she is still completing the previous one.                                                                                                                       |
 
-## Essential Requirements of Admin Interface
+## <a id="essentialAdmin">[Essential Requirements of Admin Interface](#essentialAdmin-1)</a>
 
 An Admin panel is crucial for the proper integration and smooth functioning of the system.
 The basic features and functionalities of an Admin panel would be:
@@ -278,34 +263,10 @@ The basic features and functionalities of an Admin panel would be:
 
 ### Admin Interface Requirements Diagram:
 
-```mermaid
-graph TD;
-    A(["Customer and Driver Details Management (CRM)"]) --> B([Booking Management]);
-    A:::blue --> C(["Vehicle Detail Management (if self-owned)"]);
-    B:::green --> D([Location and Fares Management]):::violate;
-    B --> E([Call System Management]);
-    B --> F([Communication]);
-    B --> G([Ratings and Reviews]);
-    D --> H([Promotions and Discounts]):::pink;
-    C:::red --> I([Payroll Management]):::violate;
-    F:::red --> J([Content Management]):::blue;
-    E:::broune --> J;
-    G:::pink --> J;
-    J --> K([Customer Support and Help]):::green;
 
+# <a id="viewpoint">[Architecture Views](#viewpoint-1)</a>
 
-    classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff;
-    classDef orange fill:#fc822b,stroke:#000,stroke-width:2px,color:#fff;
-    classDef green fill:#16b552,stroke:#000,stroke-width:2px,color:#fff;
-    classDef red fill:#ed2633,stroke:#000,stroke-width:2px,color:#fff;
-    classDef broune fill:#b67633,stroke:#000,stroke-width:2px,color:#fff;
-    classDef violate fill:#6e07f5,stroke:#000,stroke-width:2px,color:#fff;
-    classDef pink fill:#f5077e,stroke:#000,stroke-width:2px,color:#fff;
-```
-
-# Viewpoints
-
-## Use Case Viewpoint
+## <a id="use-case-viewpoint">[Use Case Viewpoint](#use-case-viewpoint-1)</a>
 
 Ride sharing services have become a popular mode of transportation for people all over the world. They offer an affordable and convenient way to get around, and can be accessed through a variety of platforms, including mobile apps and websites. In this Use Case Viewpoint, we will examine the different use cases for ride sharing services, including how they are used by passengers and drivers.
 
@@ -335,49 +296,100 @@ This Use Case Diagram is a graphic depiction of the interactions among the eleme
 
 Major elements of the UML use case diagram of Car Sharing System are shown on the picture below:
 
-
 ```mermaid
     graph LR;
-    A((Rider/\nPassenger)):::green;
-    B((Driver)):::orange;
-    C((Navigation\nEngine)):::blue;
-    D((Admin)):::red;
-    E((Payment\nGateway)):::red;
-    A ---- 1([Register/Sign In])
-    B ----- 1
-    A --- 2([Update/Change\nInfromation])
-    B --- 2
-    A --- 3([Request Ride])
-    B --- 3
-    3----C
-    A --- 4([Cancel Ride])
-    B --- 4
-    4---C
-    A --- 5([Track Ride])
-    B --- 5
-    5---C
-    A --- 6([Make Payment])
-    6---E
-    A --- 7([Send Messages/Make Calls])
-    B --- 7
-    A --- 8([Rate Driver])
-    A --- 9([View Travel History])
+    S((Super Admin)):::red;
+    U((System User)):::red;
+    R((Rider/\nPassenger)):::green;
+    D((Driver)):::orange;
+
+    N((Navigation\nEngine)):::red;
+    P((Payment\nGateway)):::orange;
+
+    %%Supper Addmin
+    1([Manage Users and Full Application])
+    2([Manage Car History])
+    3([Manage Booking])
+    
+    %%Rider
+    4([View Sharing])
+    5([Request Sharing])
+    6([Make Payment])
+    7([Rate Driver])
+    8([Cancel Ride])
+    23([View Driver])
+
+    %%All Stack Holders
+    11([Register or Login In/Logout from the System])
+    9([Update My Profile])
+    10([Change Account Password])
+    12([Track Ride])
+    13([Send Messages/Make Calls])
+
+    %%Driver
+    14([Check Sharing Request])
+    15([Start Ride])
+    16([View Passengers])
+    17([Next Ride])
+    18([End Ride])
+    19([Manage Routes])
+
+    %%System User
+    20([Manage Membership])
+    21([Manage Customer])
+    22([Manage Insurance])
+
+    %%Supper Addmin
+    S---1
+    S---2
+    S---3
+    S---9
+    S---10
+    S---11
+
+    %%Rider
+    4-----R
+    5---R
+    P---- 6 ---R
+    7---R
+    9---R
+    10---R
+    11---R
+    12---R
+    13---R
+    23---R
+
+    %%Driver
+    14----D
+    15---D
+    16---D
+    17---D
+    18---D
+    19---D
     9---D
-    B --- 9
-    B --- 14([Next Ride])
-    A --- 15([Book for Others])
-    15---C
-    B --- 16([Start Ride])
-    16---C 
-    A --- 17([End Ride])
-    B --- 17
-    17---C
-    A --- 18([Log Out])
-    B --- 18
-    B --- 19([Complete Ride])
-    19---C
-    20([Manage User])----D
-    21([Manage Ride])---D
+    8---D
+    10---D
+    11---D
+    12---D
+    13---D
+
+    %%System User
+    U-----20
+    U---21
+    U---22
+    U---9
+    U---10
+    U---11
+    
+    %%Navigation Engine
+    N----4
+    N---5
+    N---8
+    N---12
+    N---14
+    N---15
+    N---18
+    N---19
     
     classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff;
     classDef orange fill:#fc822b,stroke:#000,stroke-width:2px,color:#fff;
@@ -386,7 +398,7 @@ Major elements of the UML use case diagram of Car Sharing System are shown on th
     classDef none fill:#none,stroke:#000,stroke-width:2px,color:#fff;
     subgraph USE[Use Case Diagram];
     style USE  fill:none,stroke:#f0000,stroke-width:2px;
-    1;2;3;4;5;6;7;8;9;14;15;16;17;18;19;20;21
+    1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;
     end
 
 ```
@@ -442,7 +454,8 @@ The relationships between and among the actors and the use cases of Car Sharing 
 1. Manage Account
    - Rider and driver can manage their account details, such as payment information and personal information, through the app.
 
-## Logical Viewpoint
+## <a id="logical-viewpoint">[Logical Viewpoint](#logical-viewpoint-1)</a>
+
 
 A logical view of a ride-sharing service can be represented as a layered architecture. At the top layer, there is the user interface, which interacts with the lower layers of the system. The lower layers of the system include the authentication and authorization layer, ride matching layer, payment and pricing layer, rating and review layer, and analytics and reporting layer.
 
@@ -458,20 +471,9 @@ A logical view of a ride-sharing service can be represented as a layered archite
 
 <br><p align=center><img width=700 src="https://media.cheggcdn.com/media/9e4/9e4da75d-3fff-4458-8ff2-3bfb4c620d53/php9AEoc3"/></p>
 
-```mermaid
-graph TB
-A[User interface layer] -- interacts with --> B[Authentication and Authorization layer]
-A -- interacts with --> C[Ride matching layer]
-C -- calculates fare using --> D[Payment and Pricing layer]
-C -- interacts with --> E[Driver Interface layer]
-C -- interacts with --> F[Rating and review layer]
-G[Analytics and reporting layer] -- collects and analyzes data --> C
-B -- ensures authorized access to --> C
-D -- manages payment processing and billing --> G
 
-```
 
-## Functional Viewpoint
+## <a id="functional-viewpoint">[Functional Viewpoint](#functional-viewpoint-1)</a>
 
 ```mermaid
 sequenceDiagram
@@ -542,7 +544,7 @@ There are these interactions between the lifelines:
   - Show customer location on the map
 
 
-## Development Viewpoint
+## <a id="development-viewpoint">[Development Viewpoint](#development-viewpoint-1)</a>
 
 A development viewpoint, the ride sharing services system is a highly scalable and fault-tolerant system that can handle large volumes of requests and transactions. The development of the ride sharing services system requires a deep understanding of distributed systems, microservices architecture, and cloud computing. By leveraging these technologies, the system is able to provide a highly scalable, fault-tolerant, and reliable platform for ride-sharing services.
                                                                                               
@@ -578,7 +580,7 @@ Above diagram, Taxi is the supply which means the Taxi and User is the demand wh
 |     DISCO Component | Dispatch System is mainly written in NodeJS. So that server can send/push the messages to the Application whenever it wants.                                                                                                 |
                                               
 
-## Process Viewpoint
+## <a id="process-viewpint">[Process Viewpint](#process-viewpint-1)</a>
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/75358854/235897950-175ad3c1-73bd-4486-86ae-7e48a7153d6c.jpg" alt="Process Viewpoint Diagram" width="800" height="800">
@@ -587,31 +589,37 @@ Above diagram, Taxi is the supply which means the Taxi and User is the demand wh
 
 
 
-## Context Viewpoint
+## <a id="context-viewpoint">[Context Viewpoint](#context-viewpoint-1)</a>
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/75358854/235879368-1b5475c6-2b60-4d91-8377-17598ae3f3da.jpg" alt="Context Viewpoint" width="800" height="800">
 </p>
 
-# Quality Attribute
+# <a id="architecture-patterns">[Architecture Patterns](#architecture-patterns-1)</a>
 
-## Consistency
+# <a id="Components">[Components:](#Components-1)</a>
+
+# <a id="data-managment">[Data Management:](#data-managment-1)</a>
+
+# <a id="quality-attribute">[Performance and Scalability](#quality-attribute-1)</a>
+
+## <a id="consistency">[Consistency](#consistency-1)</a>
 
 Mission-critical applications such as financial dashboards require data to be consistent across all regions. This includes zero data loss in the inter-region and intraregional dispersal and processing mechanisms, de-duplication as well as ability to certify data quality.
 
-## Availability
+## <a id="availability">[Availability](#availability-1)</a>
 
 The real time data infrastructure stack must be highly available with 99.99 percentile guarantee. Loss of availability has a direct impact on ride sharing business and may result in significant financial losses. For instance, dynamic pricing leverages the real-time data infrastructure component for calculating demand and supply ratios per geo-fence, which in turn is used to influence the price of a trip.
 
-## Scalability
+## <a id="scalability">[Scalability](#scalability-1)</a>
 
 The raw data streams constitute petabytes of data volume collected per day across all regions. This data is constantly growing based on organic growth of our user base, new lines of business deployed by ride sharing company as well as new real time analytics use cases that arise over time. The ability to scale with this ever-growing data set in a seamless manner, without requiring users to re-architect the processing pipelines is a fundamental requirement of the real-time data infrastructure stack.
 
-## Flexibility
+## <a id="flexibility">[Flexibility](#flexibility-1)</a>
 
 We need to provide programmatic as well as declarative (SQL like) interface for expressing computational logic to accommodate the diverse user groups. In addition, some use cases need a push-based model which is semi stateful and continuously emits generated results whereas others might need a stateful pull-based model where the user can execute queries on the raw data stream. For instance, users can create intelligent alerts in case of business rule violation using push-based stream processing pipelines. Whereas, dashboarding and triaging will require a pull-based SQL interface for the same datasets.
 
-## Security
+## <a id="security">[Security](#security-1)</a>
 
 This system has multistep security. The user needs to login to the system every time by providing a password and user ID, and the login session will time out after every 2 minutes to ensure high security. When the passenger pays the bill, they need to again give the password. All of those steps will keep their bank card and payment information secure. In bellow see full description about security.
 
@@ -626,11 +634,15 @@ Basic security behaviors:
 |Auditing | Every sensitive action can be logged.|
 |Non-repudiation | gives evidence a specific action occurred.|
 
-## Performance
+## <a id="performance">[Performance](#performance-1)</a>
 
 This system has high performance ability. Passengers can book a taxi and search for availability in a short period of time. Admin can update the bike taxi list. Search queries should return 90% of the time below 5 seconds. The credit card payment transaction should finish in 10 seconds.
 
-# Technical Debt
+# <a id="securityPrivacy">[Security and Privacy](#securityPrivacy-1)</a>
+
+# <a id="deployment">[Deployment](#deployment-1)</a>
+
+# <a id="technicaldebt">[Technical Debt](#technicaldebt-1)</a>
 
 Technical debt refers to the costs that arise from taking shortcuts or making trade-offs during the development process of software or technology systems. The ride-sharing service industry is no exception, and there are several areas where technical debt can accumulate.
 
@@ -651,7 +663,7 @@ Ride-sharing services are no exception and may face various technical debt chall
 
 Overall, technical debt is a significant concern for ride-sharing services, and it requires ongoing attention and investment to ensure that the service remains stable, secure, and compliant with all relevant regulations. Technical debt in ride-sharing services requires a long-term approach and a commitment to ongoing maintenance and improvement. Regular updates and upgrades can help to improve system scalability, security, and user experience, while reducing technical debt over time.
 
-# Conclusion
+# <a id="conclusion">[Conclusion](#conclusion-1)</a>
 
 The ride-sharing service industry has revolutionized the way people travel, and its popularity continues to grow worldwide. In conclusion, ride-sharing services offer numerous benefits, including convenience, affordability, and reduced environmental impact.
 
@@ -659,7 +671,7 @@ These services have also provided new income opportunities for drivers, allowing
 
 Overall, the future of ride-sharing services looks promising, with continued innovation and improvements in technology expected to further enhance the user experience and address any remaining concerns.
 
-# References
+# <a id="references">[References](#references-1)</a>
 
 1. Zheng, Y., Li, Q., Chen, Y., Xie, X., & Ma, W. (2018). A survey of ride sharing. Transportation Research Part C: Emerging Technologies, 96, 380-393.
 1. Wang, X., Guo, Y., Huang, M., & Yu, B. (2019). A novel group decision-making method based on multi-attribute decision-making for ride-sharing. IEEE Access, 7, 45899-45907.
@@ -667,7 +679,7 @@ Overall, the future of ride-sharing services looks promising, with continued inn
 1. D. D. S. Gopala Rao, S. Bhowmick, K. Desai and M. Shukla, "A Systematic Survey of Real-Time Ridesharing: From User Behaviour to Future Directions," in IEEE Transactions on Intelligent Transportation Systems, vol. 22, no. 7, pp. 4019-4042, July 2021.
 1. Zhang, H., Wu, J., Liu, Y., Gu, X., & Xu, M. (2019). A spatiotemporal-sentiment-aware method for taxi ride-sharing. IEEE Transactions on Intelligent Transportation Systems, 20(10), 3827-3840.
 
-# Appendix
+# <a id="appendix">[Appendix](#appendix-1)</a>
 
 **Appendix A:** Glossary - a list of definitions for key terms used in the document.
 
