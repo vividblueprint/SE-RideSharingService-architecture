@@ -69,7 +69,6 @@
    - <a id="use-case-viewpoint-1">[Use Case Viewpoint](#use-case-viewpoint)</a>
    - <a id="logical-viewpoint-1">[Logical Viewpoint](#logical-viewpoint)</a>
    - <a id="functional-viewpoint-1">[Sequence Diagram for Taxi Booking System](#functional-viewpoint)</a>
-   - <a id="development-viewpoint-1">[Development Viewpoint](#development-viewpoint)</a>
    - <a id="process-viewpint-1">[Process Viewpint](#process-viewpint)</a>
    - <a id="context-viewpoint-1">[Context Viewpoint](#context-viewpoint)</a>
 1. <a id="architecture-patterns-1">[Architecture Patterns](#architecture-patterns)</a>
@@ -552,32 +551,6 @@ There are these interactions between the lifelines:
   - Show customer location on the map
 
 
-## <a id="development-viewpoint">[Development Viewpoint](#development-viewpoint-1)</a>
-
-A development viewpoint, the ride sharing services system is a highly scalable and fault-tolerant system that can handle large volumes of requests and transactions. The development of the ride sharing services system requires a deep understanding of distributed systems, microservices architecture, and cloud computing. By leveraging these technologies, the system is able to provide a highly scalable, fault-tolerant, and reliable platform for ride-sharing services.
-                                                                                              
-|  components & layers | Description                                                                                                                                                                                                                           |
-| -------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|      User Interface | The user interface allows passengers to book rides and drivers to accept or reject ride requests. This could be a mobile app or a web app.                            |
-|          Application Server | The application server receives ride requests from passengers and sends them to available drivers in the area. The server also manages the communication between drivers and passengers, handles ride pricing, and provides real-time GPS tracking.                                                |
-|        Driver App | The driver app allows drivers to accept or reject ride requests, track their location and destination, and receive payments for completed rides. It also provides a rating system for passengers and drivers.                                                        |
-| Passenger App | The passenger app allows passengers to request rides, track their location and destination, view ride history, and make payments. It also provides a rating system for drivers and passengers.                                                                                     |
-|     Payment Gateway | The payment gateway handles all payment transactions between passengers and drivers. It should be secure and reliable, and support various payment methods, such as credit cards, PayPal, or mobile wallets. |
-|    Competitors | Other companies that offer ride-sharing services and may be `impacted` by the success of the service.                                                                                                                                  |
-|     Analytics | The ride sharing system should track various metrics such as ride requests, cancellations, payments, ratings, and driver availability. This data can be used to optA geospatial database is used to store the real-time location data of drivers and passengers. This data is used to match ride requests with available drivers in the area.                            |
-|    Geospatial Database | A geospatial database is used to store the real-time location data of drivers and passengers. This data is used to match ride requests with available drivers in the area.                     |
-|     Map Service | The map service provides real-time maps and location data for the driver and passenger apps. It should be fast, reliable, and provide accurate routing and directions.          |
-|     Messaging Service | The messaging service provides real-time messaging between drivers and passengers. It should be secure and reliable and support multiple channels such as SMS, push notifications, or in-app messaging.                           |
-|    Security | A geospatial database is used to store the real-time location data of drivers and passengers. This data is used to match ride requests with available drivers in the area.                  |
-|    Infrastructure | The Uber system requires a robust infrastructure to handle a large number of concurrent users and transactions. This includes servers, storage, networking, and load balancing components.                                                    |
-
-Overall, the Uber system architecture is a complex and highly scalable distributed system that requires the use of multiple technologies and tools to ensure reliability, scalability, and security.
-
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/75358854/235846099-11017bf4-2569-415a-8e9b-e738400b34ea.jpg" width="700">
-</p>
-
-Above diagram, Taxi is the supply which means the Taxi and User is the demand where the User request the Driver. Every 4-sec once the taxi will be sending location data to the KAFKA REST API. Every call happens through the Firewall. Then it gets to the Load Balancer and it goes to KAFKA and it is going for different servers. And also a copy of location data sends to the Database and also Dispatch Optimization to keep the latest location of the Cab.
 
 |  components  | Description                                                                                                                                                                                                                           |
 | -------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
