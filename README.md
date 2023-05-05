@@ -68,7 +68,7 @@
 1. <a id="viewpoint-1">[Architecture Views](#viewpoint)</a>
    - <a id="use-case-viewpoint-1">[Use Case Viewpoint](#use-case-viewpoint)</a>
    - <a id="logical-viewpoint-1">[Logical Viewpoint](#logical-viewpoint)</a>
-   - <a id="functional-viewpoint-1">[Functional Viewpoint](#functional-viewpoint)</a>
+   - <a id="functional-viewpoint-1">[Sequence Diagram for Taxi Booking System](#functional-viewpoint)</a>
    - <a id="development-viewpoint-1">[Development Viewpoint](#development-viewpoint)</a>
    - <a id="process-viewpint-1">[Process Viewpint](#process-viewpint)</a>
    - <a id="context-viewpoint-1">[Context Viewpoint](#context-viewpoint)</a>
@@ -458,23 +458,29 @@ The relationships between and among the actors and the use cases of Car Sharing 
 ## <a id="logical-viewpoint">[Logical Viewpoint](#logical-viewpoint-1)</a>
 
 
-A logical view of a ride-sharing service can be represented as a layered architecture. At the top layer, there is the user interface, which interacts with the lower layers of the system. The lower layers of the system include the authentication and authorization layer, ride matching layer, payment and pricing layer, rating and review layer, and analytics and reporting layer.
+A logical view of a ride-sharing service can be represented as a layered architecture. Layer Design is a common approach used to design complex systems, which involves breaking down the system into several layers, with each layer responsible for a specific set of functionalities. As domains move from lower to higher layers, they impact fewer services in the case of an outage and represent more specific product use cases. This approach ensures that the system is modular, scalable, and easy to maintain.
+
 
 |                      Logical Viewpoint | Description                                                                                                                                                                                                                                                          |
 | -------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                   User interface layer | The user interface layer provides the front-end interface for users to access the ride-sharing service. This layer interacts with the authentication and authorization layer, which handles user authentication and authorization.                                   |
-|                    Ride matching layer | The ride matching layer is responsible for matching passengers with drivers based on their location, destination, and other parameters. The payment and pricing layer calculates the fare based on factors such as distance traveled, time taken, and surge pricing. |
-|              Payment and Pricing layer | The Payment and Pricing layer handles payment and pricing for the service. It calculates the fare based on factors such as distance, time, and demand. This layer also manages payment processing and billing.                                                       |
-|                 Driver Interface layer | This layer provides a user interface for drivers to accept ride requests, navigate to the passenger's location, and complete rides. The driver interface can be accessed through a mobile application.                                                               |
-|                Rating and review layer | The rating and review layer allows passengers to rate and review their driver and vice versa. This helps to maintain the quality of service and provides feedback for improvement.                                                                                   |
-|          Analytics and reporting layer | Finally, the analytics and reporting layer collects and analyzes data related to the ride-sharing service, such as ride volumes, revenue, and user feedback. It provides insights into the performance of the service and helps to identify areas for improvement.   |
-| Authentication and Authorization layer | This layer handles the authentication and authorization of users to access the ride-sharing service. It ensures that only authorized users are allowed to use the service.                                                                                           |
+|                   Edge layer | The Edge Layer is the gateway that safely exposes user functionality to the outside world, including mobile apps and other clients. This layer provides a secure boundary between the outside world and the rest of the system, protecting it from potential security threats.  |
+|                    Presentation Layer | The Presentation Layer serves client-specific use cases in ride-sharing service client apps. It provides an interface between the client and the rest of the system, enabling communication between the two. This layer uses API technology options such as Resource Oriented APIs, WebSockets, GraphQL, and gRPC. |
+|              Product Layer | The Product Layer houses services and functionalities that enable line-of-business-specific use cases, such as Mobility, Delivery, and Freight. These functionalities are designed to meet the specific requirements of each line of business and provide value-added services to users. |
+|                 Business Layer | The Business Layer provides common, core functionality that ride-sharing services can use for any product or use case. These functionalities are generic and are not specifically designed for a particular line of business. Examples of functionalities in this layer include user authentication, authorization, and data validation.  |
+|                Infrastructure Layer |The Infrastructure Layer provides shared platform infrastructure components, like networking, streaming, storage, machine learning, and AI infrastructure. This layer provides the underlying infrastructure necessary to support the system's functionalities and ensure its scalability and reliability.   |
+
+
+<br><p align=center><img width=700 src="https://user-images.githubusercontent.com/78911344/236388509-dc9d4a90-7537-47ad-88ca-7a272916c036.png"/></p>
+<p align=center>Layer Design</p>
+
+
+In conclusion, a layer design approach enables the ride-sharing system to be modular, scalable, and easy to maintain. Each layer is independent of the other layers, communicates through well-defined interfaces, and provides specific functionalities that cater to the system's needs. This design approach ensures that the ride-sharing system can meet the requirements of different lines of business and provide value-added services to users.
 
 <br><p align=center><img width=700 src="https://media.cheggcdn.com/media/9e4/9e4da75d-3fff-4458-8ff2-3bfb4c620d53/php9AEoc3"/></p>
 
 
 
-## <a id="functional-viewpoint">[Functional Viewpoint](#functional-viewpoint-1)</a>
+## <a id="functional-viewpoint">[Sequence Diagram for Taxi Booking System](#functional-viewpoint-1)</a>
 
 ```mermaid
 sequenceDiagram
@@ -496,8 +502,8 @@ DB-->>AAL: Returns user data
 AAL-->>UI: Returns authentication status
 UI-->>User: Displays success/failure message
 ```
-
-### Sequence Diagram for Taxi Booking System
+<br/>
+<br/>
 
 This diagram shows the lifelines of a taxi booking system and the interactions between them. It shows the process of ordering a taxi ride. A rider can choose a pick-up point, destination, and time of pick up.
 
@@ -506,6 +512,7 @@ This diagram shows the lifelines of a taxi booking system and the interactions b
 " width="600" height="800">
 </p>
 
+<br/>
 The diagram shows these lifelines:
 
 - Rider
