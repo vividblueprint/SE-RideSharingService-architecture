@@ -56,6 +56,7 @@
 ---
 
 ## Table of Contents
+
 1. <a id="introduction-1">[Introduction](#introduction)</a>
 1. <a id="business-requirements-1">[Business Requirements](#business-requirements)</a>
 1. <a id="stakeholder-analysis-1">[Stakeholder Analysis](#stakeholder-analysis)</a>
@@ -72,7 +73,7 @@
    - <a id="process-viewpint-1">[Process Viewpint](#process-viewpint)</a>
    - <a id="context-viewpoint-1">[Context Viewpoint](#context-viewpoint)</a>
 1. <a id="architecture-patterns-1">[Architecture Patterns](#architecture-patterns)</a>
-1. <a id="data-managment-1">[Architecture Dicition:](#data-managment)</a>
+1. <a id="data-managment-1">[Architecture Dicition](#data-managment)</a>
 1. <a id="quality-attribute-1">[Performance and Scalability](#quality-attribute)</a>
    - <a id="consistency-1">[Consistency](#consistency)</a>
    - <a id="availability-1">[Availability](#availability)</a>
@@ -97,7 +98,7 @@ Overall, this document aims to provide a comprehensive and practical guide to th
 <br/>
 <p align=center><img src="https://user-images.githubusercontent.com/78911344/236380492-c5831a7a-b3ef-4f53-9cba-3d9ae621ef3a.jpg" alt="System overview"/></p>
 
-### <p align=center>System overview</p>
+### <p align=center>Figure 1: System overview</p>
 
 # <a id="business-requirements">[Business Requirements](#business-requirements-1)</a>
 
@@ -116,7 +117,6 @@ Before we dive deeper into the architecture of the ride-sharing service, let's f
 |                    Reducing costs | Companies aim to optimize their operations to `reduce costs`, including driver `acquisition` and `retention`, `maintenance of vehicles`, and `marketing expenses`.                                                      |
 
 Now that we have defined the business requirements, let's move on to the `architecture of the ride-sharing` service.
-
 
 # <a id="stakeholder-analysis">[Stakeholder Analysis](#stakeholder-analysis-1)</a>
 
@@ -168,7 +168,7 @@ B---G
 
 ```
 
-<br/>
+### <p align=center>Figure 2: System Context</p>
 
 As shown in the diagram, the ride-sharing service is connected to various external services, including user devices, a payment gateway, a mapping service, a push notification service, and an analytics service. The ride-sharing service communicates with these external services through various interfaces and protocols, such as HTTP, HTTPS, and REST.
 
@@ -180,7 +180,6 @@ The push notification service sends real-time notifications to users about ride 
 
 The ride-sharing service is deployed on the internet and relies on various internet technologies, such as DNS, load balancers, firewalls, and security protocols, to ensure secure and reliable service delivery.
 
-
 # <a id="architecture-components">[Architecture Components](#architecture-components-1)</a>
 
 This Component diagram depicts the Car Sharing System, illustrating its components and the interfaces, ports, and relationships between them. It is a powerful tool used in Component-Based Development (CBD) to describe systems with Service-Oriented Architecture (SOA).
@@ -189,13 +188,13 @@ The Car Sharing System UML component diagram provides a comprehensive view of th
 
 The Car Sharing System is composed of several components, including the `Payment Component`, `Booking Component`, `Destination Component`, `Customer Component`, and `Insurance Component`. Each of these components plays a crucial role in the overall system, and they work together seamlessly to ensure that the Car Sharing System provides a reliable, efficient, and safe service to its users.
 
-| Component | Descripiton|
-| ---: | :--- |
-|Payment Component|The Payment Component is responsible for managing the payment transactions between the user and the system. It ensures secure and efficient processing of payment details and charges the user for each ride.|
-|Booking Component|The Booking Component handles the ride booking process, including ride requests, driver assignment, and fare calculation. It is responsible for ensuring that rides are assigned to the most suitable driver and that the user is charged an appropriate fare.|
-|Customer Component|Destination ComponentThe Destination Component is responsible for providing accurate and reliable destination information to the user. It tracks the location of drivers and users and provides distance and time estimates for rides.|
-|Customer Component|The Customer Component manages the user's account, including their profile, ride history, and preferences. It ensures that users have a smooth and seamless experience while using the Car Sharing System.
-|Insurance Component|The Insurance Component provides insurance coverage for the Car Sharing System. It ensures that users and drivers are protected in case of accidents or other incidents.|
+|           Component | Descripiton                                                                                                                                                                                                                                                    |
+| ------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   Payment Component | The Payment Component is responsible for managing the payment transactions between the user and the system. It ensures secure and efficient processing of payment details and charges the user for each ride.                                                  |
+|   Booking Component | The Booking Component handles the ride booking process, including ride requests, driver assignment, and fare calculation. It is responsible for ensuring that rides are assigned to the most suitable driver and that the user is charged an appropriate fare. |
+|  Customer Component | Destination ComponentThe Destination Component is responsible for providing accurate and reliable destination information to the user. It tracks the location of drivers and users and provides distance and time estimates for rides.                         |
+|  Customer Component | The Customer Component manages the user's account, including their profile, ride history, and preferences. It ensures that users have a smooth and seamless experience while using the Car Sharing System.                                                     |
+| Insurance Component | The Insurance Component provides insurance coverage for the Car Sharing System. It ensures that users and drivers are protected in case of accidents or other incidents.                                                                                       |
 
 The Car Sharing System Component diagram is a valuable tool for modeling and understanding the Car Sharing System's physical components, their relationships, and their interactions. It can help developers and system architects identify potential issues early in the design process and ensure that the system is designed to meet the needs of its users.
 <br/>
@@ -203,7 +202,7 @@ The Car Sharing System Component diagram is a valuable tool for modeling and und
 
 <p align=center><img src ="https://github.com/vividblueprint/GitLearn/assets/78911344/dcd4a3c7-4ac8-4c6a-b851-6072f59bfc4e"/></p>
 
-### <p align=center>Architecture Component Diagram</p>
+### <p align=center>Figure 3: Architecture Component Diagram</p>
 
 # <a id="functional-requirements">[Functional Requirements](#functional-requirements-1)</a>
 
@@ -256,7 +255,6 @@ The basic features and functionalities of an Admin panel would be:
 |                    Customer Support and Help | Admin should be able to provide customer support and help to the users. It helps to resolve any issues or queries raised by the users and improve the overall service quality.                                                                    |
 
 ### Admin Interface Requirements Diagram:
-
 
 # <a id="viewpoint">[Architecture Views](#viewpoint-1)</a>
 
@@ -397,6 +395,8 @@ Major elements of the UML use case diagram of Car Sharing System are shown on th
 
 ```
 
+### <p align=center>Figure 4: Use Case Diagram</p>
+
 <!-- <details>
     <summary> Major elements of the UML use case diagram of  Car Sharing System are shown on the picture below: </summary>
 <!-- empty line -->
@@ -447,28 +447,25 @@ The Car Sharing System involves multiple actors and use cases, and the relations
 
 ## <a id="logical-viewpoint">[Logical Viewpoint](#logical-viewpoint-1)</a>
 
-
 A logical view of a ride-sharing service can be represented as a layered architecture. Layer Design is a common approach used to design complex systems, which involves breaking down the system into several layers, with each layer responsible for a specific set of functionalities. As domains move from lower to higher layers, they impact fewer services in the case of an outage and represent more specific product use cases. This approach ensures that the system is modular, scalable, and easy to maintain.
 
-
-|                      Logical Viewpoint | Description                                                                                                                                                                                                                                                          |
-| -------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                   Edge layer | The Edge Layer is the gateway that safely exposes user functionality to the outside world, including mobile apps and other clients. This layer provides a secure boundary between the outside world and the rest of the system, protecting it from potential security threats.  |
-|                    Presentation Layer | The Presentation Layer serves client-specific use cases in ride-sharing service client apps. It provides an interface between the client and the rest of the system, enabling communication between the two. This layer uses API technology options such as Resource Oriented APIs, WebSockets, GraphQL, and gRPC. |
-|              Product Layer | The Product Layer houses services and functionalities that enable line-of-business-specific use cases, such as Mobility, Delivery, and Freight. These functionalities are designed to meet the specific requirements of each line of business and provide value-added services to users. |
-|                 Business Layer | The Business Layer provides common, core functionality that ride-sharing services can use for any product or use case. These functionalities are generic and are not specifically designed for a particular line of business. Examples of functionalities in this layer include user authentication, authorization, and data validation.  |
-|                Infrastructure Layer |The Infrastructure Layer provides shared platform infrastructure components, like networking, streaming, storage, machine learning, and AI infrastructure. This layer provides the underlying infrastructure necessary to support the system's functionalities and ensure its scalability and reliability.   |
-
+|    Logical Viewpoint | Description                                                                                                                                                                                                                                                                                                                              |
+| -------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|           Edge layer | The Edge Layer is the gateway that safely exposes user functionality to the outside world, including mobile apps and other clients. This layer provides a secure boundary between the outside world and the rest of the system, protecting it from potential security threats.                                                           |
+|   Presentation Layer | The Presentation Layer serves client-specific use cases in ride-sharing service client apps. It provides an interface between the client and the rest of the system, enabling communication between the two. This layer uses API technology options such as Resource Oriented APIs, WebSockets, GraphQL, and gRPC.                       |
+|        Product Layer | The Product Layer houses services and functionalities that enable line-of-business-specific use cases, such as Mobility, Delivery, and Freight. These functionalities are designed to meet the specific requirements of each line of business and provide value-added services to users.                                                 |
+|       Business Layer | The Business Layer provides common, core functionality that ride-sharing services can use for any product or use case. These functionalities are generic and are not specifically designed for a particular line of business. Examples of functionalities in this layer include user authentication, authorization, and data validation. |
+| Infrastructure Layer | The Infrastructure Layer provides shared platform infrastructure components, like networking, streaming, storage, machine learning, and AI infrastructure. This layer provides the underlying infrastructure necessary to support the system's functionalities and ensure its scalability and reliability.                               |
 
 <br><p align=center><img width=700 src="https://user-images.githubusercontent.com/78911344/236388509-dc9d4a90-7537-47ad-88ca-7a272916c036.png"/></p>
-<p align=center>Layer Design</p>
 
+<p align=center>Figure 5: Layer Design</p>
 
 In conclusion, a layer design approach enables the ride-sharing system to be modular, scalable, and easy to maintain. Each layer is independent of the other layers, communicates through well-defined interfaces, and provides specific functionalities that cater to the system's needs. This design approach ensures that the ride-sharing system can meet the requirements of different lines of business and provide value-added services to users.
 
 <br><p align=center><img width=700 src="https://media.cheggcdn.com/media/9e4/9e4da75d-3fff-4458-8ff2-3bfb4c620d53/php9AEoc3"/></p>
 
-
+<p align=center>Figure 6: Object Diagram</p>
 
 ## <a id="functional-viewpoint">[Sequence Diagram for Taxi Booking System](#functional-viewpoint-1)</a>
 
@@ -492,28 +489,30 @@ DB-->>AAL: Returns user data
 AAL-->>UI: Returns authentication status
 UI-->>User: Displays success/failure message
 ```
+
 <br/>
 <br/>
 
+<p align=center>Figure 7: Sing up or Login Sequence Diagram</p>
 
-
-
-|  components  | Description                                                                                                                                                                                                                           |
-| -------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|      Web Application Firewall (WAF) | Use for Security purposes. Here we can block the requests from the blocked IPs, Bots, and regions which is not supported by Uber.                            |
-|          Load Balancer  | Here we can use different layers of Load balancers like Layer 3, Layer4, and Layer 7. Layer 3 works based on IP based Load Balancer(All the IPs for traffic go Layer3 Load balancer. In the Layer4 we can use DNS based Load Balancing. In Layer7 works based on Application-level Load Balancing)                                                |
-|        KAFKA REST API | This will provide an endpoint to consume all the location data for every Cab. Example: We have 1000 Cabs running for a City and every 4 sec we are sending a location that means every 4 sec we have 1000 locations been sending for KAFKA REST API. Those locations will be sent to DISCO to keep the states alive.                                                        |
-| WEB SOCKET | Unless normal HTTP requests web sockets are really helpful for these kinds of Applications. Because we need synchronize way to sending messages from Client to the Server and Server to the Client at any given point of the time. We should have a connection established between the Cab Application to the Server or The User to the Server. Web Socket keeps the connection opens for all of the Uber Application and based on the changes that happen in the DISCO or any component in the server the data will be exchanged between the Application and the Server. Mainly written in NodeJS(Asynchornize and event-driven framework).                                     |
-|     DISCO Component | Dispatch System is mainly written in NodeJS. So that server can send/push the messages to the Application whenever it wants.                                                                                                 |
-                                              
+|                     components | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| -----------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Web Application Firewall (WAF) | Use for Security purposes. Here we can block the requests from the blocked IPs, Bots, and regions which is not supported by Uber.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|                  Load Balancer | Here we can use different layers of Load balancers like Layer 3, Layer4, and Layer 7. Layer 3 works based on IP based Load Balancer(All the IPs for traffic go Layer3 Load balancer. In the Layer4 we can use DNS based Load Balancing. In Layer7 works based on Application-level Load Balancing)                                                                                                                                                                                                                                                                                                                                           |
+|                 KAFKA REST API | This will provide an endpoint to consume all the location data for every Cab. Example: We have 1000 Cabs running for a City and every 4 sec we are sending a location that means every 4 sec we have 1000 locations been sending for KAFKA REST API. Those locations will be sent to DISCO to keep the states alive.                                                                                                                                                                                                                                                                                                                         |
+|                     WEB SOCKET | Unless normal HTTP requests web sockets are really helpful for these kinds of Applications. Because we need synchronize way to sending messages from Client to the Server and Server to the Client at any given point of the time. We should have a connection established between the Cab Application to the Server or The User to the Server. Web Socket keeps the connection opens for all of the Uber Application and based on the changes that happen in the DISCO or any component in the server the data will be exchanged between the Application and the Server. Mainly written in NodeJS(Asynchornize and event-driven framework). |
+|                DISCO Component | Dispatch System is mainly written in NodeJS. So that server can send/push the messages to the Application whenever it wants.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ## <a id="process-viewpint">[Process Viewpint](#process-viewpint-1)</a>
+
 This diagram shows the lifelines of a taxi booking system and the interactions between them. It shows the process of ordering a taxi ride. A rider can choose a pick-up point, destination, and time of pick up.
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/75358854/235557263-3bb7c723-d57a-4ca3-9309-cf8c5da80860.jpg" alt="Sequence Diagram for Taxi Booking System
 " width="600" height="800">
 </p>
+
+<p align=center>Figure 8: Sequence Diagram for Taxi Booking System</p>
 
 <br/>
 The diagram shows these lifelines:
@@ -554,21 +553,19 @@ There are these interactions between the lifelines:
   - Retrieve GPS coordinates of the customer
   - Show customer location on the map
 
-
-
-
-## 
-
 ## <a id="context-viewpoint">[Context Viewpoint](#context-viewpoint-1)</a>
+
 <p align="center">
     <img src="https://user-images.githubusercontent.com/75358854/235879368-1b5475c6-2b60-4d91-8377-17598ae3f3da.jpg" alt="Context Viewpoint" width="800" height="800">
 </p>
+
+<p align=center>Figure 9: Context Diagram</p>
 
 # <a id="architecture-patterns">[Architecture Patterns](#architecture-patterns-1)</a>
 
 # <a id="Components">[Components:](#Components-1)</a>
 
-# <a id="data-managment">[Data Management:](#data-managment-1)</a>
+# <a id="data-managment">[Architecture Dicition](#data-managment-1)</a>
 
 # <a id="quality-attribute">[Performance and Scalability](#quality-attribute-1)</a>
 
