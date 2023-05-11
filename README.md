@@ -60,6 +60,15 @@
 1. <a id="introduction-1">[Introduction](#introduction)</a>
 1. <a id="business-requirements-1">[Business Requirements](#business-requirements)</a>
 1. <a id="stakeholder-analysis-1">[Stakeholder Analysis](#stakeholder-analysis)</a>
+1. <a id="quality-attribute-1">[Quality attributes](#quality-attribute)</a>
+   - <a id="consistency-1">[Consistency](#consistency)</a>
+   - <a id="availability-1">[Availability](#availability)</a>
+   - <a id="scalability-1">[Scalability](#scalability)</a>
+   - <a id="flexibility-1">[Flexibility](#flexibility)</a>
+   - <a id="security-1">[Security](#security)</a>
+   - <a id="performance-1">[Performance](#performance)</a>
+1. <a id="key-quality-concerns-1">[Key Quality Concerns](#key-quality-concerns)</a>
+1. <a id="deployment-1">[Deployment](#deployment)</a>
 1. <a id="system-context-1">[System Context](#system-context)</a>
 1. <a id="architecture-components-1">[Architecture Components](#architecture-components)</a>
 1. <a id="functional-requirements-1">[Functional Requirements](#functional-requirements)</a>
@@ -74,15 +83,7 @@
    - <a id="context-viewpoint-1">[Context Viewpoint](#context-viewpoint)</a>
 1. <a id="architecture-patterns-1">[Architecture Patterns](#architecture-patterns)</a>
 1. <a id="data-managment-1">[Architecture Decisions ](#data-managment)</a>
-1. <a id="quality-attribute-1">[Performance and Scalability](#quality-attribute)</a>
-   - <a id="consistency-1">[Consistency](#consistency)</a>
-   - <a id="availability-1">[Availability](#availability)</a>
-   - <a id="scalability-1">[Scalability](#scalability)</a>
-   - <a id="flexibility-1">[Flexibility](#flexibility)</a>
-   - <a id="security-1">[Security](#security)</a>
-   - <a id="performance-1">[Performance](#performance)</a>
-1. <a id="securityPrivacy-1">[Security and Privacy](#securityPrivacy)</a>
-1. <a id="deployment-1">[Deployment](#deployment)</a>
+
 
 # <a id='introduction'>[Introduction](#introduction-1)</a>
 
@@ -145,6 +146,110 @@ In addition to the stakeholders who have a `positive interest` or investment in 
 
 Understanding the concerns and `objections of negative stakeholders` is important in designing a ride-sharing service that is `sustainable` and `responsive` to the needs of all stakeholders. By considering the perspectives of both positive and negative stakeholders, architects can design a ride-sharing service that addresses concerns and objections while still meeting the needs of `riders`, `drivers`, `investors`, and other `positive stakeholders`.
 
+# <a id="quality-attribute">[Quality Attribute](#quality-attribute-1)</a>
+
+
+## <a id="consistency">[Consistency](#consistency-1)</a>
+
+Mission-critical applications such as financial dashboards require data to be consistent across all regions. This includes zero data loss in the inter-region and intraregional dispersal and processing mechanisms, de-duplication as well as ability to certify data quality.
+
+## <a id="availability">[Availability](#availability-1)</a>
+
+The real time data infrastructure stack must be highly available with 99.99 percentile guarantee. Loss of availability has a direct impact on ride sharing business and may result in significant financial losses. For instance, dynamic pricing leverages the real-time data infrastructure component for calculating demand and supply ratios per geo-fence, which in turn is used to influence the price of a trip.
+
+## <a id="scalability">[Scalability](#scalability-1)</a>
+
+The raw data streams constitute petabytes of data volume collected per day across all regions. This data is constantly growing based on organic growth of our user base, new lines of business deployed by ride sharing company as well as new real time analytics use cases that arise over time. The ability to scale with this ever-growing data set in a seamless manner, without requiring users to re-architect the processing pipelines is a fundamental requirement of the real-time data infrastructure stack.
+
+## <a id="flexibility">[Flexibility](#flexibility-1)</a>
+
+We need to provide programmatic as well as declarative (SQL like) interface for expressing computational logic to accommodate the diverse user groups. In addition, some use cases need a push-based model which is semi stateful and continuously emits generated results whereas others might need a stateful pull-based model where the user can execute queries on the raw data stream. For instance, users can create intelligent alerts in case of business rule violation using push-based stream processing pipelines. Whereas, dashboarding and triaging will require a pull-based SQL interface for the same datasets.
+
+## <a id="security">[Security](#security-1)</a>
+
+This system has multistep security. The user needs to login to the system every time by providing a password and user ID, and the login session will time out after every 2 minutes to ensure high security. When the passenger pays the bill, they need to again give the password. All of those steps will keep their bank card and payment information secure. In bellow see full description about security.
+
+Basic security behaviors:
+|Security behaviors|Description|
+|---: | :---|
+|Authentication | Login using at least a user name and a password.|
+|Authorization | according to their profile, online user must be granted or not allowed to receive some specific services (Automatic match finding, Ride Suggestion, etc...)|
+|Confidentiality | sensitive data must be encrypted if any (credit card payments).|
+|Safety | Credit card data must not be kept at a local database.
+|Data integrity | Data sent across the network cannot be modified by a tier.|
+|Auditing | Every sensitive action can be logged.|
+|Non-repudiation | gives evidence a specific action occurred.|
+
+## <a id="performance">[Performance](#performance-1)</a>
+
+This system has high performance ability. Passengers can book a taxi and search for availability in a short period of time. Admin can update the bike taxi list. Search queries should return 90% of the time below 5 seconds. The credit card payment transaction should finish in 10 seconds.
+
+# <a id="key-quality-concerns-1">[Key Quality Concerns](#key-quality-concerns)</a>
+
+## Security
+
+From a ride-sharing service point of view, security and privacy are critical considerations to ensure the safety and trust of riders and drivers using the platform. The ride-sharing service should implement security measures to protect users' personal information, such as their name, address, phone number, and payment information, from unauthorized access or disclosure. This includes implementing encryption mechanisms during transmission and storage, access controls, and data backup and recovery procedures.
+
+Additionally, the ride-sharing service should ensure that only authorized users can access the platform and its features through authentication and authorization mechanisms. This includes implementing secure login mechanisms, such as multi-factor authentication and password complexity, to prevent unauthorized access.
+
+The ride-sharing service should also prioritize secure communication between the platform and its users, as well as external services. This includes implementing secure protocols such as TLS and ensuring that all third-party services meet appropriate security standards.
+
+<ol>
+  <li>
+    <strong>Authentication and Authorization:</strong> The system should ensure that only authorized users can access the application and its features. This includes implementing secure login mechanisms, such as multi-factor authentication and password complexity.
+  </li>
+  <li>
+    <strong>Data Security:</strong> The system should protect all data transmitted and stored in the application, including user information and ride data, against unauthorized access or modification. This includes implementing encryption mechanisms, access controls, and data backup and recovery procedures.
+  </li>
+  <li>
+    <strong>Secure Communication:</strong> The system should ensure that all communication between the application and its users, as well as external services, is secure and encrypted. This includes implementing secure protocols, such as TLS, and ensuring that all third-party services used by the application meet appropriate security standards.
+  </li>
+  <li>
+    <strong>Threat Monitoring:</strong> The system should monitor and respond to potential security threats, such as unauthorized access attempts or suspicious activity, to prevent security breaches. This includes implementing intrusion detection and prevention systems, as well as maintaining up-to-date security patches and software updates.
+  </li>
+</ol>
+<ol>
+  <li>
+    <strong>Personal Data Protection:</strong> The system should protect the personal data of users from unauthorized access or disclosure. This includes encrypting sensitive data, such as user's name, address, phone number, and payment information, during transmission and storage.
+  </li>
+  <li>
+    <strong>User Control:</strong> The system should allow users to control their data, including the ability to edit or delete their personal information and ride history.
+  </li>
+  <li>
+    <strong>Transparency:</strong> The system should provide users with clear and concise information about how their data is collected, used, and shared within the system. Additionally, the system should be transparent about any data breaches or security incidents that may affect users' personal information.
+  </li>
+</ol>
+
+In terms of privacy, the ride-sharing service should allow users to control their data, including the ability to edit or delete their personal information and ride history. The ride-sharing service should also be transparent about how users' data is collected, used, and shared within the system, and provide clear and concise information about any data breaches or security incidents that may affect users' personal information.
+
+Finally, the ride-sharing service should monitor and respond to potential security threats, such as unauthorized access attempts or suspicious activity, to prevent security breaches. This includes implementing intrusion detection and prevention systems, as well as maintaining up-to-date security patches and software updates.
+
+## Scalability
+
+Load balancing is a critical pattern for achieving scalability in any distributed system, including Ride Sharing Service system. In a system like Uber, load balancing is necessary to ensure that traffic is evenly distributed across multiple servers to prevent any one server from becoming overwhelmed with requests.
+
+Ride Sharing Service system uses a combination of hardware load balancers and software load balancers to achieve scalability. Hardware load balancers are used to distribute traffic at the network level, while software load balancers are used to distribute traffic at the application level.
+
+<p align="center">
+<img src="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/assets/75358854/5c6e0f2e-cd97-47de-a364-1d6ce18eb6a3" width="700">
+</p>
+
+### <p align=center>Figure 2: Load Balancer </p>
+
+In addition to load balancing,  Ride Sharing Service system also uses a number of other techniques to achieve scalability, including:
+
+- Sharding: Ride Sharing Service system is sharded, which means that data is partitioned across multiple databases or servers. This allows the system to scale horizontally as new servers can be added to the cluster as needed.
+
+- Caching: Ride Sharing Service system uses caching to reduce the load on its servers. By caching frequently accessed data, the system can avoid repeatedly retrieving the same data from the database, which can be a resource-intensive operation.
+
+- Microservices: Ride Sharing Service system is based on a microservices architecture, which means that different parts of the system are broken down into smaller, independently deployable services. This makes it easier to scale individual components of the system as needed.
+
+- Auto-scaling: Ride Sharing Service system uses auto-scaling to automatically add or remove servers based on the current level of traffic. This allows the system to maintain optimal performance even during periods of high traffic.
+
+
+
+
+
 # <a id="system-context">[System Context](#system-context-1)</a>
 
 The ride-sharing service operates within a larger system context, consisting of various external systems, interfaces, and communication protocols. The following diagram illustrates the system context of the ride-sharing service:
@@ -167,8 +272,7 @@ B---F
 B---G
 
 ```
-
-### <p align=center>Figure 2: System Context</p>
+### <p align=center>Figure 3: System Context</p>
 
 As shown in the diagram, the ride-sharing service is connected to various external services, including user devices, a payment gateway, a mapping service, a push notification service, and an analytics service. The ride-sharing service communicates with these external services through various interfaces and protocols, such as HTTP, HTTPS, and REST.
 
@@ -202,7 +306,7 @@ The Car Sharing System Component diagram is a valuable tool for modeling and und
 
 <p align=center><img src ="https://github.com/vividblueprint/GitLearn/assets/78911344/dcd4a3c7-4ac8-4c6a-b851-6072f59bfc4e"/></p>
 
-### <p align=center>Figure 3: Architecture Component Diagram</p>
+### <p align=center>Figure 4: Architecture Component Diagram</p>
 
 # <a id="functional-requirements">[Functional Requirements](#functional-requirements-1)</a>
 
@@ -395,7 +499,7 @@ Major elements of the UML use case diagram of Car Sharing System are shown on th
 
 ```
 
-### <p align=center>Figure 4: Use Case Diagram</p>
+### <p align=center>Figure 5: Use Case Diagram</p>
 
 <!-- <details>
     <summary> Major elements of the UML use case diagram of  Car Sharing System are shown on the picture below: </summary>
@@ -459,13 +563,13 @@ A logical view of a ride-sharing service can be represented as a layered archite
 
 <br><p align=center><img width=700 src="https://user-images.githubusercontent.com/78911344/236388509-dc9d4a90-7537-47ad-88ca-7a272916c036.png"/></p>
 
-<p align=center>Figure 5: Layer Design</p>
+<p align=center>Figure 6: Layer Design</p>
 
 In conclusion, a layer design approach enables the ride-sharing system to be modular, scalable, and easy to maintain. Each layer is independent of the other layers, communicates through well-defined interfaces, and provides specific functionalities that cater to the system's needs. This design approach ensures that the ride-sharing system can meet the requirements of different lines of business and provide value-added services to users.
 
 <br><p align=center><img width=700 src="https://media.cheggcdn.com/media/9e4/9e4da75d-3fff-4458-8ff2-3bfb4c620d53/php9AEoc3"/></p>
 
-<p align=center>Figure 6: Object Diagram</p>
+<p align=center>Figure 7: Object Diagram</p>
 
 ## <a id="functional-viewpoint">[Sequence Diagram for Taxi Booking System](#functional-viewpoint-1)</a>
 
@@ -493,7 +597,7 @@ UI-->>User: Displays success/failure message
 <br/>
 <br/>
 
-<p align=center>Figure 7: Sing up or Login Sequence Diagram</p>
+<p align=center>Figure 8: Sing up or Login Sequence Diagram</p>
 
 |                     components | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | -----------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -512,7 +616,7 @@ This diagram shows the lifelines of a taxi booking system and the interactions b
 " width="600" height="800">
 </p>
 
-<p align=center>Figure 8: Sequence Diagram for Taxi Booking System</p>
+<p align=center>Figure 9: Sequence Diagram for Taxi Booking System</p>
 
 <br/>
 The diagram shows these lifelines:
@@ -559,7 +663,7 @@ There are these interactions between the lifelines:
     <img src="https://user-images.githubusercontent.com/75358854/235879368-1b5475c6-2b60-4d91-8377-17598ae3f3da.jpg" alt="Context Viewpoint" width="800" height="800">
 </p>
 
-<p align=center>Figure 9: Context Diagram</p>
+<p align=center>Figure 10: Context Diagram</p>
 
 # <a id="architecture-patterns">[Architecture Patterns](#architecture-patterns-1)</a>
 
@@ -581,6 +685,10 @@ There are these interactions between the lifelines:
 
 These are just a few of the architecture patterns that could be used in a ride-sharing service application, and there are many other factors to consider, such as security, reliability, maintainability, and user experience. It's important to choose the right patterns for the specific use case and requirements, and to constantly evaluate and evolve the architecture as the application grows and changes over time.
 
+## Microservices Pattern
+
+
+
 # <a id="data-managment">[Architecture Decisions ](#data-managment-1)</a>
 
 Here are some sample architecture decisions for the Ride Sharing Service, along with their explanations and justifications from the perspective of a ride sharing service:
@@ -595,80 +703,7 @@ Here are some sample architecture decisions for the Ride Sharing Service, along 
 |Redis for Caching|Redis is used as an in-memory cache for frequently accessed data, such as user profiles and ride requests. This helps to reduce the load on the database and improve performance.|Redis is a popular choice for caching due to its fast read and write speeds, support for multiple data types, and built-in features for managing data expiration and eviction. By caching frequently accessed data in Redis, we can reduce the number of database queries required and improve the overall performance of the application.|
 
 These are just a few examples of architecture decisions that might be made for a ride sharing service. Other decisions might include the use of specific programming languages or frameworks, the adoption of specific security or monitoring tools, or the integration with other third-party services or APIs. Ultimately, the architecture of a ride sharing service should be designed to meet the specific needs and requirements of the business, while also providing a scalable, flexible, and resilient foundation for growth and innovation.
-# <a id="quality-attribute">[Performance and Scalability](#quality-attribute-1)</a>
 
-## <a id="consistency">[Consistency](#consistency-1)</a>
-
-Mission-critical applications such as financial dashboards require data to be consistent across all regions. This includes zero data loss in the inter-region and intraregional dispersal and processing mechanisms, de-duplication as well as ability to certify data quality.
-
-## <a id="availability">[Availability](#availability-1)</a>
-
-The real time data infrastructure stack must be highly available with 99.99 percentile guarantee. Loss of availability has a direct impact on ride sharing business and may result in significant financial losses. For instance, dynamic pricing leverages the real-time data infrastructure component for calculating demand and supply ratios per geo-fence, which in turn is used to influence the price of a trip.
-
-## <a id="scalability">[Scalability](#scalability-1)</a>
-
-The raw data streams constitute petabytes of data volume collected per day across all regions. This data is constantly growing based on organic growth of our user base, new lines of business deployed by ride sharing company as well as new real time analytics use cases that arise over time. The ability to scale with this ever-growing data set in a seamless manner, without requiring users to re-architect the processing pipelines is a fundamental requirement of the real-time data infrastructure stack.
-
-## <a id="flexibility">[Flexibility](#flexibility-1)</a>
-
-We need to provide programmatic as well as declarative (SQL like) interface for expressing computational logic to accommodate the diverse user groups. In addition, some use cases need a push-based model which is semi stateful and continuously emits generated results whereas others might need a stateful pull-based model where the user can execute queries on the raw data stream. For instance, users can create intelligent alerts in case of business rule violation using push-based stream processing pipelines. Whereas, dashboarding and triaging will require a pull-based SQL interface for the same datasets.
-
-## <a id="security">[Security](#security-1)</a>
-
-This system has multistep security. The user needs to login to the system every time by providing a password and user ID, and the login session will time out after every 2 minutes to ensure high security. When the passenger pays the bill, they need to again give the password. All of those steps will keep their bank card and payment information secure. In bellow see full description about security.
-
-Basic security behaviors:
-|Security behaviors|Description|
-|---: | :---|
-|Authentication | Login using at least a user name and a password.|
-|Authorization | according to their profile, online user must be granted or not allowed to receive some specific services (Automatic match finding, Ride Suggestion, etc...)|
-|Confidentiality | sensitive data must be encrypted if any (credit card payments).|
-|Safety | Credit card data must not be kept at a local database.
-|Data integrity | Data sent across the network cannot be modified by a tier.|
-|Auditing | Every sensitive action can be logged.|
-|Non-repudiation | gives evidence a specific action occurred.|
-
-## <a id="performance">[Performance](#performance-1)</a>
-
-This system has high performance ability. Passengers can book a taxi and search for availability in a short period of time. Admin can update the bike taxi list. Search queries should return 90% of the time below 5 seconds. The credit card payment transaction should finish in 10 seconds.
-
-# <a id="securityPrivacy">[Security and Privacy](#securityPrivacy-1)</a>
-
-From a ride-sharing service point of view, security and privacy are critical considerations to ensure the safety and trust of riders and drivers using the platform. The ride-sharing service should implement security measures to protect users' personal information, such as their name, address, phone number, and payment information, from unauthorized access or disclosure. This includes implementing encryption mechanisms during transmission and storage, access controls, and data backup and recovery procedures.
-
-Additionally, the ride-sharing service should ensure that only authorized users can access the platform and its features through authentication and authorization mechanisms. This includes implementing secure login mechanisms, such as multi-factor authentication and password complexity, to prevent unauthorized access.
-
-The ride-sharing service should also prioritize secure communication between the platform and its users, as well as external services. This includes implementing secure protocols such as TLS and ensuring that all third-party services meet appropriate security standards.
-
-<ol>
-  <li>
-    <strong>Authentication and Authorization:</strong> The system should ensure that only authorized users can access the application and its features. This includes implementing secure login mechanisms, such as multi-factor authentication and password complexity.
-  </li>
-  <li>
-    <strong>Data Security:</strong> The system should protect all data transmitted and stored in the application, including user information and ride data, against unauthorized access or modification. This includes implementing encryption mechanisms, access controls, and data backup and recovery procedures.
-  </li>
-  <li>
-    <strong>Secure Communication:</strong> The system should ensure that all communication between the application and its users, as well as external services, is secure and encrypted. This includes implementing secure protocols, such as TLS, and ensuring that all third-party services used by the application meet appropriate security standards.
-  </li>
-  <li>
-    <strong>Threat Monitoring:</strong> The system should monitor and respond to potential security threats, such as unauthorized access attempts or suspicious activity, to prevent security breaches. This includes implementing intrusion detection and prevention systems, as well as maintaining up-to-date security patches and software updates.
-  </li>
-</ol>
-<ol>
-  <li>
-    <strong>Personal Data Protection:</strong> The system should protect the personal data of users from unauthorized access or disclosure. This includes encrypting sensitive data, such as user's name, address, phone number, and payment information, during transmission and storage.
-  </li>
-  <li>
-    <strong>User Control:</strong> The system should allow users to control their data, including the ability to edit or delete their personal information and ride history.
-  </li>
-  <li>
-    <strong>Transparency:</strong> The system should provide users with clear and concise information about how their data is collected, used, and shared within the system. Additionally, the system should be transparent about any data breaches or security incidents that may affect users' personal information.
-  </li>
-</ol>
-
-In terms of privacy, the ride-sharing service should allow users to control their data, including the ability to edit or delete their personal information and ride history. The ride-sharing service should also be transparent about how users' data is collected, used, and shared within the system, and provide clear and concise information about any data breaches or security incidents that may affect users' personal information.
-
-Finally, the ride-sharing service should monitor and respond to potential security threats, such as unauthorized access attempts or suspicious activity, to prevent security breaches. This includes implementing intrusion detection and prevention systems, as well as maintaining up-to-date security patches and software updates.
 
 # <a id="deployment">[Deployment](#deployment-1)</a>
 
