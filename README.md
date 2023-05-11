@@ -73,7 +73,7 @@
    - <a id="process-viewpint-1">[Process Viewpint](#process-viewpint)</a>
    - <a id="context-viewpoint-1">[Context Viewpoint](#context-viewpoint)</a>
 1. <a id="architecture-patterns-1">[Architecture Patterns](#architecture-patterns)</a>
-1. <a id="data-managment-1">[Architecture Dicition](#data-managment)</a>
+1. <a id="data-managment-1">[Architecture Decisions ](#data-managment)</a>
 1. <a id="quality-attribute-1">[Performance and Scalability](#quality-attribute)</a>
    - <a id="consistency-1">[Consistency](#consistency)</a>
    - <a id="availability-1">[Availability](#availability)</a>
@@ -581,8 +581,20 @@ There are these interactions between the lifelines:
 
 These are just a few of the architecture patterns that could be used in a ride-sharing service application, and there are many other factors to consider, such as security, reliability, maintainability, and user experience. It's important to choose the right patterns for the specific use case and requirements, and to constantly evaluate and evolve the architecture as the application grows and changes over time.
 
-# <a id="data-managment">[Architecture Dicition](#data-managment-1)</a>
+# <a id="data-managment">[Architecture Decisions ](#data-managment-1)</a>
 
+Here are some sample architecture decisions for the Ride Sharing Service, along with their explanations and justifications from the perspective of a ride sharing service:
+
+|Architecture Decision|Explanation|Justification|
+|---|---|---|
+|Microservices Architecture|The Ride Sharing Service is designed as a collection of loosely coupled microservices, each responsible for a specific aspect of the application (e.g. user management, ride requests, ride matching, payment processing, etc.). This architecture allows for greater scalability, fault tolerance, and flexibility compared to a monolithic architecture.|By breaking down the application into smaller, independent components, we can scale each component independently based on its demand. Also, if one microservice fails, it won't bring down the entire application.|
+|Kubernetes Orchestration|The microservices are deployed on a Kubernetes cluster, which provides automated scaling, self-healing, and load balancing.|Kubernetes simplifies deployment and management of microservices, and provides built-in mechanisms for scaling up or down based on demand. Additionally, Kubernetes can automatically recover from failures, reducing the need for manual intervention.|
+|REST API for Communication|The microservices communicate with each other via REST APIs, which allows for a standardized, platform-agnostic way of exchanging data.|REST APIs provide a simple and easy-to-use interface for inter-service communication, and allow for easy integration with other services or third-party tools.|
+|Event-Driven Architecture for Real-Time Processing|Events are used to notify other services of changes in the system (e.g. a new ride request, a ride has been matched, a payment has been processed, etc.). This allows for real-time processing and reduces the need for polling or frequent API calls.|Event-driven architecture allows us to respond to changes in the system in real-time, which is especially important for ride sharing services, where timely processing is critical. By using events, we can reduce the amount of polling or API calls required, which can improve performance and reduce costs.|
+|MongoDB for Data Storage|The application uses MongoDB as the primary database, which provides a scalable, flexible, and highly available solution for storing and retrieving data.|MongoDB is a popular choice for NoSQL databases due to its flexible schema, horizontal scaling, and automatic failover capabilities. These features are well-suited for the dynamic and rapidly changing data requirements of a ride sharing service.|
+|Redis for Caching|Redis is used as an in-memory cache for frequently accessed data, such as user profiles and ride requests. This helps to reduce the load on the database and improve performance.|Redis is a popular choice for caching due to its fast read and write speeds, support for multiple data types, and built-in features for managing data expiration and eviction. By caching frequently accessed data in Redis, we can reduce the number of database queries required and improve the overall performance of the application.|
+
+These are just a few examples of architecture decisions that might be made for a ride sharing service. Other decisions might include the use of specific programming languages or frameworks, the adoption of specific security or monitoring tools, or the integration with other third-party services or APIs. Ultimately, the architecture of a ride sharing service should be designed to meet the specific needs and requirements of the business, while also providing a scalable, flexible, and resilient foundation for growth and innovation.
 # <a id="quality-attribute">[Performance and Scalability](#quality-attribute-1)</a>
 
 ## <a id="consistency">[Consistency](#consistency-1)</a>
@@ -622,4 +634,56 @@ This system has high performance ability. Passengers can book a taxi and search 
 
 # <a id="securityPrivacy">[Security and Privacy](#securityPrivacy-1)</a>
 
+From a ride-sharing service point of view, security and privacy are critical considerations to ensure the safety and trust of riders and drivers using the platform. The ride-sharing service should implement security measures to protect users' personal information, such as their name, address, phone number, and payment information, from unauthorized access or disclosure. This includes implementing encryption mechanisms during transmission and storage, access controls, and data backup and recovery procedures.
+
+Additionally, the ride-sharing service should ensure that only authorized users can access the platform and its features through authentication and authorization mechanisms. This includes implementing secure login mechanisms, such as multi-factor authentication and password complexity, to prevent unauthorized access.
+
+The ride-sharing service should also prioritize secure communication between the platform and its users, as well as external services. This includes implementing secure protocols such as TLS and ensuring that all third-party services meet appropriate security standards.
+
+<ol>
+  <li>
+    <strong>Authentication and Authorization:</strong> The system should ensure that only authorized users can access the application and its features. This includes implementing secure login mechanisms, such as multi-factor authentication and password complexity.
+  </li>
+  <li>
+    <strong>Data Security:</strong> The system should protect all data transmitted and stored in the application, including user information and ride data, against unauthorized access or modification. This includes implementing encryption mechanisms, access controls, and data backup and recovery procedures.
+  </li>
+  <li>
+    <strong>Secure Communication:</strong> The system should ensure that all communication between the application and its users, as well as external services, is secure and encrypted. This includes implementing secure protocols, such as TLS, and ensuring that all third-party services used by the application meet appropriate security standards.
+  </li>
+  <li>
+    <strong>Threat Monitoring:</strong> The system should monitor and respond to potential security threats, such as unauthorized access attempts or suspicious activity, to prevent security breaches. This includes implementing intrusion detection and prevention systems, as well as maintaining up-to-date security patches and software updates.
+  </li>
+</ol>
+<ol>
+  <li>
+    <strong>Personal Data Protection:</strong> The system should protect the personal data of users from unauthorized access or disclosure. This includes encrypting sensitive data, such as user's name, address, phone number, and payment information, during transmission and storage.
+  </li>
+  <li>
+    <strong>User Control:</strong> The system should allow users to control their data, including the ability to edit or delete their personal information and ride history.
+  </li>
+  <li>
+    <strong>Transparency:</strong> The system should provide users with clear and concise information about how their data is collected, used, and shared within the system. Additionally, the system should be transparent about any data breaches or security incidents that may affect users' personal information.
+  </li>
+</ol>
+
+In terms of privacy, the ride-sharing service should allow users to control their data, including the ability to edit or delete their personal information and ride history. The ride-sharing service should also be transparent about how users' data is collected, used, and shared within the system, and provide clear and concise information about any data breaches or security incidents that may affect users' personal information.
+
+Finally, the ride-sharing service should monitor and respond to potential security threats, such as unauthorized access attempts or suspicious activity, to prevent security breaches. This includes implementing intrusion detection and prevention systems, as well as maintaining up-to-date security patches and software updates.
+
 # <a id="deployment">[Deployment](#deployment-1)</a>
+
+Deployment refers to the process of taking software code and making it available to end-users. For a ride sharing service, deployment is critical to ensuring that riders and drivers can use the service seamlessly. A typical ride sharing service will have several components, such as the mobile app, the back-end server, and the database.
+
+The deployment process for a ride sharing service involves the following steps:
+
+Code review: Before deploying any code changes, the development team should review the code to ensure it meets the project requirements and is free from bugs and security vulnerabilities.
+
+Build: The code is then built into an executable package that can be deployed. This may involve compiling the code, packaging it into a container, or using a build tool like Maven.
+
+Testing: The deployment package is tested to ensure it works as expected. This includes unit tests, integration tests, and end-to-end testing.
+
+Deployment: Once the code is tested and approved, it can be deployed to the production environment. This may involve using a continuous deployment tool like Jenkins or GitLab CI/CD.
+
+Monitoring: After deployment, the service should be monitored for issues and performance metrics. This includes monitoring the server health, database performance, and user feedback.
+
+From a ride sharing service's point of view, deployment is critical to ensure that the service is available to riders and drivers at all times. Any downtime or issues with the service can result in lost revenue and a poor user experience. Therefore, it is essential to have a robust deployment process that includes testing and monitoring to ensure the service is reliable and performant.
