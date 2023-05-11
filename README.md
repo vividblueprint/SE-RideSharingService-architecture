@@ -72,8 +72,7 @@
    - <a id="process-viewpint-1">[Process Viewpint](#process-viewpint)</a>
    - <a id="context-viewpoint-1">[Context Viewpoint](#context-viewpoint)</a>
 1. <a id="architecture-patterns-1">[Architecture Patterns](#architecture-patterns)</a>
-1. <a id="Components-1">[Components:](#Components)</a>
-1. <a id="data-managment-1">[Data Management:](#data-managment)</a>
+1. <a id="data-managment-1">[Architecture Dicition:](#data-managment)</a>
 1. <a id="quality-attribute-1">[Performance and Scalability](#quality-attribute)</a>
    - <a id="consistency-1">[Consistency](#consistency)</a>
    - <a id="availability-1">[Availability](#availability)</a>
@@ -83,10 +82,6 @@
    - <a id="performance-1">[Performance](#performance)</a>
 1. <a id="securityPrivacy-1">[Security and Privacy](#securityPrivacy)</a>
 1. <a id="deployment-1">[Deployment](#deployment)</a>
-1. <a id="technicaldebt-1">[Technical Debt](#technicaldebt)</a>
-1. <a id="conclusion-1">[Conclusion](#conclusion)</a>
-1. <a id="references-1">[References](#references)</a>
-1. <a id="appendix-1">[Appendix](#appendix)</a>
 
 # <a id='introduction'>[Introduction](#introduction-1)</a>
 
@@ -163,17 +158,16 @@ D[Payment Gateway]
 E[Mapping Service]
 F[Push Notification Service]
 G[Analytics Service]
-H[Internet]
 
-C-->B
-B-->A
-B-->D
-B-->E
-B-->F
-B-->G
-B-->H
+C---B
+B---A
+B---D
+B---E
+B---F
+B---G
 
 ```
+
 <br/>
 
 As shown in the diagram, the ride-sharing service is connected to various external services, including user devices, a payment gateway, a mapping service, a push notification service, and an analytics service. The ride-sharing service communicates with these external services through various interfaces and protocols, such as HTTP, HTTPS, and REST.
@@ -207,7 +201,7 @@ The Car Sharing System Component diagram is a valuable tool for modeling and und
 <br/>
 <br/>
 
-<p align=center><img src ="https://user-images.githubusercontent.com/78911344/236380331-93019f1f-436b-4307-a6d0-86c2ebbcbb55.png"/></p>
+<p align=center><img src ="https://github.com/vividblueprint/GitLearn/assets/78911344/dcd4a3c7-4ac8-4c6a-b851-6072f59bfc4e"/></p>
 
 ### <p align=center>Architecture Component Diagram</p>
 
@@ -307,10 +301,10 @@ Major elements of the UML use case diagram of Car Sharing System are shown on th
     P((Payment\nGateway)):::orange;
 
     %%Supper Addmin
-    1([Manage Users and Full Application])
+    1([Manage Users])
     2([Manage Car History])
     3([Manage Booking])
-    
+
     %%Rider
     4([View Sharing])
     5([Request Sharing])
@@ -380,7 +374,7 @@ Major elements of the UML use case diagram of Car Sharing System are shown on th
     U---9
     U---10
     U---11
-    
+
     %%Navigation Engine
     N----4
     N---5
@@ -390,7 +384,7 @@ Major elements of the UML use case diagram of Car Sharing System are shown on th
     N---15
     N---18
     N---19
-    
+
     classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff;
     classDef orange fill:#fc822b,stroke:#000,stroke-width:2px,color:#fff;
     classDef green fill:#16b552,stroke:#000,stroke-width:2px,color:#fff;
@@ -412,47 +406,44 @@ Major elements of the UML use case diagram of Car Sharing System are shown on th
 </details> -->
 <!-- empty line -->
 
-The relationships between and among the actors and the use cases of Car Sharing System:
+The Car Sharing System involves multiple actors and use cases, and the relationships among them are crucial for the system to function properly. Here are some possible relationships between the actors and use cases:
 
-<!-- **Super Admin Entity** : Use cases of Super Admin are Manage Booking, Manage Customer, Manage Payment, Manage Car History, Manage Insurance, Manage Memebership, Manage Destination, Manage Users and Full  Car Sharing System Operations
+|            Actors | Description :                                                                                                                                                                                                                              |
+| ----------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|       Super Admin | The Super Admin is responsible for managing the entire system and has access to several functionalities, including managing users, car history, and bookings.                                                                              |
+|       System User | System User refers to the user who manages the ride-sharing application's membership, customer, and insurance functionalities. They can update their profile, change their password, and perform registration and login/logout operations. |
+|   Rider Passenger | The Rider/Passenger is a user who requests sharing and makes payments using the payment gateway. They can view available rides and drivers, rate drivers, cancel rides, and track their current rides.                                     |
+|            Driver | The Driver is responsible for picking up riders, starting and ending rides, and managing routes. They can check sharing requests, view passengers, and proceed to the next ride.                                                           |
+| Navigation Engine | Navigation Engine refers to the system's feature that allows riders to view their ride on a map and track their ride's progress.                                                                                                           |
+|   Payment Gateway | The Payment Gateway is responsible for processing payments made by the riders.                                                                                                                                                             |
 
-**System User Entity**  : Use cases of System User are Manage Booking, Manage Customer, Manage Payment, Manage
+### The use cases of the Car Sharing System are:
 
-**Customer Entity** : Use cases of Customer are Request Sharing, View Sharing, Make Payment, View Payment History
-
-**Driver Entity**  : Use cases of Driver are Check Sharing Request, View Passengars, Manage Routes, Collect Payments -->
-
-1. Request a Ride
-   - Rider opens the ride sharing service app and enters their destination.
-   - Ride sharing service uses GPS to determine the rider's location and matches the rider with an available driver who is nearby and notifies the driver of the request.
-   - Driver accepts the ride request and the Navigation Engine provides turn-by-turn directions to navigate to the pick-up location.
-1. Start Ride
-   - Driver picks up the rider at the pick-up location.
-   - Driver starts the ride in the app to begin tracking the distance and time of the ride using GPS.
-   - Navigation Engine provides turn-by-turn directions to the destination.
-1. End Ride
-   - Driver completes the ride in the app when they arrive at the destination.
-   - Rider confirms that the ride has ended and pays for the ride through the app, with GPS being used to calculate the fare based on distance and time.
-   - GPS is used to track the vehicle's location and calculate the fare.
-   - Navigation Engine provides the driver with the most efficient route to the destination, which helps to reduce the time and distance of the ride.
-1. Cancel Ride
-   - Rider cancels the ride request before the driver arrives.
-   - Ride sharing service cancels the ride and notifies the driver, with GPS being used to update the driver's location.
-   - Navigation Engine provides the driver with updated directions to their next destination.
-1. Update Ride Details
-   - Rider updates the pick-up location or destination of the ride request before the driver arrives.
-   - Ride sharing service updates the ride details and notifies the driver, with GPS being used to update the driver's route and estimated time of arrival.
-   - Navigation Engine provides the driver with updated directions to the new destination.
-1. Rate Driver
-   - Rider rates the driver on a scale of 1 to 5 stars after the ride is complete.
-   - Ride sharing service records the rating and uses it to inform future ride matches, with GPS being used to track the driver's location and route during the ride.
-1. Report Issue
-   - Rider reports an issue with the ride, such as poor driving or unsafe conditions.
-   - Ride sharing service records the report and investigates the issue, with GPS being used to track the vehicle's location and route during the ride.
-1. View Ride History
-   - Rider and driver can view their past ride history in the app, including the pick-up and drop-off locations, distance, time, fare, and rating, with GPS being used to track the vehicle's location and route during the ride.
-1. Manage Account
-   - Rider and driver can manage their account details, such as payment information and personal information, through the app.
+| Use Cases                                                             | Description                                                                          |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Manage Users                                                          | The ability to create, modify, and delete user accounts in the system.               |
+| Manage Car History                                                    | The ability to view the history of cars used in the system.                          |
+| Manage Booking                                                        | The ability to book a ride for a rider passenger.                                    |
+| View Sharing                                                          | The ability to view the shared ride options available to the rider passenger.        |
+| Request Sharing                                                       | The ability to request a shared ride option from the system.                         |
+| Make Payment                                                          | The ability to make a payment for the ride service.                                  |
+| Rate Driver                                                           | The ability to rate the driver based on the ride experience.                         |
+| Cancel Ride                                                           | The ability to cancel a ride that has been booked.                                   |
+| View Driver                                                           | The ability to view the driver's details and information.                            |
+| Register or Login In/Logout from the System                           | The ability to register as a new user or login/logout from the system.               |
+| Update My Profile                                                     | The ability to update the user profile information.                                  |
+| Change Account Password - The ability to change the account password. |
+| Track Ride                                                            | The ability to track the ride in real-time.                                          |
+| Send Messages/Make Calls                                              | The ability to communicate with the driver or rider passenger via messages or calls. |
+| Check Sharing Request                                                 | The ability to check the status of a shared ride request.                            |
+| Start Ride                                                            | The ability to start the ride once the rider passenger and driver are ready.         |
+| View Passengers                                                       | The ability to view the other passengers in a shared ride.                           |
+| Next Ride                                                             | The ability to book the next ride in advance.                                        |
+| End Ride                                                              | The ability to end the ride once the destination is reached.                         |
+| Manage Routes                                                         | The ability to manage the routes and destinations in the system.                     |
+| Manage Membership                                                     | The ability to manage the membership plans and options for the rider passenger.      |
+| Manage Customer                                                       | The ability to manage the customer information and details.                          |
+| Manage Insurance                                                      | The ability to manage the insurance information and details for the ride service.    |
 
 ## <a id="logical-viewpoint">[Logical Viewpoint](#logical-viewpoint-1)</a>
 
@@ -619,58 +610,3 @@ This system has high performance ability. Passengers can book a taxi and search 
 # <a id="securityPrivacy">[Security and Privacy](#securityPrivacy-1)</a>
 
 # <a id="deployment">[Deployment](#deployment-1)</a>
-
-# <a id="technicaldebt">[Technical Debt](#technicaldebt-1)</a>
-
-Technical debt refers to the costs that arise from taking shortcuts or making trade-offs during the development process of software or technology systems. The ride-sharing service industry is no exception, and there are several areas where technical debt can accumulate.
-
-One major area of technical debt in ride-sharing services is in the development of the mobile applications that riders and drivers use to request and provide rides. These apps must handle large amounts of data and complex algorithms in real-time, and shortcuts or compromises in the code can lead to bugs, crashes, and security vulnerabilities.
-
-Another area of technical debt in ride-sharing services is in the infrastructure that supports the services. This includes the servers and databases that store user information and ride data, as well as the network infrastructure that connects riders and drivers. Failure to properly design and maintain this infrastructure can lead to system downtime, data loss, and security breaches.
-
-Finally, ride-sharing services face technical debt in the area of regulatory compliance. The laws and regulations governing ride-sharing services vary by jurisdiction, and it can be challenging to keep up with changes and ensure that the service is in compliance with all applicable laws.
-
-Ride-sharing services are no exception and may face various technical debt challenges, including:
-|Technical Debt Challenges | Description|
-|---: | :---|
-|Legacy systems | As ride-sharing services expand, they often acquire new technologies and integrate them into their existing systems, leading to a more complex and difficult-to-maintain infrastructure.|
-|Scalability | As the user base of ride-sharing services grows, the system must be able to handle the increased traffic and demand. This can lead to issues such as slow response times and downtime.|
-|Security | With sensitive user data being shared on ride-sharing platforms, security must be a top priority. Any security breaches can result in severe consequences, including legal action and damage to the brand's reputation.|
-|Technical infrastructure | Ride-sharing services require a sophisticated technical infrastructure to function, including GPS technology, payment processing systems, and real-time communication channels. The maintenance and upgrading of this infrastructure can be costly and time-consuming.|
-|Integration with third-party services | Ride-sharing services often integrate with other third-party services such as mapping and payment platforms. This can lead to issues with compatibility and system stability.|
-
-Overall, technical debt is a significant concern for ride-sharing services, and it requires ongoing attention and investment to ensure that the service remains stable, secure, and compliant with all relevant regulations. Technical debt in ride-sharing services requires a long-term approach and a commitment to ongoing maintenance and improvement. Regular updates and upgrades can help to improve system scalability, security, and user experience, while reducing technical debt over time.
-
-# <a id="conclusion">[Conclusion](#conclusion-1)</a>
-
-The ride-sharing service industry has revolutionized the way people travel, and its popularity continues to grow worldwide. In conclusion, ride-sharing services offer numerous benefits, including convenience, affordability, and reduced environmental impact.
-
-These services have also provided new income opportunities for drivers, allowing them to work flexible hours and earn additional income. However, there are also potential drawbacks, such as concerns over safety and security, and the impact on traditional taxi and public transportation services.
-
-Overall, the future of ride-sharing services looks promising, with continued innovation and improvements in technology expected to further enhance the user experience and address any remaining concerns.
-
-# <a id="references">[References](#references-1)</a>
-
-1. Zheng, Y., Li, Q., Chen, Y., Xie, X., & Ma, W. (2018). A survey of ride sharing. Transportation Research Part C: Emerging Technologies, 96, 380-393.
-1. Wang, X., Guo, Y., Huang, M., & Yu, B. (2019). A novel group decision-making method based on multi-attribute decision-making for ride-sharing. IEEE Access, 7, 45899-45907.
-1. Sun, X., Zhang, W., & Wang, Y. (2018). Ride sharing in autonomous vehicle era: A survey. IEEE Transactions on Intelligent Transportation Systems, 19(12), 3808-3823.
-1. D. D. S. Gopala Rao, S. Bhowmick, K. Desai and M. Shukla, "A Systematic Survey of Real-Time Ridesharing: From User Behaviour to Future Directions," in IEEE Transactions on Intelligent Transportation Systems, vol. 22, no. 7, pp. 4019-4042, July 2021.
-1. Zhang, H., Wu, J., Liu, Y., Gu, X., & Xu, M. (2019). A spatiotemporal-sentiment-aware method for taxi ride-sharing. IEEE Transactions on Intelligent Transportation Systems, 20(10), 3827-3840.
-
-# <a id="appendix">[Appendix](#appendix-1)</a>
-
-**Appendix A:** Glossary - a list of definitions for key terms used in the document.
-
-**Appendix B:** References - a list of sources used in the document, typically arranged alphabetically by author's last name.
-
-**Appendix C:** Survey Results - data or statistics from a survey that was conducted as part of the research for the document.
-
-**Appendix D:** Technical Specifications - detailed technical information related to the implementation or design of a system or product.
-
-**Appendix E:** User Manual - instructions for using a product or system.
-
-**Appendix F:** Case Studies - examples or case studies that illustrate the concepts or principles discussed in the document.
-
-**Appendix G:** Code Samples - code examples or snippets that demonstrate a particular programming technique or approach.
-
-**Appendix H:** Budget - a detailed breakdown of the costs associated with a project or initiative.
