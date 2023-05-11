@@ -573,33 +573,7 @@ In conclusion, a layer design approach enables the ride-sharing system to be mod
 
 <p align=center>Figure 7: Object Diagram</p>
 
-## <a id="functional-viewpoint">[Sequence Diagram for Taxi Booking System](#functional-viewpoint-1)</a>
 
-```mermaid
-sequenceDiagram
-participant User
-participant UI as User Interface Layer
-participant AAL as Authentication and Authorization Layer
-participant DB as Database
-
-User->>UI: User clicks 'Sign Up' or 'Log In'
-UI->>AAL: Sends authentication request
-AAL->>DB: Queries user database
-DB-->>AAL: Returns user data
-AAL-->>UI: Returns authentication status
-UI-->>User: Displays login/signup form
-User->>UI: Fills in login/signup form
-UI->>AAL: Sends login/signup request with user credentials
-AAL->>DB: Queries user database
-DB-->>AAL: Returns user data
-AAL-->>UI: Returns authentication status
-UI-->>User: Displays success/failure message
-```
-
-<br/>
-<br/>
-
-<p align=center>Figure 8: Sing up or Login Sequence Diagram</p>
 
 |                     components | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | -----------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -618,7 +592,7 @@ This diagram shows the lifelines of a taxi booking system and the interactions b
 " width="600" height="800">
 </p>
 
-<p align=center>Figure 9: Sequence Diagram for Taxi Booking System</p>
+<p align=center>Figure 9: Process Diagram for Taxi Booking System</p>
 
 <br/>
 The diagram shows these lifelines:
@@ -658,6 +632,34 @@ There are these interactions between the lifelines:
   - Send GPS coordinates of the customer
   - Retrieve GPS coordinates of the customer
   - Show customer location on the map
+  
+### Process diagram of Sing up or Login
+
+```mermaid
+sequenceDiagram
+participant User
+participant UI as User Interface Layer
+participant AAL as Authentication and Authorization Layer
+participant DB as Database
+
+User->>UI: User clicks 'Sign Up' or 'Log In'
+UI->>AAL: Sends authentication request
+AAL->>DB: Queries user database
+DB-->>AAL: Returns user data
+AAL-->>UI: Returns authentication status
+UI-->>User: Displays login/signup form
+User->>UI: Fills in login/signup form
+UI->>AAL: Sends login/signup request with user credentials
+AAL->>DB: Queries user database
+DB-->>AAL: Returns user data
+AAL-->>UI: Returns authentication status
+UI-->>User: Displays success/failure message
+```
+
+<br/>
+<br/>
+
+<p align=center> Figure 8:  Process diagram of Sing up or Login </p>
 
 ## <a id="context-viewpoint">[Context Viewpoint](#context-viewpoint-1)</a>
 
