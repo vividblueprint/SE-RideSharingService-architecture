@@ -228,6 +228,8 @@ Finally, the ride-sharing service should monitor and respond to potential securi
 
 Load balancing is a critical pattern for achieving scalability in any distributed system, including Ride Sharing Service system. In a system like Uber, load balancing is necessary to ensure that traffic is evenly distributed across multiple servers to prevent any one server from becoming overwhelmed with requests.
 
+Scalability is a critical quality attribute of the Ride Sharing Service system is a concern for multiple stakeholders, including: Rider, Drivers and Administrators.
+
 Ride Sharing Service system uses a combination of hardware load balancers and software load balancers to achieve scalability. Hardware load balancers are used to distribute traffic at the network level, while software load balancers are used to distribute traffic at the application level.
 
 <p align="center">
@@ -238,13 +240,13 @@ Ride Sharing Service system uses a combination of hardware load balancers and so
 
 In addition to load balancing,  Ride Sharing Service system also uses a number of other techniques to achieve scalability, including:
 
-- Sharding: Ride Sharing Service system is sharded, which means that data is partitioned across multiple databases or servers. This allows the system to scale horizontally as new servers can be added to the cluster as needed.
+- Sharding: Ride Sharing Service system is sharded, which means that data is partitioned across multiple databases or servers. This allows the     system to scale horizontally as new servers can be added to the cluster as needed.
 
-- Caching: Ride Sharing Service system uses caching to reduce the load on its servers. By caching frequently accessed data, the system can avoid repeatedly retrieving the same data from the database, which can be a resource-intensive operation.
+- Caching: Ride Sharing Service system uses caching to reduce the load on its servers. By caching frequently accessed data, the system can avoid   repeatedly retrieving the same data from the database, which can be a resource-intensive operation.
 
-- Microservices: Ride Sharing Service system is based on a microservices architecture, which means that different parts of the system are broken down into smaller, independently deployable services. This makes it easier to scale individual components of the system as needed.
+- Microservices: Ride Sharing Service system is based on a microservices architecture, which means that different parts of the system are broken   down into smaller, independently deployable services. This makes it easier to scale individual components of the system as needed.
 
-- Auto-scaling: Ride Sharing Service system uses auto-scaling to automatically add or remove servers based on the current level of traffic. This allows the system to maintain optimal performance even during periods of high traffic.
+- Auto-scaling: Ride Sharing Service system uses auto-scaling to automatically add or remove servers based on the current level of traffic. This   allows the system to maintain optimal performance even during periods of high traffic.
 
 
 
@@ -687,6 +689,23 @@ These are just a few of the architecture patterns that could be used in a ride-s
 
 ## Microservices Pattern
 
+<p align="center">
+    <img src="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/assets/75358854/5588ff3c-e2f9-4aaa-8291-495f84142116" alt="Context Viewpoint" width="800" height="600">
+</p>
+
+<p align=center>Figure 11: Microservice Architecture Of Ride Sharing Service</p>
+
+API Gateway Since clients don’t call the services directly, API Gateway acts as an entry point for the clients to forward requests to appropriate  microservices.
+  
+The major change that we observe here is the introduction of API Gateway through which all the drivers and passengers are connected. From the API Gateway, all the internal points are connected such as passenger management, driver management, trip management and others.
+The units are individual separate deployable units performing separate functionalities.
+
+For Example: If you want to change anything in the billing Microservices, then you just have to deploy only billing Microservices and don’t have to deploy the others.
+
+All the features were now scaled individually i.e. The interdependency between each and every feature was removed.
+For Example, we all know that the number of people searching for cabs is more comparatively more than the people actually booking a cab and making payments. This gets us an inference that the number of processes working on the passenger management microservice is more than the number of processes working on payments.
+
+  
 
 
 # <a id="data-managment">[Architecture Decisions ](#data-managment-1)</a>
