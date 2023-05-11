@@ -504,6 +504,19 @@ UI-->>User: Displays success/failure message
 <br/>
 <br/>
 
+
+
+
+|  components  | Description                                                                                                                                                                                                                           |
+| -------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|      Web Application Firewall (WAF) | Use for Security purposes. Here we can block the requests from the blocked IPs, Bots, and regions which is not supported by Uber.                            |
+|          Load Balancer  | Here we can use different layers of Load balancers like Layer 3, Layer4, and Layer 7. Layer 3 works based on IP based Load Balancer(All the IPs for traffic go Layer3 Load balancer. In the Layer4 we can use DNS based Load Balancing. In Layer7 works based on Application-level Load Balancing)                                                |
+|        KAFKA REST API | This will provide an endpoint to consume all the location data for every Cab. Example: We have 1000 Cabs running for a City and every 4 sec we are sending a location that means every 4 sec we have 1000 locations been sending for KAFKA REST API. Those locations will be sent to DISCO to keep the states alive.                                                        |
+| WEB SOCKET | Unless normal HTTP requests web sockets are really helpful for these kinds of Applications. Because we need synchronize way to sending messages from Client to the Server and Server to the Client at any given point of the time. We should have a connection established between the Cab Application to the Server or The User to the Server. Web Socket keeps the connection opens for all of the Uber Application and based on the changes that happen in the DISCO or any component in the server the data will be exchanged between the Application and the Server. Mainly written in NodeJS(Asynchornize and event-driven framework).                                     |
+|     DISCO Component | Dispatch System is mainly written in NodeJS. So that server can send/push the messages to the Application whenever it wants.                                                                                                 |
+                                              
+
+## <a id="process-viewpint">[Process Viewpint](#process-viewpint-1)</a>
 This diagram shows the lifelines of a taxi booking system and the interactions between them. It shows the process of ordering a taxi ride. A rider can choose a pick-up point, destination, and time of pick up.
 
 <p align="center">
@@ -549,24 +562,6 @@ There are these interactions between the lifelines:
   - Send GPS coordinates of the customer
   - Retrieve GPS coordinates of the customer
   - Show customer location on the map
-
-
-
-|  components  | Description                                                                                                                                                                                                                           |
-| -------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|      Web Application Firewall (WAF) | Use for Security purposes. Here we can block the requests from the blocked IPs, Bots, and regions which is not supported by Uber.                            |
-|          Load Balancer  | Here we can use different layers of Load balancers like Layer 3, Layer4, and Layer 7. Layer 3 works based on IP based Load Balancer(All the IPs for traffic go Layer3 Load balancer. In the Layer4 we can use DNS based Load Balancing. In Layer7 works based on Application-level Load Balancing)                                                |
-|        KAFKA REST API | This will provide an endpoint to consume all the location data for every Cab. Example: We have 1000 Cabs running for a City and every 4 sec we are sending a location that means every 4 sec we have 1000 locations been sending for KAFKA REST API. Those locations will be sent to DISCO to keep the states alive.                                                        |
-| WEB SOCKET | Unless normal HTTP requests web sockets are really helpful for these kinds of Applications. Because we need synchronize way to sending messages from Client to the Server and Server to the Client at any given point of the time. We should have a connection established between the Cab Application to the Server or The User to the Server. Web Socket keeps the connection opens for all of the Uber Application and based on the changes that happen in the DISCO or any component in the server the data will be exchanged between the Application and the Server. Mainly written in NodeJS(Asynchornize and event-driven framework).                                     |
-|     DISCO Component | Dispatch System is mainly written in NodeJS. So that server can send/push the messages to the Application whenever it wants.                                                                                                 |
-                                              
-
-## <a id="process-viewpint">[Process Viewpint](#process-viewpint-1)</a>
-
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/75358854/236353783-1e290cae-bd92-45d8-98ef-4d1a9b9f097f.jpg" alt="Process Viewpoint Diagram" width="700" >
-</p>
-
 
 
 
