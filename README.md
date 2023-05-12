@@ -769,6 +769,12 @@ Every feature could be scaled independently of the other. As an example, the num
 
 Ride Sharing Service broke down its monolith into cloud-based microservices for each of the functionalities and connected these via an API gateway.
 
+<p align="center">
+    <img src="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/assets/75358854/da612cc6-9be8-49c2-81be-fad72fa79431" alt="Context Viewpoint" width="800" height="600">
+</p>
+
+
+
 ### Ride Sharing Service Microservices Architecture – Benefits
 
 - Individual development teams were assigned ownership of specific services which helped to boost the quality, speed, and manageability of new     module development.
