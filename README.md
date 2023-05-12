@@ -327,7 +327,7 @@ The Car Sharing System Component diagram is a valuable tool for modeling and und
 <br/>
 <br/>
 
-<p align=center><img src ="https://github.com/vividblueprint/GitLearn/assets/78911344/dcd4a3c7-4ac8-4c6a-b851-6072f59bfc4e"/></p>
+<p align=center><img src ="https://github.com/vividblueprint/GitLearn/assets/78911344/781ddda5-cde1-492c-93f0-7c3c5e968533"/></p>
 
 ### <p align=center>Figure 5: Architecture Component Diagram</p>
 
