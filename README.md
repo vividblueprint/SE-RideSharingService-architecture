@@ -67,7 +67,7 @@
    - <a id="flexibility-1">[Flexibility](#flexibility)</a>
    - <a id="security-1">[Security](#security)</a>
    - <a id="performance-1">[Performance](#performance)</a>
-1. <a id="key-quality-concerns-1">[Key Quality Concerns](#key-quality-concerns)</a>
+1. <a id="key-1">[Key Quality Concerns](#key)</a>
 1. <a id="deployment-1">[Deployment](#deployment)</a>
 1. <a id="system-context-1">[System Context](#system-context)</a>
 1. <a id="architecture-components-1">[Architecture Components](#architecture-components)</a>
@@ -184,7 +184,32 @@ Basic security behaviors:
 
 This system has high performance ability. Passengers can book a taxi and search for availability in a short period of time. Admin can update the bike taxi list. Search queries should return 90% of the time below 5 seconds. The credit card payment transaction should finish in 10 seconds.
 
-# <a id="key-quality-concerns-1">[Key Quality Concerns](#key-quality-concerns)</a>
+# <a id="key">[Key Quality Concerns](#key-1)</a>
+
+## Usability
+
+Usability is a critical aspect of a ride-sharing service as it directly impacts the user experience and ultimately determines the success of the service. Here are some key considerations for improving the usability of a ride-sharing service:
+
+1. User interface: The user interface (UI) should be intuitive and easy to use, with clear and concise instructions for each step of the ride-sharing process. The UI should also be visually appealing and responsive to user input.
+
+1. Mobile optimization: As ride-sharing services are often accessed through mobile devices, the service should be optimized for mobile use. This includes ensuring that the UI is mobile-friendly, and that the app is fast, responsive, and easy to navigate.
+
+1. Seamless booking process: The booking process should be quick and straightforward, with minimal user input required. Users should be able to book a ride with just a few clicks, and the app should provide real-time updates on the status of the ride.
+
+1. Clear pricing information: Pricing information should be transparent and easy to understand, with no hidden fees or charges. Users should be able to see the cost of their ride upfront, and any changes to the cost should be clearly communicated.
+
+1. Driver rating system: A driver rating system can help to ensure that users have a positive experience with the service by allowing them to rate their driver and provide feedback. This can also help to maintain a high level of service quality by holding drivers accountable for their performance.
+
+1. Accessibility: The service should be accessible to users with disabilities, with features such as text-to-speech and voice commands to enable users with visual impairments to use the app.
+
+1. Personalization: Personalization features such as favorite locations and ride preferences can improve the user experience by making it easier and more convenient for users to book rides.
+
+By prioritizing these factors, a ride-sharing service can improve its usability, attract more users, and retain existing customers.
+
+<p align="center">
+<img src="https://github.com/vividblueprint/GitLearn/assets/78911344/0d2c72a7-5161-4020-b0d0-28f58b38754e">
+</p>
+
 
 ## Security
 
@@ -233,7 +258,7 @@ Scalability is a critical quality attribute of the Ride Sharing Service system i
 Ride Sharing Service system uses a combination of hardware load balancers and software load balancers to achieve scalability. Hardware load balancers are used to distribute traffic at the network level, while software load balancers are used to distribute traffic at the application level.
 
 <p align="center">
-<img src="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/assets/75358854/5c6e0f2e-cd97-47de-a364-1d6ce18eb6a3" width="700">
+<img src="https://github.com/vividblueprint/GitLearn/assets/78911344/a90a5e36-6799-4bc4-a824-cef2e884cf23">
 </p>
 
 ### <p align=center>Figure 2: Load Balancer </p>
