@@ -381,7 +381,6 @@ The basic features and functionalities of an Admin panel would be:
 |                           Content Management | The admin should be able to manage the content on the website or app, including text, images, and videos. It helps to keep the content up-to-date and relevant.                                                                                   |
 |                    Customer Support and Help | Admin should be able to provide customer support and help to the users. It helps to resolve any issues or queries raised by the users and improve the overall service quality.                                                                    |
 
-### Admin Interface Requirements Diagram:
 
 # <a id="viewpoint">[Architecture Views](#viewpoint-1)</a>
 
