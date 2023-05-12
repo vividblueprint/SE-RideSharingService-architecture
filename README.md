@@ -792,7 +792,7 @@ Deployment: Once the code is tested and approved, it can be deployed to the prod
 Monitoring: After deployment, the service should be monitored for issues and performance metrics. This includes monitoring the server health, database performance, and user feedback.
 
 <p align="center">
-    <img src="https://github.com/vividblueprint/GitLearn/assets/78911344/cb1babc3-8128-4434-9c0a-51d55a702d7c">
+    <img src="https://github.com/vividblueprint/GitLearn/assets/78911344/43aef463-f03a-4d94-ace7-6b3a7936268a">
 </p>
 <p align="center">Figure 16: UML Deployment Diagram for Car Ride Sharing Service System</p>
 
