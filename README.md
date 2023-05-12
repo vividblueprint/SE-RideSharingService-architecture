@@ -680,7 +680,7 @@ UI-->>User: Displays success/failure message
 
 <br><p align=center><img width=700 src="https://media.cheggcdn.com/media/9e4/9e4da75d-3fff-4458-8ff2-3bfb4c620d53/php9AEoc3"/></p>
 
-<p align=center>Figure 11: Database Scham</p>
+<p align=center>Figure 11: Database Schama</p>
 
 
 # <a id="architecture-patterns">[Architecture Patterns](#architecture-patterns-1)</a>
@@ -793,3 +793,20 @@ Monitoring: After deployment, the service should be monitored for issues and per
 <p align="center">Figure 15: UML Deployment Diagram for Car Ride Sharing Service System</p>
 
 From a ride sharing service's point of view, deployment is critical to ensure that the service is available to riders and drivers at all times. Any downtime or issues with the service can result in lost revenue and a poor user experience. Therefore, it is essential to have a robust deployment process that includes testing and monitoring to ensure the service is reliable and performant.
+
+
+# <a id="conclusion">[Conclusion](#conclusion-1)</a>
+
+The ride-sharing service industry has revolutionized the way people travel, and its popularity continues to grow worldwide. In conclusion, ride-sharing services offer numerous benefits, including convenience, affordability, and reduced environmental impact.
+
+These services have also provided new income opportunities for drivers, allowing them to work flexible hours and earn additional income. However, there are also potential drawbacks, such as concerns over safety and security, and the impact on traditional taxi and public transportation services.
+
+Overall, the future of ride-sharing services looks promising, with continued innovation and improvements in technology expected to further enhance the user experience and address any remaining concerns.
+
+# <a id="references">[References](#references-1)</a>
+
+1. Zheng, Y., Li, Q., Chen, Y., Xie, X., & Ma, W. (2018). A survey of ride sharing. Transportation Research Part C: Emerging Technologies, 96, 380-393.
+1. Wang, X., Guo, Y., Huang, M., & Yu, B. (2019). A novel group decision-making method based on multi-attribute decision-making for ride-sharing. IEEE Access, 7, 45899-45907.
+1. Sun, X., Zhang, W., & Wang, Y. (2018). Ride sharing in autonomous vehicle era: A survey. IEEE Transactions on Intelligent Transportation Systems, 19(12), 3808-3823.
+1. D. D. S. Gopala Rao, S. Bhowmick, K. Desai and M. Shukla, "A Systematic Survey of Real-Time Ridesharing: From User Behaviour to Future Directions," in IEEE Transactions on Intelligent Transportation Systems, vol. 22, no. 7, pp. 4019-4042, July 2021.
+1. Zhang, H., Wu, J., Liu, Y., Gu, X., & Xu, M. (2019). A spatiotemporal-sentiment-aware method for taxi ride-sharing. IEEE Transactions on Intelligent Transportation Systems, 20(10), 3827-3840.
