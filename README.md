@@ -274,9 +274,6 @@ In addition to load balancing,  Ride Sharing Service system also uses a number o
 - Auto-scaling: Ride Sharing Service system uses auto-scaling to automatically add or remove servers based on the current level of traffic. This   allows the system to maintain optimal performance even during periods of high traffic.
 
 
-
-
-
 # <a id="system-context">[System Context](#system-context-1)</a>
 
 The ride-sharing service operates within a larger system context, consisting of various external systems, interfaces, and communication protocols. The following diagram illustrates the system context of the ride-sharing service:
@@ -613,8 +610,7 @@ In conclusion, a layer design approach enables the ride-sharing system to be mod
 This diagram shows the lifelines of a taxi booking system and the interactions between them. It shows the process of ordering a taxi ride. A rider can choose a pick-up point, destination, and time of pick up.
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/75358854/235557263-3bb7c723-d57a-4ca3-9309-cf8c5da80860.jpg" alt="Sequence Diagram for Taxi Booking System
-" width="600" height="800">
+    <img src="https://user-images.githubusercontent.com/75358854/235557263-3bb7c723-d57a-4ca3-9309-cf8c5da80860.jpg" alt="Sequence Diagram for Taxi Booking System">
 </p>
 
 <p align=center>Figure 9: Process Diagram for Taxi Booking System</p>
@@ -689,7 +685,7 @@ UI-->>User: Displays success/failure message
 ## <a id="context-viewpoint">[Context Viewpoint](#context-viewpoint-1)</a>
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/75358854/235879368-1b5475c6-2b60-4d91-8377-17598ae3f3da.jpg" alt="Context Viewpoint" width="800" height="800">
+    <img src="https://user-images.githubusercontent.com/75358854/235879368-1b5475c6-2b60-4d91-8377-17598ae3f3da.jpg" alt="Context Viewpoint">
 </p>
 
 <p align=center>Figure 10: Context Diagram</p>
@@ -717,7 +713,7 @@ These are just a few of the architecture patterns that could be used in a ride-s
 ## Microservices Pattern
 
 <p align="center">
-    <img src="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/assets/75358854/5588ff3c-e2f9-4aaa-8291-495f84142116" alt="Context Viewpoint" width="800" height="600">
+    <img src="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/assets/75358854/5588ff3c-e2f9-4aaa-8291-495f84142116" alt="Context Viewpoint">
 </p>
 
 <p align=center>Figure 11: Microservice Architecture Of Ride Sharing Service</p>
@@ -770,7 +766,7 @@ Every feature could be scaled independently of the other. As an example, the num
 Ride Sharing Service broke down its monolith into cloud-based microservices for each of the functionalities and connected these via an API gateway.
 
 <p align="center">
-    <img src="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/assets/75358854/da612cc6-9be8-49c2-81be-fad72fa79431" alt="Context Viewpoint" width="800" height="600">
+    <img src="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/assets/75358854/da612cc6-9be8-49c2-81be-fad72fa79431" alt="Context Viewpoint">
 </p>
 
 
