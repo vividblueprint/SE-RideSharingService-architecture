@@ -84,7 +84,6 @@
 1. <a id="architecture-patterns-1">[Architecture Patterns](#architecture-patterns)</a>
 1. <a id="data-managment-1">[Architecture Decisions ](#data-managment)</a>
 
-
 # <a id='introduction'>[Introduction](#introduction-1)</a>
 
 The ride-sharing industry has exploded in popularity in recent years, with services such as `Uber`, `Lyft`, and `Grab` becoming ubiquitous in cities around the world. These services offer a new and convenient way for people to get around, using a combination of technology and transportation to connect riders with drivers. However, designing and implementing a successful ride-sharing service is no simple feat, and requires careful consideration of a wide range of `technical`, `logistical`, and `social` factors.
@@ -148,7 +147,6 @@ Understanding the concerns and `objections of negative stakeholders` is importan
 
 # <a id="quality-attribute">[Quality Attribute](#quality-attribute-1)</a>
 
-
 ## <a id="consistency">[Consistency](#consistency-1)</a>
 
 Mission-critical applications such as financial dashboards require data to be consistent across all regions. This includes zero data loss in the inter-region and intraregional dispersal and processing mechanisms, de-duplication as well as ability to certify data quality.
@@ -210,6 +208,7 @@ By prioritizing these factors, a ride-sharing service can improve its usability,
 <img src="https://github.com/vividblueprint/GitLearn/assets/78911344/0d2c72a7-5161-4020-b0d0-28f58b38754e">
 </p>
 
+### <p align="center">Figure 2: Usability</p>
 
 ## Security
 
@@ -261,18 +260,17 @@ Ride Sharing Service system uses a combination of hardware load balancers and so
 <img src="https://github.com/vividblueprint/GitLearn/assets/78911344/a90a5e36-6799-4bc4-a824-cef2e884cf23">
 </p>
 
-### <p align=center>Figure 2: Load Balancer </p>
+### <p align=center>Figure 3: Real-Time Ride Sharing Service system </p>
 
-In addition to load balancing,  Ride Sharing Service system also uses a number of other techniques to achieve scalability, including:
+In addition to load balancing, Ride Sharing Service system also uses a number of other techniques to achieve scalability, including:
 
-- Sharding: Ride Sharing Service system is sharded, which means that data is partitioned across multiple databases or servers. This allows the     system to scale horizontally as new servers can be added to the cluster as needed.
+- Sharding: Ride Sharing Service system is sharded, which means that data is partitioned across multiple databases or servers. This allows the system to scale horizontally as new servers can be added to the cluster as needed.
 
-- Caching: Ride Sharing Service system uses caching to reduce the load on its servers. By caching frequently accessed data, the system can avoid   repeatedly retrieving the same data from the database, which can be a resource-intensive operation.
+- Caching: Ride Sharing Service system uses caching to reduce the load on its servers. By caching frequently accessed data, the system can avoid repeatedly retrieving the same data from the database, which can be a resource-intensive operation.
 
-- Microservices: Ride Sharing Service system is based on a microservices architecture, which means that different parts of the system are broken   down into smaller, independently deployable services. This makes it easier to scale individual components of the system as needed.
+- Microservices: Ride Sharing Service system is based on a microservices architecture, which means that different parts of the system are broken down into smaller, independently deployable services. This makes it easier to scale individual components of the system as needed.
 
-- Auto-scaling: Ride Sharing Service system uses auto-scaling to automatically add or remove servers based on the current level of traffic. This   allows the system to maintain optimal performance even during periods of high traffic.
-
+- Auto-scaling: Ride Sharing Service system uses auto-scaling to automatically add or remove servers based on the current level of traffic. This allows the system to maintain optimal performance even during periods of high traffic.
 
 # <a id="system-context">[System Context](#system-context-1)</a>
 
@@ -296,7 +294,8 @@ B---F
 B---G
 
 ```
-### <p align=center>Figure 3: System Context</p>
+
+### <p align=center>Figure 4: System Context</p>
 
 As shown in the diagram, the ride-sharing service is connected to various external services, including user devices, a payment gateway, a mapping service, a push notification service, and an analytics service. The ride-sharing service communicates with these external services through various interfaces and protocols, such as HTTP, HTTPS, and REST.
 
@@ -330,7 +329,7 @@ The Car Sharing System Component diagram is a valuable tool for modeling and und
 
 <p align=center><img src ="https://github.com/vividblueprint/GitLearn/assets/78911344/dcd4a3c7-4ac8-4c6a-b851-6072f59bfc4e"/></p>
 
-### <p align=center>Figure 4: Architecture Component Diagram</p>
+### <p align=center>Figure 5: Architecture Component Diagram</p>
 
 # <a id="functional-requirements">[Functional Requirements](#functional-requirements-1)</a>
 
@@ -523,7 +522,7 @@ Major elements of the UML use case diagram of Car Sharing System are shown on th
 
 ```
 
-### <p align=center>Figure 5: Use Case Diagram</p>
+### <p align=center>Figure 6: Use Case Diagram</p>
 
 <!-- <details>
     <summary> Major elements of the UML use case diagram of  Car Sharing System are shown on the picture below: </summary>
@@ -587,15 +586,13 @@ A logical view of a ride-sharing service can be represented as a layered archite
 
 <br><p align=center><img width=700 src="https://user-images.githubusercontent.com/78911344/236388509-dc9d4a90-7537-47ad-88ca-7a272916c036.png"/></p>
 
-<p align=center>Figure 6: Layer Design</p>
+<p align=center>Figure 7: Layer Design</p>
 
 In conclusion, a layer design approach enables the ride-sharing system to be modular, scalable, and easy to maintain. Each layer is independent of the other layers, communicates through well-defined interfaces, and provides specific functionalities that cater to the system's needs. This design approach ensures that the ride-sharing system can meet the requirements of different lines of business and provide value-added services to users.
 
 <br><p align=center><img width=700 src="https://media.cheggcdn.com/media/9e4/9e4da75d-3fff-4458-8ff2-3bfb4c620d53/php9AEoc3"/></p>
 
-<p align=center>Figure 7: Object Diagram</p>
-
-
+<p align=center>Figure 8: Object Diagram</p>
 
 |                     components | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | -----------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -613,7 +610,7 @@ This diagram shows the lifelines of a taxi booking system and the interactions b
     <img src="https://user-images.githubusercontent.com/75358854/235557263-3bb7c723-d57a-4ca3-9309-cf8c5da80860.jpg" alt="Sequence Diagram for Taxi Booking System">
 </p>
 
-<p align=center>Figure 9: Process Diagram for Taxi Booking System</p>
+<p align=center>Figure 10: Process Diagram for Taxi Booking System</p>
 
 <br/>
 The diagram shows these lifelines:
@@ -653,7 +650,7 @@ There are these interactions between the lifelines:
   - Send GPS coordinates of the customer
   - Retrieve GPS coordinates of the customer
   - Show customer location on the map
-  
+
 ### Process diagram of Sing up or Login
 
 ```mermaid
@@ -680,7 +677,7 @@ UI-->>User: Displays success/failure message
 <br/>
 <br/>
 
-<p align=center> Figure 8:  Process diagram of Sing up or Login </p>
+<p align=center> Figure 11:  Process diagram of Sing up or Login </p>
 
 ## <a id="context-viewpoint">[Context Viewpoint](#context-viewpoint-1)</a>
 
@@ -688,25 +685,25 @@ UI-->>User: Displays success/failure message
     <img src="https://user-images.githubusercontent.com/75358854/235879368-1b5475c6-2b60-4d91-8377-17598ae3f3da.jpg" alt="Context Viewpoint">
 </p>
 
-<p align=center>Figure 10: Context Diagram</p>
+<p align=center>Figure 12: Context Diagram</p>
 
 # <a id="architecture-patterns">[Architecture Patterns](#architecture-patterns-1)</a>
 
- These patterns are designed to improve the scalability, reliability, and performance of the ride sharing service.
+These patterns are designed to improve the scalability, reliability, and performance of the ride sharing service.
 
-|Architecture Pattern|Explanation|Ride-Sharing Service Application|
-|---:|:---|:---|
-|Microservices|The use of independently deployable services, each with its own functionality, data storage, and API, to build a larger application|In a ride-sharing service, different microservices could handle different functions, such as user authentication, ride matching, payment processing, and driver dispatching, allowing for more flexibility and scalability|
-|Service-Oriented Architecture (SOA)|A design approach that structures an application as a collection of services, which communicate with each other through APIs, and are loosely coupled and independent|In a ride-sharing service, SOA could allow for greater modularity and easier integration of new features, such as carpooling, different payment options, or integration with public transit|
-|Event-Driven Architecture (EDA)|A design approach that emphasizes the production, detection, consumption, and reaction to events, using asynchronous communication and decoupled systems|In a ride-sharing service, EDA could be used to handle real-time events, such as ride requests, driver availability, or traffic conditions, and trigger appropriate actions or notifications|
-|Containerization|The use of lightweight, portable, and isolated runtime environments, known as containers, to package and deploy applications and their dependencies|In a ride-sharing service, containerization could allow for easier deployment and scaling of microservices, as well as more efficient use of resources|
-|RESTful API|A design style for building web services, based on HTTP and CRUD operations, that allows for stateless and scalable communication between clients and servers|In a ride-sharing service, RESTful APIs could provide standardized communication between different components, such as mobile apps, web dashboards, or third-party integrations, allowing for greater interoperability and flexibility|
-|Cloud Computing|The use of remote servers and resources, accessed through the internet, to store, process, and manage data and applications, instead of local hardware|In a ride-sharing service, cloud computing could provide greater scalability, availability, and cost-effectiveness, as well as easier access to advanced services, such as machine learning, analytics, or geolocation|
-|Data Sharding|The technique of partitioning data horizontally, based on a key or attribute, and distributing it across multiple servers or nodes, to improve performance, scalability, and availability|In a ride-sharing service, data sharding could be used to handle large volumes of data, such as user profiles, ride histories, or traffic patterns, and reduce the risk of downtime or data loss|
-|Load Balancing|The process of distributing incoming network traffic across multiple servers or nodes, to optimize resource utilization, improve performance, and ensure high availability|In a ride-sharing service, load balancing could be used to handle variable traffic volumes, prevent overloading of specific components, such as databases or APIs, and maintain a consistent user experience|
-|CQRS|Separating the read and write sides of an application, allowing for different data models and optimization strategies.|This pattern is useful when we have different needs for reading and writing data, such as when we need to handle large amounts of data or complex queries. For example, we might use CQRS to optimize reading data for driver matching, while writing data for handling payments.|
-|Serverless|Using cloud functions or services to handle specific tasks, without managing servers or infrastructure.|This pattern is useful when we need to handle spikes in traffic or unpredictable usage, and when we want to focus on application functionality rather than infrastructure management. For example, we might use serverless functions to handle user authentication or image processing.|
-|Service Mesh|Managing communication between microservices, including traffic routing, load balancing, and security.|This pattern is useful when we have many microservices that need to communicate with each other, and when we want to handle service discovery and routing in a centralized way. For example, we might use a service mesh to handle communication between the user interface, the driver matching service, and the payment service.|
+|                Architecture Pattern | Explanation                                                                                                                                                                               | Ride-Sharing Service Application                                                                                                                                                                                                                                                                                                   |
+| ----------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                       Microservices | The use of independently deployable services, each with its own functionality, data storage, and API, to build a larger application                                                       | In a ride-sharing service, different microservices could handle different functions, such as user authentication, ride matching, payment processing, and driver dispatching, allowing for more flexibility and scalability                                                                                                         |
+| Service-Oriented Architecture (SOA) | A design approach that structures an application as a collection of services, which communicate with each other through APIs, and are loosely coupled and independent                     | In a ride-sharing service, SOA could allow for greater modularity and easier integration of new features, such as carpooling, different payment options, or integration with public transit                                                                                                                                        |
+|     Event-Driven Architecture (EDA) | A design approach that emphasizes the production, detection, consumption, and reaction to events, using asynchronous communication and decoupled systems                                  | In a ride-sharing service, EDA could be used to handle real-time events, such as ride requests, driver availability, or traffic conditions, and trigger appropriate actions or notifications                                                                                                                                       |
+|                    Containerization | The use of lightweight, portable, and isolated runtime environments, known as containers, to package and deploy applications and their dependencies                                       | In a ride-sharing service, containerization could allow for easier deployment and scaling of microservices, as well as more efficient use of resources                                                                                                                                                                             |
+|                         RESTful API | A design style for building web services, based on HTTP and CRUD operations, that allows for stateless and scalable communication between clients and servers                             | In a ride-sharing service, RESTful APIs could provide standardized communication between different components, such as mobile apps, web dashboards, or third-party integrations, allowing for greater interoperability and flexibility                                                                                             |
+|                     Cloud Computing | The use of remote servers and resources, accessed through the internet, to store, process, and manage data and applications, instead of local hardware                                    | In a ride-sharing service, cloud computing could provide greater scalability, availability, and cost-effectiveness, as well as easier access to advanced services, such as machine learning, analytics, or geolocation                                                                                                             |
+|                       Data Sharding | The technique of partitioning data horizontally, based on a key or attribute, and distributing it across multiple servers or nodes, to improve performance, scalability, and availability | In a ride-sharing service, data sharding could be used to handle large volumes of data, such as user profiles, ride histories, or traffic patterns, and reduce the risk of downtime or data loss                                                                                                                                   |
+|                      Load Balancing | The process of distributing incoming network traffic across multiple servers or nodes, to optimize resource utilization, improve performance, and ensure high availability                | In a ride-sharing service, load balancing could be used to handle variable traffic volumes, prevent overloading of specific components, such as databases or APIs, and maintain a consistent user experience                                                                                                                       |
+|                                CQRS | Separating the read and write sides of an application, allowing for different data models and optimization strategies.                                                                    | This pattern is useful when we have different needs for reading and writing data, such as when we need to handle large amounts of data or complex queries. For example, we might use CQRS to optimize reading data for driver matching, while writing data for handling payments.                                                  |
+|                          Serverless | Using cloud functions or services to handle specific tasks, without managing servers or infrastructure.                                                                                   | This pattern is useful when we need to handle spikes in traffic or unpredictable usage, and when we want to focus on application functionality rather than infrastructure management. For example, we might use serverless functions to handle user authentication or image processing.                                            |
+|                        Service Mesh | Managing communication between microservices, including traffic routing, load balancing, and security.                                                                                    | This pattern is useful when we have many microservices that need to communicate with each other, and when we want to handle service discovery and routing in a centralized way. For example, we might use a service mesh to handle communication between the user interface, the driver matching service, and the payment service. |
 
 These are just a few of the architecture patterns that could be used in a ride-sharing service application, and there are many other factors to consider, such as security, reliability, maintainability, and user experience. It's important to choose the right patterns for the specific use case and requirements, and to constantly evaluate and evolve the architecture as the application grows and changes over time.
 
@@ -716,10 +713,10 @@ These are just a few of the architecture patterns that could be used in a ride-s
     <img src="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/assets/75358854/5588ff3c-e2f9-4aaa-8291-495f84142116" alt="Context Viewpoint">
 </p>
 
-<p align=center>Figure 11: Microservice Architecture Of Ride Sharing Service</p>
+<p align=center>Figure 13: Microservice Architecture Of Ride Sharing Service</p>
 
-API Gateway Since clients don’t call the services directly, API Gateway acts as an entry point for the clients to forward requests to appropriate  microservices.
-  
+API Gateway Since clients don’t call the services directly, API Gateway acts as an entry point for the clients to forward requests to appropriate microservices.
+
 The major change that we observe here is the introduction of API Gateway through which all the drivers and passengers are connected. From the API Gateway, all the internal points are connected such as passenger management, driver management, trip management and others.
 The units are individual separate deployable units performing separate functionalities.
 
@@ -728,34 +725,29 @@ For Example: If you want to change anything in the billing Microservices, then y
 All the features were now scaled individually i.e. The interdependency between each and every feature was removed.
 For Example, we all know that the number of people searching for cabs is more comparatively more than the people actually booking a cab and making payments. This gets us an inference that the number of processes working on the passenger management microservice is more than the number of processes working on payments.
 
-  
-
-
 # <a id="data-managment">[Architecture Decisions ](#data-managment-1)</a>
 
 Here are some sample architecture decisions for the Ride Sharing Service, along with their explanations and justifications from the perspective of a ride sharing service:
 
-|Architecture Decision|Explanation|Justification|
-|---|---|---|
-|Microservices Architecture|The Ride Sharing Service is designed as a collection of loosely coupled microservices, each responsible for a specific aspect of the application (e.g. user management, ride requests, ride matching, payment processing, etc.). This architecture allows for greater scalability, fault tolerance, and flexibility compared to a monolithic architecture.|By breaking down the application into smaller, independent components, we can scale each component independently based on its demand. Also, if one microservice fails, it won't bring down the entire application.|
-|Kubernetes Orchestration|The microservices are deployed on a Kubernetes cluster, which provides automated scaling, self-healing, and load balancing.|Kubernetes simplifies deployment and management of microservices, and provides built-in mechanisms for scaling up or down based on demand. Additionally, Kubernetes can automatically recover from failures, reducing the need for manual intervention.|
-|REST API for Communication|The microservices communicate with each other via REST APIs, which allows for a standardized, platform-agnostic way of exchanging data.|REST APIs provide a simple and easy-to-use interface for inter-service communication, and allow for easy integration with other services or third-party tools.|
-|Event-Driven Architecture for Real-Time Processing|Events are used to notify other services of changes in the system (e.g. a new ride request, a ride has been matched, a payment has been processed, etc.). This allows for real-time processing and reduces the need for polling or frequent API calls.|Event-driven architecture allows us to respond to changes in the system in real-time, which is especially important for ride sharing services, where timely processing is critical. By using events, we can reduce the amount of polling or API calls required, which can improve performance and reduce costs.|
-|MongoDB for Data Storage|The application uses MongoDB as the primary database, which provides a scalable, flexible, and highly available solution for storing and retrieving data.|MongoDB is a popular choice for NoSQL databases due to its flexible schema, horizontal scaling, and automatic failover capabilities. These features are well-suited for the dynamic and rapidly changing data requirements of a ride sharing service.|
-|Redis for Caching|Redis is used as an in-memory cache for frequently accessed data, such as user profiles and ride requests. This helps to reduce the load on the database and improve performance.|Redis is a popular choice for caching due to its fast read and write speeds, support for multiple data types, and built-in features for managing data expiration and eviction. By caching frequently accessed data in Redis, we can reduce the number of database queries required and improve the overall performance of the application.|
+| Architecture Decision                              | Explanation                                                                                                                                                                                                                                                                                                                                                | Justification                                                                                                                                                                                                                                                                                                                              |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Microservices Architecture                         | The Ride Sharing Service is designed as a collection of loosely coupled microservices, each responsible for a specific aspect of the application (e.g. user management, ride requests, ride matching, payment processing, etc.). This architecture allows for greater scalability, fault tolerance, and flexibility compared to a monolithic architecture. | By breaking down the application into smaller, independent components, we can scale each component independently based on its demand. Also, if one microservice fails, it won't bring down the entire application.                                                                                                                         |
+| Kubernetes Orchestration                           | The microservices are deployed on a Kubernetes cluster, which provides automated scaling, self-healing, and load balancing.                                                                                                                                                                                                                                | Kubernetes simplifies deployment and management of microservices, and provides built-in mechanisms for scaling up or down based on demand. Additionally, Kubernetes can automatically recover from failures, reducing the need for manual intervention.                                                                                    |
+| REST API for Communication                         | The microservices communicate with each other via REST APIs, which allows for a standardized, platform-agnostic way of exchanging data.                                                                                                                                                                                                                    | REST APIs provide a simple and easy-to-use interface for inter-service communication, and allow for easy integration with other services or third-party tools.                                                                                                                                                                             |
+| Event-Driven Architecture for Real-Time Processing | Events are used to notify other services of changes in the system (e.g. a new ride request, a ride has been matched, a payment has been processed, etc.). This allows for real-time processing and reduces the need for polling or frequent API calls.                                                                                                     | Event-driven architecture allows us to respond to changes in the system in real-time, which is especially important for ride sharing services, where timely processing is critical. By using events, we can reduce the amount of polling or API calls required, which can improve performance and reduce costs.                            |
+| MongoDB for Data Storage                           | The application uses MongoDB as the primary database, which provides a scalable, flexible, and highly available solution for storing and retrieving data.                                                                                                                                                                                                  | MongoDB is a popular choice for NoSQL databases due to its flexible schema, horizontal scaling, and automatic failover capabilities. These features are well-suited for the dynamic and rapidly changing data requirements of a ride sharing service.                                                                                      |
+| Redis for Caching                                  | Redis is used as an in-memory cache for frequently accessed data, such as user profiles and ride requests. This helps to reduce the load on the database and improve performance.                                                                                                                                                                          | Redis is a popular choice for caching due to its fast read and write speeds, support for multiple data types, and built-in features for managing data expiration and eviction. By caching frequently accessed data in Redis, we can reduce the number of database queries required and improve the overall performance of the application. |
 
 These are just a few examples of architecture decisions that might be made for a ride sharing service. Other decisions might include the use of specific programming languages or frameworks, the adoption of specific security or monitoring tools, or the integration with other third-party services or APIs. Ultimately, the architecture of a ride sharing service should be designed to meet the specific needs and requirements of the business, while also providing a scalable, flexible, and resilient foundation for growth and innovation.
 
 ## Architecture Decision for Microservice Pattern
 
-These were the main  Challenges faced by the monolithic software framework that Ride Sharing Service worked with.
-
+These were the main Challenges faced by the monolithic software framework that Ride Sharing Service worked with.
 
 - To update even a single feature, every feature had to be built again, deployed and tested many times.
 - To update even a single feature, every feature had to be built again, deployed and tested many times.
-  Fixing bugs became a very difficult job as there was only a single codebase, and developers had to change the code in this repository again and   again.
+  Fixing bugs became a very difficult job as there was only a single codebase, and developers had to change the code in this repository again and again.
 - Scaling any feature together with the introduction of new features over many countries is getting to be very tough.
-
 
 The introduction of the API gateway connected passengers and drivers. Similarly, from the gateway, other internal points, such as passenger/driver/trip management, and other internal points are connected.
 
@@ -769,22 +761,25 @@ Ride Sharing Service broke down its monolith into cloud-based microservices for 
     <img src="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/assets/75358854/da612cc6-9be8-49c2-81be-fad72fa79431" alt="Context Viewpoint">
 </p>
 
-
+<p align=center>Figure 14: Architecture Decision for Microservice Pattern</p>
 
 ### Ride Sharing Service Microservices Architecture – Benefits
 
-- Individual development teams were assigned ownership of specific services which helped to boost the quality, speed, and manageability of new     module development.
+- Individual development teams were assigned ownership of specific services which helped to boost the quality, speed, and manageability of new module development.
 - Teams were allowed to focus only on the services that needed scaling, and this helped to scale at high speed.
 - Individual services could be updated without disrupting any other services.
 - Fault tolerance has become more reliable.
-
-
 
 # <a id="deployment">[Deployment](#deployment-1)</a>
 
 Deployment refers to the process of taking software code and making it available to end-users. For a ride sharing service, deployment is critical to ensuring that riders and drivers can use the service seamlessly. A typical ride sharing service will have several components, such as the mobile app, the back-end server, and the database.
 
 The deployment process for a ride sharing service involves the following steps:
+
+<p align="center">
+    <img src="https://github.com/vividblueprint/GitLearn/assets/78911344/7749efe9-b0b3-4174-a10c-ec67f701b1bb">
+</p>
+<p align="center">Figure 15: Development Lifecycle</p>
 
 Code review: Before deploying any code changes, the development team should review the code to ensure it meets the project requirements and is free from bugs and security vulnerabilities.
 
@@ -795,5 +790,10 @@ Testing: The deployment package is tested to ensure it works as expected. This i
 Deployment: Once the code is tested and approved, it can be deployed to the production environment. This may involve using a continuous deployment tool like Jenkins or GitLab CI/CD.
 
 Monitoring: After deployment, the service should be monitored for issues and performance metrics. This includes monitoring the server health, database performance, and user feedback.
+
+<p align="center">
+    <img src="https://github.com/vividblueprint/GitLearn/assets/78911344/cb1babc3-8128-4434-9c0a-51d55a702d7c">
+</p>
+<p align="center">Figure 16: UML Deployment Diagram for Car Ride Sharing Service System</p>
 
 From a ride sharing service's point of view, deployment is critical to ensure that the service is available to riders and drivers at all times. Any downtime or issues with the service can result in lost revenue and a poor user experience. Therefore, it is essential to have a robust deployment process that includes testing and monitoring to ensure the service is reliable and performant.
