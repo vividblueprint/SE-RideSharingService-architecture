@@ -84,6 +84,8 @@
 1. <a id="database-devel-1">[Database Development](#database-devel)</a>
 1. <a id="architecture-patterns-1">[Architecture Patterns](#architecture-patterns)</a>
 1. <a id="data-managment-1">[Architecture Decisions ](#data-managment)</a>
+1. <a id="conclusion-1">[Conclusion](#conclusion)</a>
+1. <a id="references-s-1">[References](#references-s)</a>
 
 # <a id='introduction'>[Introduction](#introduction-1)</a>
 
@@ -803,7 +805,7 @@ These services have also provided new income opportunities for drivers, allowing
 
 Overall, the future of ride-sharing services looks promising, with continued innovation and improvements in technology expected to further enhance the user experience and address any remaining concerns.
 
-# <a id="references">[References](#references-1)</a>
+# <a id="references-s">[References](#references-s-1)</a>
 
 1. Zheng, Y., Li, Q., Chen, Y., Xie, X., & Ma, W. (2018). A survey of ride sharing. Transportation Research Part C: Emerging Technologies, 96, 380-393.
 1. Wang, X., Guo, Y., Huang, M., & Yu, B. (2019). A novel group decision-making method based on multi-attribute decision-making for ride-sharing. IEEE Access, 7, 45899-45907.
