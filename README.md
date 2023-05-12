@@ -598,7 +598,7 @@ This diagram shows the lifelines of a taxi booking system and the interactions b
     <img src="https://user-images.githubusercontent.com/75358854/235557263-3bb7c723-d57a-4ca3-9309-cf8c5da80860.jpg" alt="Sequence Diagram for Taxi Booking System">
 </p>
 
-<p align=center>Figure 10: Process Diagram for Taxi Booking System</p>
+<p align=center>Figure 8: Process Diagram for Taxi Booking System</p>
 
 <br/>
 The diagram shows these lifelines:
@@ -665,7 +665,7 @@ UI-->>User: Displays success/failure message
 <br/>
 <br/>
 
-<p align=center> Figure 11:  Process diagram of Sing up or Login </p>
+<p align=center> Figure 9:  Process diagram of Sing up or Login </p>
 
 ## <a id="context-viewpoint">[Context Viewpoint](#context-viewpoint-1)</a>
 
@@ -673,14 +673,14 @@ UI-->>User: Displays success/failure message
     <img src="https://user-images.githubusercontent.com/75358854/235879368-1b5475c6-2b60-4d91-8377-17598ae3f3da.jpg" alt="Context Viewpoint">
 </p>
 
-<p align=center>Figure 12: Context Diagram</p>
+<p align=center>Figure 10: Context Diagram</p>
 
 # <a id="database-devel">[Database Development](#database-devel-1)</a>
 
 
 <br><p align=center><img width=700 src="https://media.cheggcdn.com/media/9e4/9e4da75d-3fff-4458-8ff2-3bfb4c620d53/php9AEoc3"/></p>
 
-<p align=center>Figure 8: Database Scham</p>
+<p align=center>Figure 11: Database Scham</p>
 
 
 # <a id="architecture-patterns">[Architecture Patterns](#architecture-patterns-1)</a>
@@ -709,7 +709,7 @@ These are just a few of the architecture patterns that could be used in a ride-s
     <img src="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/assets/75358854/5588ff3c-e2f9-4aaa-8291-495f84142116" alt="Context Viewpoint">
 </p>
 
-<p align=center>Figure 13: Microservice Architecture Of Ride Sharing Service</p>
+<p align=center>Figure 12: Microservice Architecture Of Ride Sharing Service</p>
 
 API Gateway Since clients don’t call the services directly, API Gateway acts as an entry point for the clients to forward requests to appropriate microservices.
 
@@ -757,7 +757,7 @@ Ride Sharing Service broke down its monolith into cloud-based microservices for 
     <img src="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/assets/75358854/da612cc6-9be8-49c2-81be-fad72fa79431" alt="Context Viewpoint">
 </p>
 
-<p align=center>Figure 14: Architecture Decision for Microservice Pattern</p>
+<p align=center>Figure 13: Architecture Decision for Microservice Pattern</p>
 
 ### Ride Sharing Service Microservices Architecture – Benefits
 
@@ -775,7 +775,7 @@ The deployment process for a ride sharing service involves the following steps:
 <p align="center">
     <img src="https://github.com/vividblueprint/GitLearn/assets/78911344/7749efe9-b0b3-4174-a10c-ec67f701b1bb">
 </p>
-<p align="center">Figure 15: Development Lifecycle</p>
+<p align="center">Figure 14: Development Lifecycle</p>
 
 Code review: Before deploying any code changes, the development team should review the code to ensure it meets the project requirements and is free from bugs and security vulnerabilities.
 
@@ -790,6 +790,6 @@ Monitoring: After deployment, the service should be monitored for issues and per
 <p align="center">
     <img src="https://github.com/vividblueprint/GitLearn/assets/78911344/43aef463-f03a-4d94-ace7-6b3a7936268a">
 </p>
-<p align="center">Figure 16: UML Deployment Diagram for Car Ride Sharing Service System</p>
+<p align="center">Figure 15: UML Deployment Diagram for Car Ride Sharing Service System</p>
 
 From a ride sharing service's point of view, deployment is critical to ensure that the service is available to riders and drivers at all times. Any downtime or issues with the service can result in lost revenue and a poor user experience. Therefore, it is essential to have a robust deployment process that includes testing and monitoring to ensure the service is reliable and performant.
