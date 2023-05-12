@@ -725,6 +725,33 @@ Here are some sample architecture decisions for the Ride Sharing Service, along 
 
 These are just a few examples of architecture decisions that might be made for a ride sharing service. Other decisions might include the use of specific programming languages or frameworks, the adoption of specific security or monitoring tools, or the integration with other third-party services or APIs. Ultimately, the architecture of a ride sharing service should be designed to meet the specific needs and requirements of the business, while also providing a scalable, flexible, and resilient foundation for growth and innovation.
 
+## Architecture Decision for Microservice Pattern
+
+These were the main  Challenges faced by the monolithic software framework that Ride Sharing Service worked with.
+
+
+- To update even a single feature, every feature had to be built again, deployed and tested many times.
+- To update even a single feature, every feature had to be built again, deployed and tested many times.
+  Fixing bugs became a very difficult job as there was only a single codebase, and developers had to change the code in this repository again and   again.
+- Scaling any feature together with the introduction of new features over many countries is getting to be very tough.
+
+
+The introduction of the API gateway connected passengers and drivers. Similarly, from the gateway, other internal points, such as passenger/driver/trip management, and other internal points are connected.
+
+All the units are designed to perform their functions independently.
+
+Every feature could be scaled independently of the other. As an example, the number of people searching for taxis is greater than the number of people that actually book the taxi services and make the payments. This also means that the number of processes that handle passenger management is greater than the number that manages the payment processes.
+
+Ride Sharing Service broke down its monolith into cloud-based microservices for each of the functionalities and connected these via an API gateway.
+
+### Ride Sharing Service Microservices Architecture – Benefits
+
+- Individual development teams were assigned ownership of specific services which helped to boost the quality, speed, and manageability of new     module development.
+- Teams were allowed to focus only on the services that needed scaling, and this helped to scale at high speed.
+- Individual services could be updated without disrupting any other services.
+- Fault tolerance has become more reliable.
+
+
 
 # <a id="deployment">[Deployment](#deployment-1)</a>
 
