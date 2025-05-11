@@ -1,5 +1,5 @@
 <br>
-<br><p align=center><img width=700 src="https://qph.cf2.quoracdn.net/main-qimg-bfb158d7f806d176dfe09e4547f61895-pjlq"/></p>
+<br><p align=center><img width="100%" src="./docs/profile.png" alt="Profile"/></p>
 
 <h1 align="center" >
 <img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
@@ -99,8 +99,7 @@ Overall, this document aims to provide a comprehensive and practical guide to th
 
 <br/>
 <br/>
-<p align=center><img src="https://user-images.githubusercontent.com/78911344/236380492-c5831a7a-b3ef-4f53-9cba-3d9ae621ef3a.jpg" alt="System overview"/></p>
-
+<p align=center><img src="./docs/System_overview.jpg" alt="System overview"/></p>
 ### <p align=center>Figure 1: System overview</p>
 
 # <a id="business-requirements">[Business Requirements](#business-requirements-1)</a>
@@ -207,9 +206,7 @@ Usability is a critical aspect of a ride-sharing service as it directly impacts 
 
 By prioritizing these factors, a ride-sharing service can improve its usability, attract more users, and retain existing customers.
 
-<p align="center">
-<img src="https://github.com/vividblueprint/GitLearn/assets/78911344/0d2c72a7-5161-4020-b0d0-28f58b38754e">
-</p>
+<p align="center"><img src="./docs/Usability.jpg" alt="Usability"/></p>
 
 ### <p align="center">Figure 2: Usability</p>
 
@@ -259,9 +256,7 @@ Scalability is a critical quality attribute of the Ride Sharing Service system i
 
 Ride Sharing Service system uses a combination of hardware load balancers and software load balancers to achieve scalability. Hardware load balancers are used to distribute traffic at the network level, while software load balancers are used to distribute traffic at the application level.
 
-<p align="center">
-<img src="https://github.com/vividblueprint/GitLearn/assets/78911344/a90a5e36-6799-4bc4-a824-cef2e884cf23">
-</p>
+<p align="center"><img src="./docs/Real_Time_Ride_Sharing_Service_system.png" alt="Real-Time Ride Sharing Service system"/></p>
 
 ### <p align=center>Figure 3: Real-Time Ride Sharing Service system </p>
 
@@ -330,7 +325,7 @@ The Car Sharing System Component diagram is a valuable tool for modeling and und
 <br/>
 <br/>
 
-<p align=center><img src ="https://github.com/vividblueprint/GitLearn/assets/78911344/781ddda5-cde1-492c-93f0-7c3c5e968533"/></p>
+<p align=center><img src ="./docs/Architecture_Component_Diagram.png" alt="Architecture Component Diagram"/></p>
 
 ### <p align=center>Figure 5: Architecture Component Diagram</p>
 
@@ -586,7 +581,8 @@ A logical view of a ride-sharing service can be represented as a layered archite
 |       Business Layer | The Business Layer provides common, core functionality that ride-sharing services can use for any product or use case. These functionalities are generic and are not specifically designed for a particular line of business. Examples of functionalities in this layer include user authentication, authorization, and data validation. |
 | Infrastructure Layer | The Infrastructure Layer provides shared platform infrastructure components, like networking, streaming, storage, machine learning, and AI infrastructure. This layer provides the underlying infrastructure necessary to support the system's functionalities and ensure its scalability and reliability.                               |
 
-<br><p align=center><img width=700 src="https://user-images.githubusercontent.com/78911344/236388509-dc9d4a90-7537-47ad-88ca-7a272916c036.png"/></p>
+<be>
+<p align=center><img src="./docs/Layer_Design.png" alt="Layer Design"/></p>
 
 <p align=center>Figure 7: Layer Design</p>
 
@@ -596,9 +592,7 @@ In conclusion, a layer design approach enables the ride-sharing system to be mod
 
 This diagram shows the lifelines of a taxi booking system and the interactions between them. It shows the process of ordering a taxi ride. A rider can choose a pick-up point, destination, and time of pick up.
 
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/75358854/235557263-3bb7c723-d57a-4ca3-9309-cf8c5da80860.jpg" alt="Sequence Diagram for Taxi Booking System">
-</p>
+<p align="center"><img src="./docs/Process_Diagram_for_Taxi_Booking_System.jpg" alt="Process Diagram for Taxi Booking System"></p>
 
 <p align=center>Figure 8: Process Diagram for Taxi Booking System</p>
 
@@ -671,9 +665,7 @@ UI-->>User: Displays success/failure message
 
 ## <a id="context-viewpoint">[Context Viewpoint](#context-viewpoint-1)</a>
 
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/75358854/235879368-1b5475c6-2b60-4d91-8377-17598ae3f3da.jpg" alt="Context Viewpoint">
-</p>
+<p align="center"><img src="./docs/Context_Diagram.jpg" alt="Context Viewpoint"></p>
 
 <p align=center>Figure 10: Context Diagram</p>
 
@@ -684,10 +676,8 @@ Deployment refers to the process of taking software code and making it available
 
 The deployment process for a ride sharing service involves the following steps:
 
-<p align="center">
-    <img src="https://github.com/vividblueprint/GitLearn/assets/78911344/7749efe9-b0b3-4174-a10c-ec67f701b1bb">
-</p>
-<p align="center">Figure 14: Development Lifecycle</p>
+<p align="center"><img src="./docs/Development_Lifecycle.png" alt="Development Lifecycle"></p>
+<p align="center">Figure 11: Development Lifecycle</p>
 
 Code review: Before deploying any code changes, the development team should review the code to ensure it meets the project requirements and is free from bugs and security vulnerabilities.
 
@@ -699,19 +689,18 @@ Deployment: Once the code is tested and approved, it can be deployed to the prod
 
 Monitoring: After deployment, the service should be monitored for issues and performance metrics. This includes monitoring the server health, database performance, and user feedback.
 
-<p align="center">
-    <img src="https://github.com/vividblueprint/GitLearn/assets/78911344/43aef463-f03a-4d94-ace7-6b3a7936268a">
-</p>
-<p align="center">Figure 15: UML Deployment Diagram for Car Ride Sharing Service System</p>
+<p align="center"><img src="./docs/UML_Deployment_Diagram_for_Car_Ride_Sharing_Service_System.png" alt="UML Deployment Diagram for Car Ride Sharing Service System"></p>
+<p align="center">Figure 12: UML Deployment Diagram for Car Ride Sharing Service System</p>
 
 From a ride sharing service's point of view, deployment is critical to ensure that the service is available to riders and drivers at all times. Any downtime or issues with the service can result in lost revenue and a poor user experience. Therefore, it is essential to have a robust deployment process that includes testing and monitoring to ensure the service is reliable and performant.
 
 # <a id="database-devel">[Database Development](#database-devel-1)</a>
 
 
-<br><p align=center><img width=700 src="https://media.cheggcdn.com/media/9e4/9e4da75d-3fff-4458-8ff2-3bfb4c620d53/php9AEoc3"/></p>
-
-<p align=center>Figure 11: Database Schama</p>
+<br>
+<p align=center><img width=700 src="./docs/Database_Schama.png" alt="Database Schama"/></p>
+ 
+<p align=center>Figure 13: Database Schama</p>
 
 
 # <a id="architecture-patterns">[Architecture Patterns](#architecture-patterns-1)</a>
@@ -736,11 +725,9 @@ These are just a few of the architecture patterns that could be used in a ride-s
 
 ## Microservices Pattern
 
-<p align="center">
-    <img src="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/assets/75358854/5588ff3c-e2f9-4aaa-8291-495f84142116" alt="Context Viewpoint">
-</p>
+<p align="center"><img src="./docs/Microservice_Architecture_Of_Ride_Sharing_Service.jpg" alt="Microservice Architecture Of Ride Sharing Service"></p>
 
-<p align=center>Figure 12: Microservice Architecture Of Ride Sharing Service</p>
+<p align=center>Figure 14: Microservice Architecture Of Ride Sharing Service</p>
 
 API Gateway Since clients don’t call the services directly, API Gateway acts as an entry point for the clients to forward requests to appropriate microservices.
 
@@ -784,11 +771,9 @@ Every feature could be scaled independently of the other. As an example, the num
 
 Ride Sharing Service broke down its monolith into cloud-based microservices for each of the functionalities and connected these via an API gateway.
 
-<p align="center">
-    <img src="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/assets/75358854/da612cc6-9be8-49c2-81be-fad72fa79431" alt="Context Viewpoint">
-</p>
+<p align="center"><img src="./docs/Architecture_Decision_for_Microservice_Pattern.jpg" alt="Architecture Decision for Microservice Pattern"></p>
 
-<p align=center>Figure 13: Architecture Decision for Microservice Pattern</p>
+<p align=center>Figure 15: Architecture Decision for Microservice Pattern</p>
 
 ### Ride Sharing Service Microservices Architecture – Benefits
 
