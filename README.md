@@ -100,7 +100,8 @@ Overall, this document aims to provide a comprehensive and practical guide to th
 <br/>
 <br/>
 <p align=center><img src="./docs/System_overview.jpg" alt="System overview"/></p>
-### <p align=center>Figure 1: System overview</p>
+
+<p align=center>Figure 1: System overview</p>
 
 # <a id="business-requirements">[Business Requirements](#business-requirements-1)</a>
 
