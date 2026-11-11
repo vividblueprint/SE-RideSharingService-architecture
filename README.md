@@ -9,29 +9,23 @@
 <img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
 <img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
 <img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/></h1>
- <p align="center">Get dynamically generated GitHub stats!</p>
 
-<p align="center">
-  <a href="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/actions">
-    <img alt="Tests Passing" src="https://github.com/anuraghazra/github-readme-stats/workflows/Test/badge.svg"/>
-  </a>
-  <a href="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/contributors">
-    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture"/>
-  </a>
-  <a href="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/issues">
-    <img alt="Issues" src="https://img.shields.io/github/issues/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture?color=0088ff"/>
-  </a>
-  <a href="https://github.com/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture/pulls">
-    <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture?color=0088ff">
-  </a>
-  <br />
-<img alt="Lines of code" src="https://img.shields.io/tokei/lines/github/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture?color=green">
-<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture?color=302df0">
-<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture">
-<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture?color=0088ff">
-<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture?color=00ff00f">
-<img alt="GitHub repo file count" src="https://img.shields.io/github/directory-file-count/WHU-Ride-Sharing-Service/SE-RideSharingService-architecture">
-</p>
+[![GitHub](https://img.shields.io/badge/GitHub-vividblueprint-181717?logo=github&logoColor=white)](https://github.com/vividblueprint)
+[![Followers](https://img.shields.io/github/followers/vividblueprint?style=flat&logo=github&label=Followers)](https://github.com/vividblueprint?tab=followers)
+![Profile Views](https://komarev.com/ghpvc/?username=vividblueprint&label=Profile%20Views&color=blueviolet&style=flat)
+[![Issues](https://img.shields.io/github/issues/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/pulls)
+[![Contributors](https://img.shields.io/github/contributors/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/graphs/contributors)
+[![Stars](https://img.shields.io/github/stars/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/stargazers)
+[![Forks](https://img.shields.io/github/forks/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/forks)
+[![Watchers](https://img.shields.io/github/watchers/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/watchers)
+![Last Commit](https://img.shields.io/github/last-commit/vividblueprint/SE-RideSharingService-architecture?style=flat)
+![Monthly Commits](https://img.shields.io/github/commit-activity/m/vividblueprint/SE-RideSharingService-architecture?style=flat)
+![Languages](https://img.shields.io/github/languages/count/vividblueprint/SE-RideSharingService-architecture?style=flat)
+![Code Size](https://img.shields.io/github/languages/code-size/vividblueprint/SE-RideSharingService-architecture?style=flat)
+![Repo Size](https://img.shields.io/github/repo-size/vividblueprint/SE-RideSharingService-architecture?style=flat)
+![Files](https://img.shields.io/github/directory-file-count/vividblueprint/SE-RideSharingService-architecture?type=file&style=flat)
+![License](https://img.shields.io/github/license/vividblueprint/SE-RideSharingService-architecture?style=flat)
 
 ```mermaid
   graph BT
@@ -798,3 +792,7 @@ Overall, the future of ride-sharing services looks promising, with continued inn
 1. Sun, X., Zhang, W., & Wang, Y. (2018). Ride sharing in autonomous vehicle era: A survey. IEEE Transactions on Intelligent Transportation Systems, 19(12), 3808-3823.
 1. D. D. S. Gopala Rao, S. Bhowmick, K. Desai and M. Shukla, "A Systematic Survey of Real-Time Ridesharing: From User Behaviour to Future Directions," in IEEE Transactions on Intelligent Transportation Systems, vol. 22, no. 7, pp. 4019-4042, July 2021.
 1. Zhang, H., Wu, J., Liu, Y., Gu, X., & Xu, M. (2019). A spatiotemporal-sentiment-aware method for taxi ride-sharing. IEEE Transactions on Intelligent Transportation Systems, 20(10), 3827-3840.
+
+## 👥 Contributors
+
+[![Contributors](https://contrib.rocks/image?repo=vividblueprint/SE-RideSharingService-architecture)](https://github.com/vividblueprint/SE-RideSharingService-architecture/graphs/contributors)
