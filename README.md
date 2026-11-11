@@ -1,31 +1,37 @@
-<br>
-<br><p align=center><img width="100%" src="./docs/profile.png" alt="Profile"/></p>
+<div align="center">
+
+<img src="./assets/Ride-Sharing Microservices Architecture.png" alt="Repository Banner" width="500">
 
 <h1 align="center" >
-<img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
-<img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
-<img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+
+<img width="25px" src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+<img width="25px" src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+<img width="25px" src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
 <b>Ride Sharing Service</b>
-<img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
-<img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
-<img width=25px src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/></h1>
+<img width="25px" src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+<img width="25px" src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+<img width="25px" src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+
+</h1>
 
 [![GitHub](https://img.shields.io/badge/GitHub-vividblueprint-181717?logo=github&logoColor=white)](https://github.com/vividblueprint)
-[![Followers](https://img.shields.io/github/followers/vividblueprint?style=flat&logo=github&label=Followers)](https://github.com/vividblueprint?tab=followers)
-![Profile Views](https://komarev.com/ghpvc/?username=vividblueprint&label=Profile%20Views&color=blueviolet&style=flat)
+[![Profile Views](https://komarev.com/ghpvc/?username=vividblueprint&label=Profile%20Views&color=blueviolet&style=flat)](https://github.com/vividblueprint)
 [![Issues](https://img.shields.io/github/issues/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/issues)
 [![Pull Requests](https://img.shields.io/github/issues-pr/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/pulls)
 [![Contributors](https://img.shields.io/github/contributors/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/graphs/contributors)
 [![Stars](https://img.shields.io/github/stars/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/stargazers)
 [![Forks](https://img.shields.io/github/forks/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/forks)
 [![Watchers](https://img.shields.io/github/watchers/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/watchers)
-![Last Commit](https://img.shields.io/github/last-commit/vividblueprint/SE-RideSharingService-architecture?style=flat)
-![Monthly Commits](https://img.shields.io/github/commit-activity/m/vividblueprint/SE-RideSharingService-architecture?style=flat)
-![Languages](https://img.shields.io/github/languages/count/vividblueprint/SE-RideSharingService-architecture?style=flat)
-![Code Size](https://img.shields.io/github/languages/code-size/vividblueprint/SE-RideSharingService-architecture?style=flat)
-![Repo Size](https://img.shields.io/github/repo-size/vividblueprint/SE-RideSharingService-architecture?style=flat)
-![Files](https://img.shields.io/github/directory-file-count/vividblueprint/SE-RideSharingService-architecture?type=file&style=flat)
-![License](https://img.shields.io/github/license/vividblueprint/SE-RideSharingService-architecture?style=flat)
+[![Last Commit](https://img.shields.io/github/last-commit/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/commits)
+[![Monthly Commits](https://img.shields.io/github/commit-activity/m/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/commits)
+[![Languages](https://img.shields.io/github/languages/count/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture)
+[![Code Size](https://img.shields.io/github/languages/code-size/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture)
+[![Repo Size](https://img.shields.io/github/repo-size/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture)
+[![Total Commits](https://img.shields.io/github/commit-activity/t/vividblueprint/SE-RideSharingService-architecture?style=flat&label=Total%20Commits)](https://github.com/vividblueprint/SE-RideSharingService-architecture/commits)
+[![Files](https://img.shields.io/github/directory-file-count/vividblueprint/SE-RideSharingService-architecture?type=file&style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/tree/HEAD)
+[![License](https://img.shields.io/github/license/vividblueprint/SE-RideSharingService-architecture?style=flat)](https://github.com/vividblueprint/SE-RideSharingService-architecture/blob/HEAD/LICENSE)
+
+</div>
 
 ```mermaid
   graph BT
@@ -93,7 +99,7 @@ Overall, this document aims to provide a comprehensive and practical guide to th
 
 <br/>
 <br/>
-<p align=center><img src="./docs/System_overview.jpg" alt="System overview"/></p>
+<p align=center><img src="./assets/System_overview.jpg" alt="System overview"/></p>
 
 <p align=center>Figure 1: System overview</p>
 
@@ -201,7 +207,7 @@ Usability is a critical aspect of a ride-sharing service as it directly impacts 
 
 By prioritizing these factors, a ride-sharing service can improve its usability, attract more users, and retain existing customers.
 
-<p align="center"><img src="./docs/Usability.jpg" alt="Usability"/></p>
+<p align="center"><img src="./assets/Usability.jpg" alt="Usability"/></p>
 
 ### <p align="center">Figure 2: Usability</p>
 
@@ -251,7 +257,7 @@ Scalability is a critical quality attribute of the Ride Sharing Service system i
 
 Ride Sharing Service system uses a combination of hardware load balancers and software load balancers to achieve scalability. Hardware load balancers are used to distribute traffic at the network level, while software load balancers are used to distribute traffic at the application level.
 
-<p align="center"><img src="./docs/Real_Time_Ride_Sharing_Service_system.png" alt="Real-Time Ride Sharing Service system"/></p>
+<p align="center"><img src="./assets/Real_Time_Ride_Sharing_Service_system.png" alt="Real-Time Ride Sharing Service system"/></p>
 
 ### <p align=center>Figure 3: Real-Time Ride Sharing Service system </p>
 
@@ -320,7 +326,7 @@ The Car Sharing System Component diagram is a valuable tool for modeling and und
 <br/>
 <br/>
 
-<p align=center><img src ="./docs/Architecture_Component_Diagram.png" alt="Architecture Component Diagram"/></p>
+<p align=center><img src ="./assets/Architecture_Component_Diagram.png" alt="Architecture Component Diagram"/></p>
 
 ### <p align=center>Figure 5: Architecture Component Diagram</p>
 
@@ -577,7 +583,7 @@ A logical view of a ride-sharing service can be represented as a layered archite
 | Infrastructure Layer | The Infrastructure Layer provides shared platform infrastructure components, like networking, streaming, storage, machine learning, and AI infrastructure. This layer provides the underlying infrastructure necessary to support the system's functionalities and ensure its scalability and reliability.                               |
 
 <be>
-<p align=center><img src="./docs/Layer_Design.png" alt="Layer Design"/></p>
+<p align=center><img src="./assets/Layer_Design.png" alt="Layer Design"/></p>
 
 <p align=center>Figure 7: Layer Design</p>
 
@@ -587,7 +593,7 @@ In conclusion, a layer design approach enables the ride-sharing system to be mod
 
 This diagram shows the lifelines of a taxi booking system and the interactions between them. It shows the process of ordering a taxi ride. A rider can choose a pick-up point, destination, and time of pick up.
 
-<p align="center"><img src="./docs/Process_Diagram_for_Taxi_Booking_System.jpg" alt="Process Diagram for Taxi Booking System"></p>
+<p align="center"><img src="./assets/Process_Diagram_for_Taxi_Booking_System.jpg" alt="Process Diagram for Taxi Booking System"></p>
 
 <p align=center>Figure 8: Process Diagram for Taxi Booking System</p>
 
@@ -660,7 +666,7 @@ UI-->>User: Displays success/failure message
 
 ## <a id="context-viewpoint">[Context Viewpoint](#context-viewpoint-1)</a>
 
-<p align="center"><img src="./docs/Context_Diagram.jpg" alt="Context Viewpoint"></p>
+<p align="center"><img src="./assets/Context_Diagram.jpg" alt="Context Viewpoint"></p>
 
 <p align=center>Figure 10: Context Diagram</p>
 
@@ -671,7 +677,7 @@ Deployment refers to the process of taking software code and making it available
 
 The deployment process for a ride sharing service involves the following steps:
 
-<p align="center"><img src="./docs/Development_Lifecycle.png" alt="Development Lifecycle"></p>
+<p align="center"><img src="./assets/Development_Lifecycle.png" alt="Development Lifecycle"></p>
 <p align="center">Figure 11: Development Lifecycle</p>
 
 Code review: Before deploying any code changes, the development team should review the code to ensure it meets the project requirements and is free from bugs and security vulnerabilities.
@@ -684,7 +690,7 @@ Deployment: Once the code is tested and approved, it can be deployed to the prod
 
 Monitoring: After deployment, the service should be monitored for issues and performance metrics. This includes monitoring the server health, database performance, and user feedback.
 
-<p align="center"><img src="./docs/UML_Deployment_Diagram_for_Car_Ride_Sharing_Service_System.png" alt="UML Deployment Diagram for Car Ride Sharing Service System"></p>
+<p align="center"><img src="./assets/UML_Deployment_Diagram_for_Car_Ride_Sharing_Service_System.png" alt="UML Deployment Diagram for Car Ride Sharing Service System"></p>
 <p align="center">Figure 12: UML Deployment Diagram for Car Ride Sharing Service System</p>
 
 From a ride sharing service's point of view, deployment is critical to ensure that the service is available to riders and drivers at all times. Any downtime or issues with the service can result in lost revenue and a poor user experience. Therefore, it is essential to have a robust deployment process that includes testing and monitoring to ensure the service is reliable and performant.
@@ -693,7 +699,7 @@ From a ride sharing service's point of view, deployment is critical to ensure th
 
 
 <br>
-<p align=center><img width=700 src="./docs/Database_Schama.png" alt="Database Schama"/></p>
+<p align=center><img width=700 src="./assets/Database_Schama.png" alt="Database Schama"/></p>
  
 <p align=center>Figure 13: Database Schama</p>
 
@@ -720,7 +726,7 @@ These are just a few of the architecture patterns that could be used in a ride-s
 
 ## Microservices Pattern
 
-<p align="center"><img src="./docs/Microservice_Architecture_Of_Ride_Sharing_Service.jpg" alt="Microservice Architecture Of Ride Sharing Service"></p>
+<p align="center"><img src="./assets/Microservice_Architecture_Of_Ride_Sharing_Service.jpg" alt="Microservice Architecture Of Ride Sharing Service"></p>
 
 <p align=center>Figure 14: Microservice Architecture Of Ride Sharing Service</p>
 
@@ -766,7 +772,7 @@ Every feature could be scaled independently of the other. As an example, the num
 
 Ride Sharing Service broke down its monolith into cloud-based microservices for each of the functionalities and connected these via an API gateway.
 
-<p align="center"><img src="./docs/Architecture_Decision_for_Microservice_Pattern.jpg" alt="Architecture Decision for Microservice Pattern"></p>
+<p align="center"><img src="./assets/Architecture_Decision_for_Microservice_Pattern.jpg" alt="Architecture Decision for Microservice Pattern"></p>
 
 <p align=center>Figure 15: Architecture Decision for Microservice Pattern</p>
 
